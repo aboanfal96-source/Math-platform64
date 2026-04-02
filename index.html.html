@@ -1,0 +1,2734 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منصة الرياضيات | هدية أ. عواطف العتيبي</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg-primary:#0a0e1a;--bg-secondary:#111827;--bg-card:#1a2234;--bg-card-hover:#1f2b42;--accent-1:#6366f1;--accent-2:#8b5cf6;--accent-3:#a78bfa;--accent-gold:#fbbf24;--accent-emerald:#34d399;--accent-rose:#f472b6;--accent-cyan:#22d3ee;--text-primary:#f1f5f9;--text-secondary:#94a3b8;--text-muted:#64748b;--border:rgba(99,102,241,0.15);--glow:rgba(99,102,241,0.3)}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Tajawal',sans-serif;background:var(--bg-primary);color:var(--text-primary);min-height:100vh;overflow-x:hidden}body::before{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 20% 50%,rgba(99,102,241,0.08) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(139,92,246,0.06) 0%,transparent 50%),radial-gradient(ellipse at 50% 80%,rgba(34,211,238,0.05) 0%,transparent 50%);animation:bgFloat 20s ease-in-out infinite;z-index:0}@keyframes bgFloat{0%,100%{transform:translate(0,0)}33%{transform:translate(2%,-2%)}66%{transform:translate(-1%,1%)}}
+.header{position:relative;z-index:10;padding:1.5rem 2rem;background:rgba(17,24,39,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}.header-right{display:flex;align-items:center;gap:1rem}.logo-icon{width:50px;height:50px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;box-shadow:0 0 25px var(--glow);animation:lp 3s ease-in-out infinite}@keyframes lp{0%,100%{box-shadow:0 0 25px var(--glow)}50%{box-shadow:0 0 40px rgba(99,102,241,0.5)}}.logo-text h1{font-family:'Almarai',sans-serif;font-size:1.3rem;font-weight:800;background:linear-gradient(135deg,#fff,var(--accent-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.logo-text p{font-size:.75rem;color:var(--text-muted)}.header-badge{background:linear-gradient(135deg,rgba(251,191,36,0.15),rgba(251,191,36,0.05));border:1px solid rgba(251,191,36,0.3);padding:.4rem 1rem;border-radius:100px;font-size:.8rem;color:var(--accent-gold)}
+.app-container{position:relative;z-index:1;display:flex;min-height:calc(100vh - 80px)}.sidebar{width:280px;min-width:280px;background:rgba(17,24,39,0.6);backdrop-filter:blur(10px);border-left:1px solid var(--border);padding:1.5rem 0;overflow-y:auto}.sidebar-section{margin-bottom:.5rem}.sidebar-title{padding:.6rem 1.5rem;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text-muted)}.nav-item{display:flex;align-items:center;gap:.8rem;padding:.75rem 1.5rem;cursor:pointer;transition:all .2s;border-right:3px solid transparent;font-size:.95rem;color:var(--text-secondary)}.nav-item:hover{background:rgba(99,102,241,0.08);color:var(--text-primary)}.nav-item.active{background:rgba(99,102,241,0.12);border-right-color:var(--accent-1);color:var(--accent-3);font-weight:700}.nav-item .icon{font-size:1.2rem;width:28px;text-align:center}.nav-item .badge{margin-right:auto;background:var(--accent-1);color:#fff;font-size:.65rem;font-weight:700;padding:.15rem .5rem;border-radius:100px}.nav-divider{height:1px;background:var(--border);margin:1rem 1.5rem}
+.main-content{flex:1;padding:2rem;overflow-y:auto}.welcome-banner{background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(139,92,246,0.1));border:1px solid var(--border);border-radius:20px;padding:2rem 2.5rem;margin-bottom:2rem;position:relative;overflow:hidden}.welcome-banner::after{content:'\\2211 \\03C0 \\221A \\222B \\0394 \\221E';position:absolute;left:2rem;top:50%;transform:translateY(-50%);font-size:3rem;letter-spacing:.5rem;opacity:.06}.welcome-banner h2{font-family:'Almarai',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:.5rem}.welcome-banner h2 span{background:linear-gradient(135deg,var(--accent-gold),#fcd34d);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.welcome-banner p{color:var(--text-secondary);font-size:.95rem;line-height:1.7}
+.chapter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;margin-bottom:2rem}.chapter-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;cursor:pointer;transition:all .3s}.chapter-card:hover{background:var(--bg-card-hover);border-color:rgba(99,102,241,0.3);transform:translateY(-3px);box-shadow:0 10px 40px rgba(0,0,0,0.3)}.chapter-card .ch-number{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;font-weight:800;font-size:.85rem;margin-bottom:1rem}.chapter-card:nth-child(1) .ch-number{background:rgba(99,102,241,0.2);color:var(--accent-1)}.chapter-card:nth-child(2) .ch-number{background:rgba(34,211,238,0.2);color:var(--accent-cyan)}.chapter-card:nth-child(3) .ch-number{background:rgba(244,114,182,0.2);color:var(--accent-rose)}.chapter-card:nth-child(4) .ch-number{background:rgba(52,211,153,0.2);color:var(--accent-emerald)}.chapter-card:nth-child(5) .ch-number{background:rgba(251,191,36,0.2);color:var(--accent-gold)}.chapter-card:nth-child(6) .ch-number{background:rgba(167,139,250,0.2);color:var(--accent-3)}.chapter-card h3{font-family:'Almarai',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem}.chapter-card .lesson-count{font-size:.8rem;color:var(--text-muted)}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem}.section-header h2{font-family:'Almarai',sans-serif;font-size:1.4rem;font-weight:800}.back-btn{display:flex;align-items:center;gap:.5rem;background:rgba(99,102,241,0.1);border:1px solid var(--border);color:var(--accent-3);padding:.5rem 1.2rem;border-radius:10px;cursor:pointer;font-family:'Tajawal';font-size:.9rem;transition:all .2s}.back-btn:hover{background:rgba(99,102,241,0.2)}
+.lesson-item{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;margin-bottom:1rem;overflow:hidden}.lesson-item:hover{border-color:rgba(99,102,241,0.25)}.lesson-header{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.5rem;cursor:pointer}.lesson-header .right{display:flex;align-items:center;gap:1rem}.lesson-num{width:32px;height:32px;background:rgba(99,102,241,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:var(--accent-3)}.lesson-name{font-weight:600;font-size:1rem}.lesson-arrow{transition:transform .3s;color:var(--text-muted)}.lesson-item.open .lesson-arrow{transform:rotate(180deg)}.lesson-body{display:none;padding:0 1.5rem 1.5rem}.lesson-item.open .lesson-body{display:block}
+.explanation-tabs{display:flex;gap:.4rem;margin-bottom:1rem;flex-wrap:wrap}.exp-tab{padding:.45rem .9rem;border-radius:10px;font-size:.8rem;font-family:'Tajawal';cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text-secondary);transition:all .2s;font-weight:600}.exp-tab:hover{background:rgba(99,102,241,0.1)}.exp-tab.active{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;border-color:transparent}
+.explanation-content{background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:14px;padding:1.5rem;min-height:200px;line-height:1.9;font-size:.95rem;color:var(--text-secondary)}.explanation-content h4{color:var(--accent-3);font-weight:700;margin-bottom:1rem;font-size:1.05rem}.explanation-content .math-formula{display:inline-block;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.2);padding:.3rem .8rem;border-radius:8px;font-family:'Courier New',monospace;direction:ltr;color:var(--accent-gold);margin:.3rem 0}.explanation-content .example-box{background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.2);border-radius:10px;padding:1rem;margin:1rem 0}.explanation-content .example-box .label{color:var(--accent-emerald);font-weight:700;font-size:.85rem;margin-bottom:.5rem}.explanation-content .tip-box{background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.2);border-radius:10px;padding:1rem;margin:1rem 0}.explanation-content .tip-box .label{color:var(--accent-gold);font-weight:700;font-size:.85rem;margin-bottom:.5rem}.explanation-content .detail-box{background:rgba(99,102,241,0.08);border:1px solid rgba(99,102,241,0.2);border-radius:10px;padding:1rem;margin:1rem 0}.explanation-content .detail-box .label{color:var(--accent-1);font-weight:700;font-size:.85rem;margin-bottom:.5rem}.explanation-content .step-box{background:rgba(244,114,182,0.08);border:1px solid rgba(244,114,182,0.2);border-radius:10px;padding:1rem;margin:.5rem 0}.explanation-content .step-box .label{color:var(--accent-rose);font-weight:700;font-size:.85rem;margin-bottom:.5rem}
+.ai-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;gap:1rem}.ai-loading .spinner{width:40px;height:40px;border:3px solid rgba(99,102,241,0.2);border-top-color:var(--accent-1);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.ai-loading p{color:var(--text-muted);font-size:.9rem}
+.nafes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}.nafes-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;cursor:pointer;transition:all .3s}.nafes-card:hover{transform:translateY(-3px);box-shadow:0 10px 40px rgba(0,0,0,0.3);border-color:rgba(99,102,241,0.3)}.nafes-card .card-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem}.nafes-card h3{font-weight:700;margin-bottom:.5rem}.nafes-card p{font-size:.85rem;color:var(--text-muted);line-height:1.6}
+.quiz-container{max-width:700px}.quiz-question{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:1.5rem}.quiz-question .q-num{color:var(--accent-1);font-weight:700;font-size:.85rem;margin-bottom:.8rem}.quiz-question .q-text{font-size:1.05rem;font-weight:600;margin-bottom:1.2rem;line-height:1.8}.quiz-option{display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;border:1px solid var(--border);border-radius:10px;margin-bottom:.5rem;cursor:pointer;transition:all .2s;font-size:.95rem}.quiz-option:hover{background:rgba(99,102,241,0.08)}.quiz-option.selected{background:rgba(99,102,241,0.15);border-color:var(--accent-1)}.quiz-option.correct{background:rgba(52,211,153,0.15);border-color:var(--accent-emerald)}.quiz-option.wrong{background:rgba(239,68,68,0.15);border-color:#ef4444}.quiz-option .letter{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex-shrink:0}
+.submit-quiz{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;border:none;padding:.8rem 2.5rem;border-radius:12px;font-family:'Tajawal';font-size:1rem;font-weight:700;cursor:pointer;margin-top:1rem}.submit-quiz:hover{transform:scale(1.03);box-shadow:0 5px 25px var(--glow)}.score-display{text-align:center;padding:2rem;background:var(--bg-card);border-radius:16px;border:1px solid var(--border);margin-top:1.5rem}.score-display .score{font-size:3rem;font-weight:900;color:var(--accent-gold)}.score-display .label{color:var(--text-muted);margin-top:.5rem}
+.exam-detail-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-bottom:1rem}.exam-detail-card .q-head{color:var(--accent-1);font-weight:700;font-size:.85rem;margin-bottom:.5rem}.exam-detail-card .q-body{font-weight:600;margin-bottom:1rem;line-height:1.8}.exam-detail-card .sol-box{background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.2);border-radius:10px;padding:1rem}.exam-detail-card .sol-label{color:var(--accent-emerald);font-weight:700;font-size:.85rem;margin-bottom:.5rem}.exam-detail-card .sol-answer{margin-top:.5rem;font-weight:700;color:var(--accent-gold)}
+.mobile-toggle{display:none;background:none;border:none;color:var(--text-primary);font-size:1.5rem;cursor:pointer}@media(max-width:768px){.mobile-toggle{display:block}.sidebar{position:fixed;top:0;right:-300px;height:100vh;z-index:100;background:var(--bg-secondary);transition:right .3s}.sidebar.open{right:0}.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99}.sidebar.open~.sidebar-overlay{display:block}.main-content{padding:1rem}.header{padding:1rem}.chapter-grid{grid-template-columns:1fr}.welcome-banner{padding:1.5rem}.welcome-banner h2{font-size:1.2rem}.explanation-tabs{gap:.3rem}.exp-tab{padding:.4rem .6rem;font-size:.73rem}}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}.fade-in{animation:fadeIn .4s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<header class="header"><div class="header-right"><button class="mobile-toggle" onclick="toggleSidebar()">☰</button><div class="logo-icon">ر</div><div class="logo-text"><h1>منصة الرياضيات الذكية</h1><p>الصف الثالث المتوسط • طبعة 1447هـ</p></div></div><div class="header-badge">🎁 هدية من أ. عواطف العتيبي</div></header>
+<div class="app-container">
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-section"><div class="sidebar-title">القائمة الرئيسية</div><div class="nav-item active" onclick="showSection('home')"><span class="icon">🏠</span> الرئيسية</div></div>
+  <div class="sidebar-section"><div class="sidebar-title">الفصل الدراسي الأول</div>
+    <div class="nav-item" onclick="showChapter(0)"><span class="icon">📐</span> المعادلات الخطية</div>
+    <div class="nav-item" onclick="showChapter(1)"><span class="icon">📊</span> الدوال الخطية</div>
+    <div class="nav-item" onclick="showChapter(2)"><span class="icon">📉</span> تحليل الدوال الخطية</div>
+    <div class="nav-item" onclick="showChapter(3)"><span class="icon">⚖️</span> المتباينات الخطية</div>
+    <div class="nav-item" onclick="showChapter(4)"><span class="icon">🔗</span> أنظمة المعادلات</div></div>
+  <div class="sidebar-section"><div class="sidebar-title">الفصل الدراسي الثاني</div>
+    <div class="nav-item" onclick="showChapter(5)"><span class="icon">🔺</span> كثيرات الحدود</div>
+    <div class="nav-item" onclick="showChapter(6)"><span class="icon">🧮</span> التحليل والتربيعية</div>
+    <div class="nav-item" onclick="showChapter(7)"><span class="icon">📈</span> الدوال التربيعية</div>
+    <div class="nav-item" onclick="showChapter(8)"><span class="icon">📐</span> الجذرية والمثلثات</div>
+    <div class="nav-item" onclick="showChapter(9)"><span class="icon">📊</span> الإحصاء والاحتمال</div></div>
+  <div class="nav-divider"></div>
+  <div class="sidebar-section"><div class="sidebar-title">اختبارات نافس</div>
+    <div class="nav-item" onclick="showSection('nafes')"><span class="icon">🎯</span> مذاكرة نافس <span class="badge">مهم</span></div>
+    <div class="nav-item" onclick="showSection('nafes-exams')"><span class="icon">📝</span> نماذج محلولة</div>
+    <div class="nav-item" onclick="showSection('nafes-quiz')"><span class="icon">⚡</span> تدريب تفاعلي</div></div>
+</nav>
+<div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+<main class="main-content" id="mainContent"></main>
+</div>
+<script>
+const chapters = [
+  {name:"المعادلات الخطية",icon:"📐",color:"#6366f1",lessons:["المعادلات","حل المعادلات ذات الخطوة الواحدة","حل المعادلات المتعددة الخطوات","حل المعادلات التي تحتوي متغيرًا في طرفيها","حل المعادلات التي تتضمن القيمة المطلقة"]},
+  {name:"الدوال الخطية",icon:"📊",color:"#22d3ee",lessons:["العلاقات","الدوال","تمثيل المعادلات الخطية بيانيًا","حل المعادلات الخطية بيانيًا","معدل التغير والميل","المتتابعات الحسابية كدوال خطية"]},
+  {name:"تحليل الدوال الخطية",icon:"📉",color:"#f472b6",lessons:["تمثيل المعادلات المكتوبة بصيغة الميل والمقطع بيانيًا","كتابة المعادلات بصيغة الميل والمقطع","كتابة المعادلات بصيغة الميل ونقطة","المستقيمات المتوازية والمستقيمات المتعامدة"]},
+  {name:"المتباينات الخطية",icon:"⚖️",color:"#fbbf24",lessons:["حل المتباينات بالجمع أو بالطرح","حل المتباينات بالضرب أو بالقسمة","حل المتباينات المتعددة الخطوات","حل المتباينات المركبة","حل المتباينات التي تتضمن القيمة المطلقة"]},
+  {name:"أنظمة المعادلات الخطية",icon:"🔗",color:"#34d399",lessons:["حل نظام من معادلتين خطيتين بيانيًا","حل نظام من معادلتين خطيتين بالتعويض","حل نظام من معادلتين خطيتين بالحذف باستعمال الجمع أو الطرح","حل نظام من معادلتين خطيتين بالحذف باستعمال الضرب","تطبيقات على النظام المكون من معادلتين خطيتين"]},
+  {name:"كثيرات الحدود",icon:"🔺",color:"#a78bfa",lessons:["ضرب وحيدات الحد","قسمة وحيدات الحد","كثيرات الحدود","جمع كثيرات الحدود وطرحها","ضرب وحيدة حد في كثيرة حدود","ضرب كثيرات الحدود","حالات خاصة من ضرب كثيرات الحدود"]},
+  {name:"التحليل والمعادلات التربيعية",icon:"🧮",color:"#ec4899",lessons:["تحليل وحيدات الحد","استعمال خاصية التوزيع","المعادلات التربيعية: س²+ب س+ج=٠","المعادلات التربيعية: أ س²+ب س+ج=٠","المعادلات التربيعية: الفرق بين مربعين","المعادلات التربيعية: المربعات الكاملة"]},
+  {name:"الدوال التربيعية",icon:"📈",color:"#f97316",lessons:["تمثيل الدوال التربيعية بيانيًا","حل المعادلات التربيعية بيانيًا","حل المعادلات التربيعية بإكمال المربع","حل المعادلات التربيعية باستعمال القانون العام"]},
+  {name:"الدوال الجذرية والمثلثات",icon:"📐",color:"#14b8a6",lessons:["تبسيط العبارات الجذرية","العمليات على العبارات الجذرية","المعادلات الجذرية","نظرية فيثاغورس","المسافة بين نقطتين","المثلثات المتشابهة","النسب المثلثية"]},
+  {name:"الإحصاء والاحتمال",icon:"📊",color:"#8b5cf6",lessons:["تصميم دراسة مسحية","تحليل نتائج الدراسة المسحية","إحصائيات العينة ومعالم المجتمع","التباديل والتوافيق","احتمالات الحوادث المركبة"]}
+];
+const ED={};
+function S(ci,li,obj){ED[ci+"-"+li]=obj;}
+// ══════════════════════════════════════════════════════════
+// الفصل 1: المعادلات الخطية (5 دروس) - مراجعة شاملة
+// ══════════════════════════════════════════════════════════
+S(0,0,{
+0:`<h4>🎯 الشرح المبسّط: المعادلات</h4>
+<p>المعادلة هي <strong>جملة رياضية</strong> تتضمن علامة المساواة (=) وتحتوي على متغير واحد أو أكثر (حرف يمثل عددًا مجهولاً).</p>
+<p><strong>حل المعادلة</strong> هو القيمة التي تجعل المعادلة صحيحة عند التعويض بها مكان المتغير.</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p>هل <span class="math-formula">س = 5</span> حلٌّ للمعادلة <span class="math-formula">2س + 3 = 13</span>؟</p>
+<p>نعوّض: 2(5) + 3 = 10 + 3 = 13 ✅ نعم، إنه حل!</p></div>
+<div class="example-box"><div class="label">📌 مثال آخر</div>
+<p>هل <span class="math-formula">س = 4</span> حلٌّ للمعادلة <span class="math-formula">3س - 7 = 2</span>؟</p>
+<p>نعوّض: 3(4) - 7 = 12 - 7 = 5 ≠ 2 ❌ لا، ليس حلاً!</p></div>
+<div class="tip-box"><div class="label">💡 تذكّري</div>
+<p>التعويض هو أسهل طريقة للتحقق من صحة الحل: عوّضي بالقيمة وتأكدي أن الطرفين متساويان.</p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية: المعادلات</h4>
+<p>المعادلات موجودة في حياتنا اليومية أكثر مما نتخيل!</p>
+<div class="example-box"><div class="label">🛒 التسوق</div>
+<p>اشتريتِ عدة أغراض بسعر واحد + ضريبة 15% = المجموع 230 ريال</p>
+<p>هذه معادلة! السعر هو المتغير المجهول.</p></div>
+<div class="example-box"><div class="label">⏰ الوقت</div>
+<p>سرتِ مسافة بسرعة 80 كم/ساعة واستغرقتِ وقتًا معينًا = 240 كم</p>
+<p><span class="math-formula">80 × س = 240</span> → الزمن = 3 ساعات</p></div>
+<div class="example-box"><div class="label">🎂 العمر</div>
+<p>عمر أحمد ضعف عمر سارة، ومجموع عمريهما 36 سنة</p>
+<p><span class="math-formula">س + 2س = 36</span> → عمر سارة = 12 سنة</p></div>`,
+
+2:`<h4>⚡ الشرح السريع: المعادلات</h4>
+<p>▸ <strong>المعادلة:</strong> عبارة فيها علامة (=) ومتغير مثل س أو ص</p>
+<p>▸ <strong>الحل:</strong> القيمة التي تجعل الطرف الأيمن = الطرف الأيسر</p>
+<p>▸ <strong>التحقق:</strong> عوّضي بالحل وتأكدي من تساوي الطرفين</p>
+<p>▸ <strong>المعادلة الخطية:</strong> أعلى قوة للمتغير فيها = 1 (مثل 2س + 3 = 7)</p>
+<div class="example-box"><div class="label">✅ تدريب سريع</div>
+<p>تحققي: هل س=3 حل لـ <span class="math-formula">4س - 5 = 7</span>؟</p>
+<p>4(3) - 5 = 12 - 5 = 7 ✅ <strong>نعم!</strong></p></div>`,
+
+3:`<h4>📖 الشرح التفصيلي: المعادلات</h4>
+<div class="detail-box"><div class="label">📚 التعريفات الأساسية</div>
+<p><strong>المعادلة:</strong> عبارة رياضية تتكون من طرفين يفصل بينهما علامة المساواة (=). كل طرف يحتوي على تعبيرات رياضية قد تشمل أعدادًا ومتغيرات وعمليات حسابية.</p>
+<p><strong>المتغير:</strong> رمز (عادةً حرف مثل س أو ص) يمثل قيمة عددية مجهولة نسعى لإيجادها.</p>
+<p><strong>الثابت:</strong> عدد معلوم القيمة لا يتغير (مثل 3 أو -7 أو ½).</p>
+<p><strong>المعامل:</strong> العدد المضروب في المتغير (مثل 2 في 2س).</p>
+<p><strong>الحد:</strong> جزء من المعادلة مفصول بعلامة + أو - (مثل 2س أو 3).</p></div>
+
+<div class="detail-box"><div class="label">📚 أنواع المعادلات</div>
+<p>▸ <strong>خطية (من الدرجة الأولى):</strong> أعلى قوة للمتغير = 1 → مثل <span class="math-formula">3س + 5 = 14</span></p>
+<p>▸ <strong>تربيعية (من الدرجة الثانية):</strong> أعلى قوة = 2 → مثل <span class="math-formula">س² - 4 = 0</span></p>
+<p>▸ <strong>تكعيبية (من الدرجة الثالثة):</strong> أعلى قوة = 3 → مثل <span class="math-formula">س³ = 8</span></p></div>
+
+<div class="step-box"><div class="label">خطوات التحقق من الحل</div>
+<p><strong>الخطوة 1:</strong> خذي القيمة المقترحة للمتغير</p>
+<p><strong>الخطوة 2:</strong> عوّضي بها في المعادلة مكان كل ظهور للمتغير</p>
+<p><strong>الخطوة 3:</strong> بسّطي كل طرف على حدة</p>
+<p><strong>الخطوة 4:</strong> قارني الطرفين: إذا تساويا فالقيمة حل، وإلا فلا</p></div>
+
+<div class="example-box"><div class="label">📌 مثال تفصيلي 1</div>
+<p>تحققي: هل <span class="math-formula">س = 6</span> حل للمعادلة <span class="math-formula">5س - 8 = 3س + 4</span>؟</p>
+<p><strong>الطرف الأيمن:</strong> 5(6) - 8 = 30 - 8 = <strong>22</strong></p>
+<p><strong>الطرف الأيسر:</strong> 3(6) + 4 = 18 + 4 = <strong>22</strong></p>
+<p>22 = 22 ✅ → <strong>نعم، س = 6 حلٌّ صحيح</strong></p></div>
+
+<div class="example-box"><div class="label">📌 مثال تفصيلي 2</div>
+<p>تحققي: هل <span class="math-formula">س = -2</span> حل للمعادلة <span class="math-formula">س² + 3س = -2</span>؟</p>
+<p><strong>الطرف الأيمن:</strong> (-2)² + 3(-2) = 4 - 6 = <strong>-2</strong></p>
+<p><strong>الطرف الأيسر:</strong> <strong>-2</strong></p>
+<p>-2 = -2 ✅ → <strong>نعم، حلٌّ صحيح</strong></p></div>
+
+<div class="tip-box"><div class="label">⚠️ أخطاء شائعة</div>
+<p>1. نسيان تعويض المتغير في <strong>جميع</strong> المواضع التي يظهر فيها</p>
+<p>2. الخطأ في حساب إشارة الأعداد السالبة عند التعويض</p>
+<p>3. الخلط بين (-2)² = 4 و -2² = -4</p></div>`
+});
+
+S(0,1,{
+0:`<h4>🎯 الشرح المبسّط: حل المعادلات ذات الخطوة الواحدة</h4>
+<p>هذه أبسط أنواع المعادلات! نحتاج <strong>عملية حسابية واحدة فقط</strong> لعزل المتغير وإيجاد قيمته.</p>
+<p>الفكرة الأساسية: نريد أن يبقى المتغير <strong>وحيدًا</strong> في أحد طرفي المعادلة، فنستخدم العملية العكسية.</p>
+<div class="example-box"><div class="label">📌 مثال: الجمع → نطرح</div>
+<p><span class="math-formula">س + 7 = 15</span></p>
+<p>نطرح 7 من الطرفين: <span class="math-formula">س = 15 - 7 = 8</span></p></div>
+<div class="example-box"><div class="label">📌 مثال: الضرب → نقسم</div>
+<p><span class="math-formula">4س = 28</span></p>
+<p>نقسم الطرفين على 4: <span class="math-formula">س = 28 ÷ 4 = 7</span></p></div>
+<div class="example-box"><div class="label">📌 مثال: الطرح → نجمع</div>
+<p><span class="math-formula">س - 9 = 11</span></p>
+<p>نضيف 9 للطرفين: <span class="math-formula">س = 11 + 9 = 20</span></p></div>
+<div class="tip-box"><div class="label">💡 القاعدة الذهبية</div>
+<p>أي عملية تفعلينها في طرف، <strong>لازم</strong> تفعلينها في الطرف الآخر عشان يبقى الميزان متوازن!</p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية: حل المعادلات ذات الخطوة الواحدة</h4>
+<p>كل موقف في حياتنا فيه شيء مجهول نبحث عنه يمكن تحويله إلى معادلة!</p>
+<div class="example-box"><div class="label">🛒 في السوق</div>
+<p>اشتريتِ كتابًا ودفعتِ للبائع 50 ريالاً، فأعاد لكِ 12 ريالاً. كم سعر الكتاب؟</p>
+<p><span class="math-formula">س + 12 = 50</span></p>
+<p>سعر الكتاب = 50 - 12 = <strong>38 ريالاً</strong></p></div>
+<div class="example-box"><div class="label">🍕 في المطعم</div>
+<p>5 صديقات تقسمن فاتورة المطعم بالتساوي، كل وحدة دفعت 35 ريالاً</p>
+<p><span class="math-formula">س ÷ 5 = 35</span></p>
+<p>المجموع الكلي = 35 × 5 = <strong>175 ريالاً</strong></p></div>
+<div class="example-box"><div class="label">🏃 في الرياضة</div>
+<p>ركضتِ عدة كيلومترات وتبقى 3 كم لإكمال 10 كم</p>
+<p><span class="math-formula">س + 3 = 10</span></p>
+<p>ركضتِ = <strong>7 كم</strong></p></div>`,
+
+2:`<h4>⚡ الشرح السريع: حل المعادلات ذات الخطوة الواحدة</h4>
+<p><strong>العمليات العكسية:</strong></p>
+<p>▸ الجمع ↔ الطرح: <span class="math-formula">س + أ = ب → س = ب - أ</span></p>
+<p>▸ الطرح ↔ الجمع: <span class="math-formula">س - أ = ب → س = ب + أ</span></p>
+<p>▸ الضرب ↔ القسمة: <span class="math-formula">أ·س = ب → س = ب ÷ أ</span></p>
+<p>▸ القسمة ↔ الضرب: <span class="math-formula">س ÷ أ = ب → س = ب × أ</span></p>
+<div class="example-box"><div class="label">✅ تدريبات سريعة مع الحل</div>
+<p>1) <span class="math-formula">س + 13 = 25</span> → <strong>س = 12</strong></p>
+<p>2) <span class="math-formula">س - 8 = 17</span> → <strong>س = 25</strong></p>
+<p>3) <span class="math-formula">6س = 42</span> → <strong>س = 7</strong></p>
+<p>4) <span class="math-formula">س ÷ 3 = 11</span> → <strong>س = 33</strong></p>
+<p>5) <span class="math-formula">-5س = 30</span> → <strong>س = -6</strong></p></div>`,
+
+3:`<h4>📖 الشرح التفصيلي: حل المعادلات ذات الخطوة الواحدة</h4>
+<div class="detail-box"><div class="label">📚 المفهوم الأساسي</div>
+<p>المعادلة ذات الخطوة الواحدة هي معادلة يرتبط فيها المتغير بعملية حسابية واحدة فقط (جمع أو طرح أو ضرب أو قسمة). لحلها نستخدم <strong>العملية العكسية</strong> على كلا الطرفين.</p>
+<p>لماذا على كلا الطرفين؟ لأن المعادلة مثل <strong>الميزان المتوازن</strong> ⚖️ — أي تغيير في طرف يجب أن يقابله نفس التغيير في الطرف الآخر.</p></div>
+
+<div class="detail-box"><div class="label">📚 الخواص المستخدمة</div>
+<p><strong>خاصية الجمع:</strong> إذا أ = ب، فإن أ + ج = ب + ج</p>
+<p><strong>خاصية الطرح:</strong> إذا أ = ب، فإن أ - ج = ب - ج</p>
+<p><strong>خاصية الضرب:</strong> إذا أ = ب، فإن أ × ج = ب × ج</p>
+<p><strong>خاصية القسمة:</strong> إذا أ = ب، فإن أ ÷ ج = ب ÷ ج (حيث ج ≠ 0)</p></div>
+
+<div class="step-box"><div class="label">خطوات الحل المنظمة</div>
+<p><strong>1.</strong> حددي العملية المرتبطة بالمتغير (جمع/طرح/ضرب/قسمة)</p>
+<p><strong>2.</strong> طبّقي العملية العكسية على <strong>كلا الطرفين</strong></p>
+<p><strong>3.</strong> بسّطي لتحصلي على قيمة المتغير</p>
+<p><strong>4.</strong> تحققي بالتعويض في المعادلة الأصلية</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: معادلة جمع</div>
+<p><span class="math-formula">س + 14 = 31</span></p>
+<p><strong>العملية:</strong> جمع 14 مع المتغير</p>
+<p><strong>العكس:</strong> طرح 14 من الطرفين</p>
+<p><span class="math-formula">س + 14 - 14 = 31 - 14</span></p>
+<p><span class="math-formula">س = 17</span></p>
+<p><strong>التحقق:</strong> 17 + 14 = 31 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: معادلة طرح</div>
+<p><span class="math-formula">س - 22 = 13</span></p>
+<p><strong>العملية:</strong> طرح 22 من المتغير</p>
+<p><strong>العكس:</strong> جمع 22 في الطرفين</p>
+<p><span class="math-formula">س = 13 + 22 = 35</span></p>
+<p><strong>التحقق:</strong> 35 - 22 = 13 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: معادلة ضرب</div>
+<p><span class="math-formula">8س = 72</span></p>
+<p><strong>العملية:</strong> ضرب المتغير في 8</p>
+<p><strong>العكس:</strong> قسمة الطرفين على 8</p>
+<p><span class="math-formula">س = 72 ÷ 8 = 9</span></p>
+<p><strong>التحقق:</strong> 8 × 9 = 72 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 4: معادلة قسمة</div>
+<p><span class="math-formula">س ÷ 7 = 12</span></p>
+<p><strong>العملية:</strong> قسمة المتغير على 7</p>
+<p><strong>العكس:</strong> ضرب الطرفين في 7</p>
+<p><span class="math-formula">س = 12 × 7 = 84</span></p>
+<p><strong>التحقق:</strong> 84 ÷ 7 = 12 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 5: معامل سالب</div>
+<p><span class="math-formula">-6س = 42</span></p>
+<p>نقسم الطرفين على -6:</p>
+<p><span class="math-formula">س = 42 ÷ (-6) = -7</span></p>
+<p><strong>التحقق:</strong> -6 × (-7) = 42 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 6: معادلة كسرية</div>
+<p><span class="math-formula">س/5 = -3</span></p>
+<p>نضرب الطرفين في 5:</p>
+<p><span class="math-formula">س = -3 × 5 = -15</span></p>
+<p><strong>التحقق:</strong> -15 ÷ 5 = -3 ✅</p></div>
+
+<div class="tip-box"><div class="label">⚠️ أخطاء شائعة وكيف تتجنبينها</div>
+<p>1. <strong>نسيان تطبيق العملية على الطرفين:</strong> إذا طرحتِ من اليمين لازم تطرحين من اليسار أيضًا</p>
+<p>2. <strong>الخطأ في إشارة القسمة على عدد سالب:</strong> سالب ÷ سالب = موجب!</p>
+<p>3. <strong>عدم التحقق من الحل:</strong> دائمًا عوّضي بالإجابة في المعادلة الأصلية</p></div>`
+});
+
+S(0,2,{
+0:`<h4>🎯 الشرح المبسّط: حل المعادلات المتعددة الخطوات</h4>
+<p>هنا المعادلة تحتاج <strong>أكثر من عملية</strong> لحلها. قد تحتوي على أقواس أو حدود متشابهة.</p>
+<p><strong>الخطوات بالترتيب:</strong> فك الأقواس ← تجميع الحدود المتشابهة ← عمليات عكسية</p>
+<div class="example-box"><div class="label">📌 مثال 1: خطوتان</div>
+<p><span class="math-formula">2س + 5 = 17</span></p>
+<p>نطرح 5: <span class="math-formula">2س = 12</span></p>
+<p>نقسم على 2: <span class="math-formula">س = 6</span></p></div>
+<div class="example-box"><div class="label">📌 مثال 2: مع أقواس</div>
+<p><span class="math-formula">3(س + 4) = 27</span></p>
+<p>نفك الأقواس: <span class="math-formula">3س + 12 = 27</span></p>
+<p>نطرح 12: <span class="math-formula">3س = 15</span></p>
+<p>نقسم على 3: <span class="math-formula">س = 5</span></p></div>
+<div class="tip-box"><div class="label">💡 نصيحة</div>
+<p>فكّري فيها كالبصلة 🧅: نشيل الطبقات واحدة تلو الأخرى من الخارج للداخل!</p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية: المعادلات المتعددة الخطوات</h4>
+<div class="example-box"><div class="label">🏪 مطعم</div>
+<p>3 صديقات كل وحدة طلبت وجبة بنفس السعر + مشروب بـ 5 ريالات. الفاتورة 72 ريالاً.</p>
+<p><span class="math-formula">3(س + 5) = 72</span></p>
+<p>فك: <span class="math-formula">3س + 15 = 72</span> → <span class="math-formula">3س = 57</span> → <strong>الوجبة = 19 ريالاً</strong></p></div>
+<div class="example-box"><div class="label">📐 محيط مستطيل</div>
+<p>محيط مستطيل = 46 سم، الطول يزيد 5 سم عن العرض. ما أبعاده؟</p>
+<p><span class="math-formula">2(س + س + 5) = 46</span> → <span class="math-formula">4س + 10 = 46</span></p>
+<p><span class="math-formula">4س = 36</span> → العرض = 9 سم، الطول = 14 سم</p></div>
+<div class="example-box"><div class="label">💰 ادّخار</div>
+<p>وفرتِ 200 ريال + 50 ريالاً أسبوعيًا. بعد كم أسبوع يصبح المبلغ 600 ريال؟</p>
+<p><span class="math-formula">200 + 50س = 600</span> → <span class="math-formula">50س = 400</span> → <strong>8 أسابيع</strong></p></div>`,
+
+2:`<h4>⚡ الشرح السريع: المعادلات المتعددة الخطوات</h4>
+<p><strong>الترتيب الصحيح:</strong></p>
+<p>1️⃣ فك الأقواس باستخدام خاصية التوزيع: <span class="math-formula">أ(ب + ج) = أب + أج</span></p>
+<p>2️⃣ تجميع الحدود المتشابهة في كل طرف</p>
+<p>3️⃣ التخلص من الحد الثابت (بالجمع أو الطرح)</p>
+<p>4️⃣ التخلص من المعامل (بالقسمة أو الضرب)</p>
+<div class="example-box"><div class="label">✅ تدريبات</div>
+<p>1) <span class="math-formula">4س + 7 = 31</span> → <span class="math-formula">4س = 24</span> → <strong>س = 6</strong></p>
+<p>2) <span class="math-formula">5س - 10 = 25</span> → <span class="math-formula">5س = 35</span> → <strong>س = 7</strong></p>
+<p>3) <span class="math-formula">2(س + 6) = 20</span> → <span class="math-formula">2س + 12 = 20</span> → <strong>س = 4</strong></p></div>`,
+
+3:`<h4>📖 الشرح التفصيلي: حل المعادلات المتعددة الخطوات</h4>
+<div class="detail-box"><div class="label">📚 المفهوم</div>
+<p>المعادلة المتعددة الخطوات تجمع بين عدة عمليات: قد تتضمن أقواسًا تحتاج فكًّا (خاصية التوزيع)، وحدودًا متشابهة تحتاج تجميعًا، ثم عمليات عكسية لعزل المتغير.</p>
+<p><strong>خاصية التوزيع:</strong> <span class="math-formula">أ(ب + ج) = أب + أج</span></p>
+<p><strong>الحدود المتشابهة:</strong> حدود تحتوي نفس المتغير بنفس الأس (مثل 3س و 5س).</p></div>
+
+<div class="step-box"><div class="label">الخطوة 1: فك الأقواس</div>
+<p>اضربي ما قبل القوس في كل حد داخل القوس مع الانتباه للإشارات.</p>
+<p>مثال: <span class="math-formula">-2(3س - 4) = -6س + 8</span> (لاحظي عكس الإشارة)</p></div>
+
+<div class="step-box"><div class="label">الخطوة 2: تجميع الحدود المتشابهة</div>
+<p>اجمعي معاملات المتغيرات معًا والأعداد الثابتة معًا في كل طرف على حدة.</p></div>
+
+<div class="step-box"><div class="label">الخطوة 3: عزل المتغير</div>
+<p>استخدمي العمليات العكسية: أولاً تخلصي من الحد الثابت، ثم من المعامل.</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p><span class="math-formula">4(2س + 3) - 2س = 30</span></p>
+<p><strong>فك الأقواس:</strong> <span class="math-formula">8س + 12 - 2س = 30</span></p>
+<p><strong>تجميع المتشابهة:</strong> <span class="math-formula">6س + 12 = 30</span></p>
+<p><strong>طرح 12:</strong> <span class="math-formula">6س = 18</span></p>
+<p><strong>قسمة على 6:</strong> <span class="math-formula">س = 3</span></p>
+<p><strong>التحقق:</strong> 4(6+3) - 2(3) = 4(9) - 6 = 36 - 6 = 30 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 2</div>
+<p><span class="math-formula">5(س - 2) + 3(س + 4) = 22</span></p>
+<p><strong>فك:</strong> <span class="math-formula">5س - 10 + 3س + 12 = 22</span></p>
+<p><strong>تجميع:</strong> <span class="math-formula">8س + 2 = 22</span></p>
+<p><strong>حل:</strong> <span class="math-formula">8س = 20</span> → <span class="math-formula">س = 2.5</span></p>
+<p><strong>التحقق:</strong> 5(0.5) + 3(6.5) = 2.5 + 19.5 = 22 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: مع كسور</div>
+<p><span class="math-formula">س/2 + 3 = 10</span></p>
+<p>طرح 3: <span class="math-formula">س/2 = 7</span></p>
+<p>ضرب في 2: <span class="math-formula">س = 14</span></p>
+<p><strong>التحقق:</strong> 14/2 + 3 = 7 + 3 = 10 ✅</p></div>
+
+<div class="tip-box"><div class="label">⚠️ أخطاء شائعة</div>
+<p>1. <strong>نسيان توزيع الإشارة السالبة:</strong> <span class="math-formula">-2(س - 3) = -2س + 6</span> وليس -2س - 6!</p>
+<p>2. <strong>تجميع حدود غير متشابهة:</strong> 2س + 3 ≠ 5س (لأن 3 ليست حد متغير)</p>
+<p>3. <strong>حل قبل فك الأقواس:</strong> يجب فك الأقواس أولاً ثم التبسيط</p></div>`
+});
+
+S(0,3,{
+0:`<h4>🎯 الشرح المبسّط: حل المعادلات التي تحتوي متغيرًا في طرفيها</h4>
+<p>هنا المتغير يظهر في <strong>كلا الطرفين</strong>. الحل: ننقل المتغيرات لطرف والأعداد للطرف الآخر.</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p><span class="math-formula">5س + 3 = 3س + 11</span></p>
+<p>نطرح 3س من الطرفين: <span class="math-formula">2س + 3 = 11</span></p>
+<p>نطرح 3: <span class="math-formula">2س = 8</span> → <strong>س = 4</strong></p>
+<p><strong>التحقق:</strong> 5(4)+3 = 23 و 3(4)+11 = 23 ✅</p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية</h4>
+<div class="example-box"><div class="label">💰 التوفير</div>
+<p>سارة معها 50 ريالاً وتوفر 10 أسبوعيًا. نورة معها 20 ريالاً وتوفر 15 أسبوعيًا. متى يتساوى المبلغان؟</p>
+<p><span class="math-formula">50 + 10س = 20 + 15س</span></p>
+<p><span class="math-formula">30 = 5س</span> → بعد <strong>6 أسابيع</strong></p></div>
+<div class="example-box"><div class="label">📱 شركات الاتصالات</div>
+<p>شركة أ: 100 ريال + 0.5 لكل دقيقة. شركة ب: 50 ريال + ريال لكل دقيقة.</p>
+<p><span class="math-formula">100 + 0.5س = 50 + س</span> → عند <strong>100 دقيقة</strong> تتساوى التكلفة</p></div>`,
+
+2:`<h4>⚡ الشرح السريع</h4>
+<p><strong>الطريقة:</strong></p>
+<p>1️⃣ اجمعي كل حدود المتغير في طرف واحد</p>
+<p>2️⃣ اجمعي كل الأعداد الثابتة في الطرف الآخر</p>
+<p>3️⃣ بسّطي وحلّي</p>
+<div class="example-box"><div class="label">✅ تدريبات</div>
+<p>1) <span class="math-formula">7س - 4 = 3س + 12</span> → <span class="math-formula">4س = 16</span> → <strong>س = 4</strong></p>
+<p>2) <span class="math-formula">2س + 9 = 5س - 6</span> → <span class="math-formula">15 = 3س</span> → <strong>س = 5</strong></p>
+<p>3) <span class="math-formula">6س - 1 = 4س + 7</span> → <span class="math-formula">2س = 8</span> → <strong>س = 4</strong></p></div>`,
+
+3:`<h4>📖 الشرح التفصيلي: معادلات بمتغير في طرفيها</h4>
+<div class="detail-box"><div class="label">📚 المفهوم</div>
+<p>عندما يظهر المتغير في الطرفين، لا نستطيع عزله مباشرة. نحتاج أولاً لنقل جميع حدود المتغير إلى طرف واحد وجميع الثوابت إلى الطرف الآخر.</p>
+<p><strong>القاعدة:</strong> عند نقل حد من طرف لآخر، نُغيّر إشارته (أو نطبّق العملية العكسية على الطرفين).</p></div>
+
+<div class="step-box"><div class="label">الخطوات المنظمة</div>
+<p><strong>1.</strong> فك الأقواس إن وجدت في أي طرف</p>
+<p><strong>2.</strong> تجميع الحدود المتشابهة في كل طرف</p>
+<p><strong>3.</strong> نقل حدود المتغير لطرف (عادةً الطرف الذي فيه المعامل الأكبر)</p>
+<p><strong>4.</strong> نقل الثوابت للطرف الآخر</p>
+<p><strong>5.</strong> تبسيط وحل</p>
+<p><strong>6.</strong> التحقق في المعادلة الأصلية</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p><span class="math-formula">3(س + 4) = 2(س + 7)</span></p>
+<p><strong>فك:</strong> <span class="math-formula">3س + 12 = 2س + 14</span></p>
+<p><strong>نطرح 2س:</strong> <span class="math-formula">س + 12 = 14</span></p>
+<p><strong>نطرح 12:</strong> <span class="math-formula">س = 2</span></p>
+<p><strong>التحقق:</strong> 3(2+4) = 3(6) = 18 و 2(2+7) = 2(9) = 18 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 2</div>
+<p><span class="math-formula">4(2س - 1) = 3(س + 6) + س</span></p>
+<p><strong>فك:</strong> <span class="math-formula">8س - 4 = 3س + 18 + س</span></p>
+<p><strong>تجميع اليسار:</strong> <span class="math-formula">8س - 4 = 4س + 18</span></p>
+<p><strong>نطرح 4س:</strong> <span class="math-formula">4س - 4 = 18</span></p>
+<p><strong>نضيف 4:</strong> <span class="math-formula">4س = 22</span></p>
+<p><strong>نقسم:</strong> <span class="math-formula">س = 5.5</span></p>
+<p><strong>التحقق:</strong> 4(11-1)=40 و 3(11.5)+5.5=34.5+5.5=40 ✅</p></div>
+
+<div class="tip-box"><div class="label">⚠️ حالات خاصة مهمة</div>
+<p><strong>حالة 1: حلول لا نهائية (معادلة هوية)</strong></p>
+<p><span class="math-formula">2(س + 3) = 2س + 6</span> → <span class="math-formula">2س + 6 = 2س + 6</span> → 6 = 6 (صحيح دائمًا!)</p>
+<p>هذا يعني أن <strong>أي عدد</strong> يحقق المعادلة.</p>
+<p><strong>حالة 2: لا يوجد حل (تناقض)</strong></p>
+<p><span class="math-formula">3س + 5 = 3س + 8</span> → 5 = 8 (خطأ!)</p>
+<p>هذا يعني أن <strong>لا عدد</strong> يحقق المعادلة.</p></div>`
+});
+
+S(0,4,{
+0:`<h4>🎯 الشرح المبسّط: حل المعادلات التي تتضمن القيمة المطلقة</h4>
+<p>القيمة المطلقة <span class="math-formula">|س|</span> = بُعد العدد عن الصفر على خط الأعداد (دائمًا موجبة أو صفر).</p>
+<p><span class="math-formula">|5| = 5</span> و <span class="math-formula">|-5| = 5</span> (كلاهما يبعدان 5 عن الصفر)</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p><span class="math-formula">|س| = 7</span></p>
+<p>أي عدد يبعد 7 عن الصفر → <strong>س = 7 أو س = -7</strong> (حلّان!)</p></div>
+<div class="tip-box"><div class="label">💡 تذكّري</div>
+<p>معادلة القيمة المطلقة تُعطي <strong>حلّين</strong> عادةً. إذا كان الطرف الآخر سالبًا → <strong>لا حل</strong> (لأن القيمة المطلقة لا تكون سالبة أبدًا).</p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية: القيمة المطلقة</h4>
+<div class="example-box"><div class="label">🏠 المسافة</div>
+<p>بيتك يبعد 3 كم عن المدرسة. ممكن يكون يمين المدرسة أو يسارها!</p>
+<p><span class="math-formula">|س| = 3</span> → <strong>س = 3 أو س = -3</strong></p></div>
+<div class="example-box"><div class="label">🌡️ درجة الحرارة</div>
+<p>الفرق بين الحرارة الفعلية والمتوقعة (25°) لا يتجاوز 2 درجة</p>
+<p><span class="math-formula">|س - 25| = 2</span> → الحرارة <strong>23° أو 27°</strong></p></div>
+<div class="example-box"><div class="label">🏭 ضبط الجودة</div>
+<p>وزن المنتج يجب أن يكون 500 غرام ± 3 غرامات</p>
+<p><span class="math-formula">|س - 500| ≤ 3</span> → الوزن المقبول: من 497 إلى 503 غرام</p></div>`,
+
+2:`<h4>⚡ الشرح السريع: القيمة المطلقة</h4>
+<p><strong>القاعدة الأساسية:</strong></p>
+<p><span class="math-formula">|أ| = ب</span> (حيث ب ≥ 0) تعني:</p>
+<p>▸ الحالة 1: <span class="math-formula">أ = ب</span></p>
+<p>▸ الحالة 2: <span class="math-formula">أ = -ب</span></p>
+<div class="example-box"><div class="label">✅ تدريبات</div>
+<p>1) <span class="math-formula">|س| = 9</span> → <strong>س = 9 أو س = -9</strong></p>
+<p>2) <span class="math-formula">|2س - 4| = 10</span></p>
+<p>حالة 1: <span class="math-formula">2س - 4 = 10</span> → <strong>س = 7</strong></p>
+<p>حالة 2: <span class="math-formula">2س - 4 = -10</span> → <strong>س = -3</strong></p>
+<p>3) <span class="math-formula">|س + 5| = -2</span> → <strong>لا حل!</strong></p></div>`,
+
+3:`<h4>📖 الشرح التفصيلي: معادلات القيمة المطلقة</h4>
+<div class="detail-box"><div class="label">📚 التعريف الدقيق</div>
+<p>القيمة المطلقة للعدد أ هي المسافة بين أ والصفر على خط الأعداد:</p>
+<p><span class="math-formula">|أ| = أ</span> إذا كان أ ≥ 0</p>
+<p><span class="math-formula">|أ| = -أ</span> إذا كان أ < 0</p>
+<p>بمعنى آخر: القيمة المطلقة تُزيل الإشارة السالبة وتُبقي الموجبة كما هي.</p></div>
+
+<div class="step-box"><div class="label">خطوات حل معادلة القيمة المطلقة</div>
+<p><strong>1.</strong> اعزلي تعبير القيمة المطلقة في أحد الطرفين</p>
+<p><strong>2.</strong> تحققي: إذا كان الطرف الآخر سالبًا → لا حل (توقفي)</p>
+<p><strong>3.</strong> اكتبي حالتين: الموجبة والسالبة</p>
+<p><strong>4.</strong> حلّي كل حالة على حدة</p>
+<p><strong>5.</strong> تحققي من كلا الحلّين في المعادلة <strong>الأصلية</strong></p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: بسيط</div>
+<p><span class="math-formula">|س - 3| = 8</span></p>
+<p><strong>الحالة 1:</strong> <span class="math-formula">س - 3 = 8</span> → <span class="math-formula">س = 11</span></p>
+<p><strong>الحالة 2:</strong> <span class="math-formula">س - 3 = -8</span> → <span class="math-formula">س = -5</span></p>
+<p><strong>التحقق:</strong> |11-3| = |8| = 8 ✅ | |-5-3| = |-8| = 8 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: يحتاج عزل أولاً</div>
+<p><span class="math-formula">|3س + 6| - 4 = 8</span></p>
+<p><strong>نعزل القيمة المطلقة:</strong> <span class="math-formula">|3س + 6| = 12</span></p>
+<p><strong>الحالة 1:</strong> <span class="math-formula">3س + 6 = 12</span> → <span class="math-formula">3س = 6</span> → <strong>س = 2</strong></p>
+<p><strong>الحالة 2:</strong> <span class="math-formula">3س + 6 = -12</span> → <span class="math-formula">3س = -18</span> → <strong>س = -6</strong></p>
+<p><strong>التحقق:</strong></p>
+<p>س=2: |6+6|-4 = 12-4 = 8 ✅</p>
+<p>س=-6: |-18+6|-4 = |-12|-4 = 12-4 = 8 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: لا حل</div>
+<p><span class="math-formula">|2س - 1| + 5 = 3</span></p>
+<p>نعزل: <span class="math-formula">|2س - 1| = -2</span></p>
+<p>الطرف الآخر <strong>سالب</strong> → القيمة المطلقة لا يمكن أن تساوي عددًا سالبًا!</p>
+<p>→ <strong>لا يوجد حل ∅</strong></p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 4: حل وحيد</div>
+<p><span class="math-formula">|4س + 8| = 0</span></p>
+<p>القيمة المطلقة = صفر فقط عندما ما بداخلها = صفر</p>
+<p><span class="math-formula">4س + 8 = 0</span> → <span class="math-formula">س = -2</span></p>
+<p>→ <strong>حل وحيد فقط!</strong></p></div>
+
+<div class="tip-box"><div class="label">⚠️ أخطاء شائعة</div>
+<p>1. <strong>نسيان الحالة السالبة:</strong> |أ|=ب تعطي حلّين وليس حلاً واحدًا</p>
+<p>2. <strong>عدم عزل القيمة المطلقة أولاً:</strong> يجب أن تكون |...| وحدها في طرف</p>
+<p>3. <strong>إعطاء حل عندما الطرف الآخر سالب:</strong> |...| ≥ 0 دائمًا</p></div>`
+});
+// ══════════════════════════════════════════════════════════
+// الفصل 2: الدوال الخطية (6 دروس) - مراجعة شاملة
+// ══════════════════════════════════════════════════════════
+S(1,0,{
+0:`<h4>🎯 الشرح المبسّط: العلاقات</h4>
+<p>العلاقة هي مجموعة من <strong>الأزواج المرتبة</strong> (س، ص)، حيث كل زوج يربط قيمة من المدخلات بقيمة من المخرجات.</p>
+<p><strong>المجال:</strong> مجموعة جميع قيم س (المدخلات) | <strong>المدى:</strong> مجموعة جميع قيم ص (المخرجات)</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p>العلاقة: {(1, 3), (2, 5), (3, 7), (4, 9)}</p>
+<p><strong>المجال:</strong> {1, 2, 3, 4} | <strong>المدى:</strong> {3, 5, 7, 9}</p></div>
+<div class="example-box"><div class="label">📌 مثال من جدول</div>
+<p>س: 0, 1, 2, 3 → ص: 2, 5, 8, 11</p>
+<p>القاعدة: <span class="math-formula">ص = 3س + 2</span></p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية: العلاقات</h4>
+<div class="example-box"><div class="label">📱 جهات الاتصال</div>
+<p>كل شخص (س) مرتبط برقم هاتف (ص) → هذه علاقة!</p>
+<p>{(أحمد, 0551234567), (سارة, 0509876543), (نورة, 0531112222)}</p></div>
+<div class="example-box"><div class="label">🎓 الدرجات</div>
+<p>كل طالبة (س) لها درجة (ص) في الاختبار</p>
+<p>{(مريم, 95), (هند, 88), (لينا, 92)}</p></div>
+<div class="example-box"><div class="label">🌡️ الطقس</div>
+<p>كل يوم (س) له درجة حرارة (ص): {(السبت, 35°), (الأحد, 37°), (الاثنين, 33°)}</p></div>`,
+
+2:`<h4>⚡ الشرح السريع: العلاقات</h4>
+<p>▸ <strong>العلاقة</strong> = مجموعة أزواج مرتبة (س، ص)</p>
+<p>▸ <strong>المجال</strong> = جميع قيم س (المدخلات/الإحداثيات الأولى)</p>
+<p>▸ <strong>المدى</strong> = جميع قيم ص (المخرجات/الإحداثيات الثانية)</p>
+<p>▸ <strong>طرق التمثيل:</strong> أزواج مرتبة، جدول، رسم بياني، خريطة سهم</p>
+<div class="example-box"><div class="label">✅ تدريب</div>
+<p>العلاقة: {(-1, 4), (0, 2), (3, -1), (5, 0)}</p>
+<p>المجال: <strong>{-1, 0, 3, 5}</strong> | المدى: <strong>{-1, 0, 2, 4}</strong></p></div>`,
+
+3:`<h4>📖 الشرح التفصيلي: العلاقات</h4>
+<div class="detail-box"><div class="label">📚 التعريف الكامل</div>
+<p>العلاقة الرياضية هي أي مجموعة من الأزواج المرتبة. كل زوج مرتب (س، ص) يتكون من عنصر أول يسمى <strong>الإحداثي السيني</strong> وعنصر ثانٍ يسمى <strong>الإحداثي الصادي</strong>.</p>
+<p><strong>ملاحظة مهمة:</strong> ترتيب العناصر في الزوج المرتب مهم! (2, 3) ≠ (3, 2)</p></div>
+
+<div class="detail-box"><div class="label">📚 طرق تمثيل العلاقة</div>
+<p><strong>1. الأزواج المرتبة:</strong> {(1, 2), (3, 4), (5, 6)}</p>
+<p><strong>2. الجدول:</strong> عمود لقيم س وعمود لقيم ص</p>
+<p><strong>3. الرسم البياني:</strong> نقاط على المستوى الإحداثي</p>
+<p><strong>4. خريطة السهم:</strong> دائرتان (مجال ومدى) مع أسهم تربط بينهما</p></div>
+
+<div class="example-box"><div class="label">📌 مثال شامل بالطرق الأربع</div>
+<p><strong>الأزواج:</strong> {(0, 1), (1, 3), (2, 5), (3, 7)}</p>
+<p><strong>المجال:</strong> {0, 1, 2, 3}</p>
+<p><strong>المدى:</strong> {1, 3, 5, 7}</p>
+<p><strong>القاعدة:</strong> <span class="math-formula">ص = 2س + 1</span></p>
+<p><strong>الرسم:</strong> نقاط على خط مستقيم صاعد</p></div>
+
+<div class="example-box"><div class="label">📌 مثال: استخراج المجال والمدى من الرسم</div>
+<p>إذا كان الرسم البياني يمثل نقاطًا عند: (−2, 4), (0, 0), (1, −1), (3, 5)</p>
+<p><strong>المجال:</strong> {−2, 0, 1, 3}</p>
+<p><strong>المدى:</strong> {−1, 0, 4, 5}</p></div>
+
+<div class="tip-box"><div class="label">💡 ملاحظات مهمة</div>
+<p>▸ يمكن لعنصرين مختلفين في المجال أن يرتبطا بنفس عنصر المدى: {(1, 5), (3, 5)} ✅</p>
+<p>▸ لا نكرر العناصر عند كتابة المجال أو المدى كمجموعات</p></div>`
+});
+
+S(1,1,{
+0:`<h4>🎯 الشرح المبسّط: الدوال</h4>
+<p>الدالة هي <strong>علاقة خاصة</strong>: كل عنصر في المجال يرتبط بعنصر <strong>واحد فقط</strong> في المدى.</p>
+<p>بمعنى آخر: كل مُدخل يعطي مُخرجًا واحدًا فقط.</p>
+<div class="example-box"><div class="label">📌 دالة ✅</div>
+<p>{(1, 3), (2, 5), (3, 7)} ← كل س لها ص واحدة فقط</p></div>
+<div class="example-box"><div class="label">📌 ليست دالة ❌</div>
+<p>{(1, 3), (1, 5), (2, 7)} ← العنصر 1 مرتبط بقيمتين مختلفتين (3 و 5)!</p></div>
+<div class="tip-box"><div class="label">💡 كيف تتأكدين؟</div>
+<p>إذا تكررت قيمة س مع قيم مختلفة لـ ص ← <strong>ليست دالة</strong></p>
+<p>لكن يمكن أن تتكرر قيمة ص مع قيم مختلفة لـ س ← <strong>لا تزال دالة</strong></p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية: الدوال</h4>
+<div class="example-box"><div class="label">🎫 آلة البيع</div>
+<p>كل زر (مدخل) يعطيك منتجًا واحدًا (مخرج) = <strong>دالة!</strong></p>
+<p>لو زر واحد أعطاك منتجين مختلفين في كل مرة = <strong>ليست دالة!</strong></p></div>
+<div class="example-box"><div class="label">🆔 رقم الهوية</div>
+<p>كل شخص له رقم هوية واحد فقط = <strong>دالة!</strong></p>
+<p>لكن لو شخص واحد يملك رقمين مختلفين = <strong>مشكلة! (ليست دالة)</strong></p></div>`,
+
+2:`<h4>⚡ الشرح السريع: الدوال</h4>
+<p>▸ الدالة: كل مُدخل (س) → مُخرج واحد (ص) فقط</p>
+<p>▸ <strong>اختبار الخط الرأسي:</strong> ارسمي خطوطًا رأسية على الرسم البياني. إذا قطع أي خط الرسم في <strong>أكثر من نقطة</strong> ← ليست دالة</p>
+<p>▸ <strong>رمز الدالة:</strong> <span class="math-formula">د(س) = ...</span> أو <span class="math-formula">f(x) = ...</span></p>
+<p>▸ <span class="math-formula">د(3)</span> تعني: "قيمة الدالة عندما س = 3" → عوّضي بـ 3 مكان س</p>
+<div class="example-box"><div class="label">✅ تدريب</div>
+<p><span class="math-formula">د(س) = 4س - 7</span></p>
+<p>د(2) = 4(2)-7 = <strong>1</strong> | د(0) = <strong>-7</strong> | د(-3) = 4(-3)-7 = <strong>-19</strong></p></div>`,
+
+3:`<h4>📖 الشرح التفصيلي: الدوال</h4>
+<div class="detail-box"><div class="label">📚 التعريف الرسمي</div>
+<p>الدالة هي علاقة يرتبط فيها كل عنصر من عناصر المجال بعنصر <strong>وحيد</strong> من عناصر المدى. نرمز لها بـ <span class="math-formula">د(س)</span> أو <span class="math-formula">f(x)</span>.</p>
+<p><strong>المتغير المستقل:</strong> س (المدخل)</p>
+<p><strong>المتغير التابع:</strong> ص أو د(س) (المخرج - يعتمد على قيمة س)</p></div>
+
+<div class="detail-box"><div class="label">📚 اختبار الخط الرأسي</div>
+<p>لتحديد ما إذا كان الرسم البياني يمثل دالة أم لا:</p>
+<p>▸ تخيّلي خطًا رأسيًا يتحرك من اليمين لليسار على الرسم</p>
+<p>▸ إذا قطع الخط الرسم في <strong>نقطة واحدة فقط</strong> في كل مرة ← <strong>دالة ✅</strong></p>
+<p>▸ إذا قطع الخط الرسم في <strong>أكثر من نقطة</strong> ← <strong>ليست دالة ❌</strong></p>
+<p>مثال: الدائرة ليست دالة! (الخط الرأسي يقطعها في نقطتين)</p></div>
+
+<div class="example-box"><div class="label">📌 إيجاد قيمة الدالة</div>
+<p>إذا كانت <span class="math-formula">د(س) = 3س² - 2س + 1</span>:</p>
+<p><span class="math-formula">د(0) = 3(0)² - 2(0) + 1 = 0 - 0 + 1 = <strong>1</strong></span></p>
+<p><span class="math-formula">د(2) = 3(4) - 2(2) + 1 = 12 - 4 + 1 = <strong>9</strong></span></p>
+<p><span class="math-formula">د(-1) = 3(1) - 2(-1) + 1 = 3 + 2 + 1 = <strong>6</strong></span></p></div>
+
+<div class="example-box"><div class="label">📌 تحديد: دالة أم لا؟</div>
+<p>1) {(2, 4), (3, 6), (4, 8)} → كل س فريدة ← <strong>دالة ✅</strong></p>
+<p>2) {(1, 5), (2, 5), (3, 5)} → ص متكررة لكن كل س فريدة ← <strong>دالة ✅</strong></p>
+<p>3) {(3, 1), (3, 4), (5, 2)} → الـ 3 لها قيمتان ← <strong>ليست دالة ❌</strong></p></div>
+
+<div class="tip-box"><div class="label">⚠️ أخطاء شائعة</div>
+<p>1. الخلط بين تكرار قيم س (ممنوع في الدوال) وتكرار قيم ص (مسموح)</p>
+<p>2. نسيان أن (-2)² = 4 وليس -4 عند إيجاد قيمة الدالة</p></div>`
+});
+
+S(1,2,{
+0:`<h4>🎯 تمثيل المعادلات الخطية بيانيًا</h4>
+<p>المعادلة الخطية رسمها دائمًا <strong>خط مستقيم</strong>. نحتاج <strong>نقطتين على الأقل</strong> لرسمه.</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p><span class="math-formula">ص = 2س + 1</span></p>
+<p>عند س=0: ص=1 → النقطة <strong>(0, 1)</strong></p>
+<p>عند س=1: ص=3 → النقطة <strong>(1, 3)</strong></p>
+<p>عند س=2: ص=5 → النقطة <strong>(2, 5)</strong></p>
+<p>نرسم النقاط ونصلها بخط مستقيم ✏️</p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية</h4>
+<div class="example-box"><div class="label">🚗 المسافة</div>
+<p>سيارة تسير بسرعة 80 كم/ساعة: <span class="math-formula">المسافة = 80 × الزمن</span></p>
+<p>بعد ساعة: 80 كم | بعد ساعتين: 160 كم | بعد 3 ساعات: 240 كم</p>
+<p>الرسم = خط مستقيم يبدأ من الصفر ويصعد!</p></div>
+<div class="example-box"><div class="label">💧 ملء خزان</div>
+<p>خزان فيه 20 لتر ونضيف 5 لترات كل دقيقة: <span class="math-formula">ص = 5س + 20</span></p></div>`,
+
+2:`<h4>⚡ الشرح السريع</h4>
+<p><strong>خطوات الرسم:</strong></p>
+<p>1️⃣ اختاري قيمتين (أو ثلاث) لـ س</p>
+<p>2️⃣ احسبي قيم ص المقابلة</p>
+<p>3️⃣ حددي النقاط على المستوى الإحداثي</p>
+<p>4️⃣ صلي النقاط بخط مستقيم ومدّيه من الطرفين</p>
+<div class="tip-box"><div class="label">💡 نصيحة</div><p>اختاري س = 0 و س = 1 و س = -1 كنقاط بداية سهلة الحساب.</p></div>`,
+
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 الصيغة القياسية</div>
+<p>المعادلة الخطية بمتغيرين: <span class="math-formula">ص = م·س + ب</span></p>
+<p><strong>م</strong> = الميل (مقدار ارتفاع أو انخفاض الخط)</p>
+<p><strong>ب</strong> = المقطع الصادي (نقطة تقاطع الخط مع محور ص)</p></div>
+
+<div class="detail-box"><div class="label">📚 المقاطع</div>
+<p><strong>المقطع الصادي:</strong> نقطة تقاطع الخط مع محور ص ← ضعي س = 0</p>
+<p><strong>المقطع السيني:</strong> نقطة تقاطع الخط مع محور س ← ضعي ص = 0</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p><span class="math-formula">ص = -2س + 6</span></p>
+<p><strong>المقطع الصادي:</strong> س=0 → ص=6 → النقطة (0, 6)</p>
+<p><strong>المقطع السيني:</strong> ص=0 → 0=-2س+6 → س=3 → النقطة (3, 0)</p>
+<p><strong>الميل:</strong> م = -2 (خط نازل من اليمين لليسار)</p>
+<p>نصل النقطتين (0, 6) و (3, 0) بخط مستقيم ← هذا هو الرسم!</p></div>
+
+<div class="example-box"><div class="label">📌 مثال: خطوط خاصة</div>
+<p><span class="math-formula">ص = 4</span> ← خط أفقي يمر بالنقطة (0, 4)</p>
+<p><span class="math-formula">س = -2</span> ← خط رأسي يمر بالنقطة (-2, 0)</p></div>`
+});
+
+S(1,3,{
+0:`<h4>🎯 حل المعادلات الخطية بيانيًا</h4>
+<p>لحل نظام من معادلتين بيانيًا: ارسمي الخطين وحددي <strong>نقطة التقاطع</strong>.</p>
+<div class="example-box"><div class="label">📌</div>
+<p><span class="math-formula">ص = س + 1</span> و <span class="math-formula">ص = -س + 5</span></p>
+<p>يتقاطعان عند النقطة <strong>(2, 3)</strong></p>
+<p>تحقق: 2+1=3 ✅ و -2+5=3 ✅</p></div>`,
+
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">📱 خطط الجوال</div>
+<p>خطة أ: 50 ريال + 0.5 ريال/دقيقة → <span class="math-formula">ص = 0.5س + 50</span></p>
+<p>خطة ب: 30 ريال + ريال/دقيقة → <span class="math-formula">ص = س + 30</span></p>
+<p>نقطة التقاطع تخبرك: عند كم دقيقة تتساوى التكلفة؟</p>
+<p><span class="math-formula">0.5س + 50 = س + 30</span> → <strong>عند 40 دقيقة تتساوى (50 ريالاً)</strong></p></div>`,
+
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ ارسمي كل معادلة كخط مستقيم</p>
+<p>▸ <strong>نقطة التقاطع</strong> = الحل (قيمتا س و ص)</p>
+<p>▸ <strong>ثلاث حالات:</strong></p>
+<p>  🔹 متقاطعان في نقطة واحدة = حل وحيد</p>
+<p>  🔹 متوازيان (لا يتقاطعان) = لا يوجد حل</p>
+<p>  🔹 متطابقان (نفس الخط) = عدد لا نهائي من الحلول</p>`,
+
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 الحالات الثلاث بالتفصيل</div>
+<p><strong>1. حل وحيد:</strong> الخطان لهما ميلان مختلفان ← يتقاطعان في نقطة واحدة بالضبط</p>
+<p><strong>2. لا حل:</strong> الخطان لهما نفس الميل لكن مقاطع صادية مختلفة ← متوازيان</p>
+<p><strong>3. عدد لا نهائي:</strong> الخطان لهما نفس الميل ونفس المقطع الصادي ← متطابقان (هما نفس الخط!)</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل: حل وحيد</div>
+<p>حلّي بيانيًا: <span class="math-formula">ص = 2س - 1</span> و <span class="math-formula">ص = -س + 5</span></p>
+<p><strong>الخط الأول:</strong> (0, -1), (1, 1), (2, 3), (3, 5)</p>
+<p><strong>الخط الثاني:</strong> (0, 5), (1, 4), (2, 3), (5, 0)</p>
+<p><strong>نقطة التقاطع:</strong> (2, 3)</p>
+<p><strong>التحقق:</strong> 2(2)-1=3 ✅ و -(2)+5=3 ✅ → <strong>الحل: س=2، ص=3</strong></p></div>
+
+<div class="example-box"><div class="label">📌 كيف نميز الحالات من المعادلات</div>
+<p><span class="math-formula">ص = 3س + 2</span> و <span class="math-formula">ص = 3س - 4</span> → نفس الميل (3)، مقطع مختلف ← <strong>لا حل</strong></p>
+<p><span class="math-formula">ص = 2س + 1</span> و <span class="math-formula">2ص = 4س + 2</span> → نفس الخط! ← <strong>حلول لا نهائية</strong></p></div>`
+});
+
+S(1,4,{
+0:`<h4>🎯 معدل التغير والميل</h4>
+<p>الميل يقيس مقدار <strong>انحدار الخط المستقيم</strong> واتجاهه.</p>
+<p><span class="math-formula">الميل (م) = التغير في ص ÷ التغير في س = (ص₂ - ص₁) / (س₂ - س₁)</span></p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p>بين النقطتين (1, 2) و (4, 8):</p>
+<p><span class="math-formula">م = (8 - 2) / (4 - 1) = 6/3 = 2</span></p>
+<p>الميل = 2 → كلما زادت س بمقدار 1، تزداد ص بمقدار 2</p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية</h4>
+<div class="example-box"><div class="label">⛰️ المنحدر</div>
+<p>تمشين 10 أمتار أفقيًا وترتفعين 5 أمتار = الميل 5/10 = 0.5</p>
+<p>ميل موجب = صاعد ↗ | ميل سالب = نازل ↘</p></div>
+<div class="example-box"><div class="label">🚗 السرعة</div>
+<p>سيارة قطعت 120 كم في ساعتين ثم 300 كم في 5 ساعات</p>
+<p>معدل التغير = <span class="math-formula">(300-120)/(5-2) = 180/3 = 60</span> كم/ساعة</p></div>`,
+
+2:`<h4>⚡ الشرح السريع</h4>
+<p><span class="math-formula">م = (ص₂ - ص₁) / (س₂ - س₁)</span></p>
+<p>▸ م > 0 → خط <strong>صاعد</strong> ↗ (من اليسار لليمين)</p>
+<p>▸ م < 0 → خط <strong>نازل</strong> ↘ (من اليسار لليمين)</p>
+<p>▸ م = 0 → خط <strong>أفقي</strong> → (مثل ص = 5)</p>
+<p>▸ م غير معرف → خط <strong>رأسي</strong> ↕ (مثل س = 3)</p>`,
+
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 التعريف</div>
+<p>الميل هو نسبة التغير الرأسي (الارتفاع) إلى التغير الأفقي (الانتقال). يُعبّر عنه أحيانًا بـ "الارتفاع على الانتقال".</p>
+<p><span class="math-formula">م = الارتفاع / الانتقال = Δص / Δس</span></p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p>أوجدي ميل الخط المار بالنقطتين (-2, 4) و (3, -1)</p>
+<p><span class="math-formula">م = (-1 - 4) / (3 - (-2)) = -5 / 5 = -1</span></p>
+<p>الميل = -1 → <strong>خط نازل</strong>، كلما زادت س بمقدار 1 نقصت ص بمقدار 1</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: معدل التغير</div>
+<p>درجة الحرارة كانت 20° عند الساعة 8 صباحًا، و 32° عند الساعة 12 ظهرًا</p>
+<p>معدل التغير = <span class="math-formula">(32-20)/(12-8) = 12/4 = 3</span> درجات لكل ساعة</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: خط أفقي</div>
+<p>بين (2, 5) و (7, 5):</p>
+<p><span class="math-formula">م = (5-5)/(7-2) = 0/5 = 0</span> → <strong>خط أفقي</strong></p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 4: خط رأسي</div>
+<p>بين (3, 1) و (3, 8):</p>
+<p><span class="math-formula">م = (8-1)/(3-3) = 7/0</span> → <strong>غير معرف!</strong> (قسمة على صفر)</p></div>
+
+<div class="tip-box"><div class="label">⚠️ تنبيه</div>
+<p>▸ الميل لا يتغير بتغيير النقطتين المختارتين على نفس الخط المستقيم</p>
+<p>▸ لا تخلطي بين (ص₂-ص₁)/(س₂-س₁) و (س₂-س₁)/(ص₂-ص₁) — البسط للصاد والمقام للسين!</p></div>`
+});
+
+S(1,5,{
+0:`<h4>🎯 المتتابعات الحسابية كدوال خطية</h4>
+<p>المتتابعة الحسابية: كل حد = الحد السابق + <strong>عدد ثابت</strong> يسمى <strong>الأساس (د)</strong>.</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p>3, 7, 11, 15, 19, ... ← الأساس = 4 (الفرق بين كل حدين متتاليين)</p>
+<p>الحد النوني: <span class="math-formula">حـ ن = 3 + (ن - 1) × 4 = 4ن - 1</span></p>
+<p>الحد العاشر: <span class="math-formula">حـ 10 = 4(10) - 1 = 39</span></p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية</h4>
+<div class="example-box"><div class="label">🏃 التمارين</div>
+<p>بدأتِ بـ 10 دقائق مشي وتزيدين 5 دقائق يوميًا:</p>
+<p>10, 15, 20, 25, 30, 35, 40</p>
+<p>بعد أسبوع (اليوم 7): <span class="math-formula">10 + (7-1)×5 = 40</span> دقيقة</p></div>
+<div class="example-box"><div class="label">💰 الادخار</div>
+<p>توفرين 100 ريال الشهر الأول وتزيدين 50 كل شهر: 100, 150, 200, ...</p>
+<p>في الشهر 12: <span class="math-formula">100 + 11×50 = 650</span> ريالاً</p></div>`,
+
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ <strong>الأساس (د)</strong> = أي حد - الحد السابق له</p>
+<p>▸ <strong>الحد النوني:</strong> <span class="math-formula">حـ ن = أ + (ن - 1) × د</span></p>
+<p>  حيث أ = الحد الأول، ن = رقم الحد المطلوب، د = الأساس</p>
+<p>▸ هذه <strong>دالة خطية</strong> لأن الرسم البياني لها خط مستقيم!</p>`,
+
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 العلاقة بالدوال الخطية</div>
+<p>المتتابعة الحسابية هي في الحقيقة <strong>دالة خطية</strong> مجالها الأعداد الطبيعية {1, 2, 3, ...}</p>
+<p><strong>الأساس (د)</strong> = ميل الدالة الخطية</p>
+<p>بمعنى: <span class="math-formula">حـ ن = دن + (أ - د)</span> وهذا شبيه بـ <span class="math-formula">ص = مس + ب</span></p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p>المتتابعة: 5, 8, 11, 14, 17, ...</p>
+<p><strong>الحد الأول (أ):</strong> 5</p>
+<p><strong>الأساس (د):</strong> 8 - 5 = 3</p>
+<p><strong>الحد النوني:</strong> <span class="math-formula">حـ ن = 5 + (ن-1)(3) = 5 + 3ن - 3 = 3ن + 2</span></p>
+<p><strong>الحد العاشر:</strong> <span class="math-formula">حـ 10 = 3(10) + 2 = 32</span></p>
+<p><strong>متى يكون الحد = 50؟</strong> <span class="math-formula">3ن + 2 = 50</span> → <span class="math-formula">3ن = 48</span> → <strong>ن = 16</strong></p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: إيجاد الأساس</div>
+<p>الحد الثالث = 11 والحد السابع = 23. أوجدي الأساس والحد الأول.</p>
+<p>حـ7 - حـ3 = (7-3) × د → 23 - 11 = 4د → <strong>د = 3</strong></p>
+<p>حـ3 = أ + 2(3) → 11 = أ + 6 → <strong>أ = 5</strong></p></div>
+
+<div class="tip-box"><div class="label">⚠️ ملاحظة</div>
+<p>▸ إذا كان الأساس <strong>موجبًا</strong> ← المتتابعة تتزايد (صاعدة)</p>
+<p>▸ إذا كان الأساس <strong>سالبًا</strong> ← المتتابعة تتناقص (نازلة)</p>
+<p>▸ مثال على التناقص: 100, 93, 86, 79, ... (د = -7)</p></div>`
+});
+// ══════════════════════════════════════════════════════════
+// الفصل 3: تحليل الدوال الخطية (4 دروس)
+// ══════════════════════════════════════════════════════════
+S(2,0,{
+0:`<h4>🎯 تمثيل المعادلات بصيغة الميل والمقطع بيانيًا</h4>
+<p>الصيغة: <span class="math-formula">ص = م·س + ب</span> حيث <strong>م = الميل</strong> و<strong>ب = المقطع الصادي</strong>.</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p><span class="math-formula">ص = 2س + 3</span></p>
+<p>المقطع الصادي: ب = 3 → ابدئي من النقطة (0, 3)</p>
+<p>الميل: م = 2 = 2/1 → من (0,3) ارتفعي 2 وتقدمي 1 → (1, 5)</p>
+<p>صلي النقطتين بخط مستقيم</p></div>
+<div class="example-box"><div class="label">📌 مثال: ميل سالب</div>
+<p><span class="math-formula">ص = -3س + 6</span></p>
+<p>ابدئي من (0, 6) → الميل -3 = -3/1 → انزلي 3 وتقدمي 1 → (1, 3)</p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">💰 اشتراك</div>
+<p>اشتراك شهري 50 ريال + 10 ريالات لكل خدمة إضافية:</p>
+<p><span class="math-formula">ص = 10س + 50</span></p>
+<p>ب = 50 (الرسم الثابت) | م = 10 (تكلفة كل خدمة)</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p><strong>طريقة الرسم:</strong></p>
+<p>1️⃣ حددي ب على محور ص (المقطع الصادي)</p>
+<p>2️⃣ من تلك النقطة، طبقي الميل: الارتفاع/الانتقال</p>
+<p>3️⃣ صلي النقاط بخط مستقيم</p>
+<p><strong>أمثلة ميل:</strong> م=3=3/1 (ارتفعي 3، تقدمي 1) | م=-½ (انزلي 1، تقدمي 2)</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 الصيغة</div>
+<p><span class="math-formula">ص = م·س + ب</span> تسمى <strong>صيغة الميل والمقطع</strong></p>
+<p>▸ <strong>ب</strong> = المقطع الصادي = النقطة التي يقطع فيها الخط محور ص (عندما س = 0)</p>
+<p>▸ <strong>م</strong> = الميل = الارتفاع ÷ الانتقال الأفقي</p></div>
+<div class="step-box"><div class="label">كيف نرسم خطوة بخطوة</div>
+<p>1. حددي النقطة (0, ب) على محور ص</p>
+<p>2. اكتبي الميل ككسر: م = البسط/المقام</p>
+<p>3. من النقطة الأولى: تحركي رأسيًا بمقدار البسط (أعلى إذا موجب، أسفل إذا سالب)</p>
+<p>4. ثم تحركي أفقيًا بمقدار المقام (دائمًا لليمين)</p>
+<p>5. صلي النقطتين ومدّي الخط</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p><span class="math-formula">ص = -⅔ س + 4</span></p>
+<p>▸ ب = 4 → النقطة الأولى (0, 4)</p>
+<p>▸ م = -⅔ → انزلي 2، تقدمي 3 → النقطة الثانية (3, 2)</p>
+<p>▸ نتأكد: -⅔(3) + 4 = -2 + 4 = 2 ✅</p></div>
+<div class="example-box"><div class="label">📌 قراءة المعادلة من الرسم</div>
+<p>خط يمر بـ (0, -1) و (2, 3):</p>
+<p>ب = -1 | م = (3-(-1))/(2-0) = 4/2 = 2</p>
+<p>→ <span class="math-formula">ص = 2س - 1</span></p></div>`
+});
+
+S(2,1,{
+0:`<h4>🎯 كتابة المعادلات بصيغة الميل والمقطع</h4>
+<p>إذا عرفتِ <strong>الميل</strong> و<strong>المقطع الصادي</strong>، يمكنك كتابة المعادلة مباشرة.</p>
+<div class="example-box"><div class="label">📌 مثال 1</div>
+<p>ميل = 3، المقطع الصادي = -2 → <span class="math-formula">ص = 3س - 2</span></p></div>
+<div class="example-box"><div class="label">📌 مثال 2: من الرسم</div>
+<p>خط يقطع محور ص عند 5 ويمر بالنقطة (2, 1):</p>
+<p>ب = 5 | م = (1-5)/(2-0) = -4/2 = -2 → <span class="math-formula">ص = -2س + 5</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">🚕 تاكسي</div>
+<p>فتحة العداد (رسم ثابت) = 5 ريالات، وكل كيلومتر = 2 ريال</p>
+<p>الميل = 2 (تكلفة الكم) | المقطع = 5 (الرسم الثابت)</p>
+<p><span class="math-formula">ص = 2س + 5</span></p>
+<p>تكلفة 15 كم: 2(15) + 5 = <strong>35 ريالاً</strong></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p><strong>من الرسم البياني:</strong></p>
+<p>1️⃣ اقرئي المقطع الصادي (ب) من محور ص</p>
+<p>2️⃣ اختاري نقطتين واضحتين واحسبي الميل</p>
+<p>3️⃣ عوّضي في <span class="math-formula">ص = مس + ب</span></p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 طرق إيجاد المعادلة</div>
+<p><strong>الطريقة 1:</strong> إذا أُعطيتِ الميل والمقطع الصادي مباشرة ← عوّضي في ص = مس + ب</p>
+<p><strong>الطريقة 2:</strong> إذا أُعطيتِ نقطتين ← احسبي الميل أولاً ثم أوجدي ب بالتعويض</p>
+<p><strong>الطريقة 3:</strong> من الرسم البياني ← اقرئي ب ثم احسبي م</p></div>
+<div class="example-box"><div class="label">📌 مثال: من نقطتين</div>
+<p>اكتبي معادلة الخط المار بالنقطتين (1, 4) و (3, 10):</p>
+<p><strong>الميل:</strong> م = (10-4)/(3-1) = 6/2 = 3</p>
+<p><strong>إيجاد ب:</strong> نعوض بنقطة (1, 4): 4 = 3(1) + ب → ب = 1</p>
+<p><strong>المعادلة:</strong> <span class="math-formula">ص = 3س + 1</span></p>
+<p><strong>تحقق بالنقطة الثانية:</strong> 3(3)+1 = 10 ✅</p></div>`
+});
+
+S(2,2,{
+0:`<h4>🎯 كتابة المعادلات بصيغة الميل ونقطة</h4>
+<p>الصيغة: <span class="math-formula">ص - ص₁ = م(س - س₁)</span></p>
+<p>تُستخدم عندما تعرفين <strong>الميل</strong> و<strong>نقطة</strong> يمر بها الخط.</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p>ميل = 2، يمر بـ (3, 7):</p>
+<p><span class="math-formula">ص - 7 = 2(س - 3)</span></p>
+<p>بالتبسيط: <span class="math-formula">ص = 2س + 1</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">🌡️ الحرارة</div>
+<p>درجة الحرارة ترتفع 3° كل ساعة. عند الساعة 2 ظهرًا كانت 20°.</p>
+<p>م = 3، النقطة (2, 20):</p>
+<p><span class="math-formula">ص - 20 = 3(س - 2)</span> → <span class="math-formula">ص = 3س + 14</span></p>
+<p>عند الساعة 5: ص = 3(5) + 14 = <strong>29°</strong></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ تحتاجين: <strong>الميل + نقطة واحدة</strong></p>
+<p>▸ أو: <strong>نقطتين</strong> (احسبي الميل أولاً ثم استخدمي أي نقطة)</p>
+<p>▸ الصيغة: <span class="math-formula">ص - ص₁ = م(س - س₁)</span></p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 متى نستخدم هذه الصيغة؟</div>
+<p>تُستخدم عندما لا تعرفين المقطع الصادي مباشرة، لكنك تعرفين الميل ونقطة يمر بها الخط. وهي مفيدة جدًا عند معرفة نقطتين فقط.</p></div>
+<div class="step-box"><div class="label">الخطوات</div>
+<p>1. إذا أُعطيتِ نقطتين: احسبي م = (ص₂-ص₁)/(س₂-س₁)</p>
+<p>2. اختاري أي نقطة (س₁، ص₁)</p>
+<p>3. عوّضي في <span class="math-formula">ص - ص₁ = م(س - س₁)</span></p>
+<p>4. بسّطي للحصول على صيغة الميل والمقطع إذا طُلب</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل: من نقطتين</div>
+<p>اكتبي معادلة الخط المار بـ (2, -1) و (5, 8):</p>
+<p><strong>الميل:</strong> م = (8-(-1))/(5-2) = 9/3 = 3</p>
+<p><strong>الصيغة:</strong> <span class="math-formula">ص - (-1) = 3(س - 2)</span></p>
+<p><span class="math-formula">ص + 1 = 3س - 6</span></p>
+<p><span class="math-formula">ص = 3س - 7</span></p>
+<p><strong>تحقق:</strong> عند (5, 8): 3(5)-7 = 15-7 = 8 ✅</p></div>`
+});
+
+S(2,3,{
+0:`<h4>🎯 المستقيمات المتوازية والمتعامدة</h4>
+<p>▸ <strong>متوازيان:</strong> لهما <strong>نفس الميل</strong> <span class="math-formula">م₁ = م₂</span></p>
+<p>▸ <strong>متعامدان:</strong> حاصل ضرب ميليهما = -1 → <span class="math-formula">م₁ × م₂ = -1</span></p>
+<div class="example-box"><div class="label">📌 متوازيان</div>
+<p><span class="math-formula">ص = 2س + 1</span> و <span class="math-formula">ص = 2س - 3</span></p>
+<p>م₁ = م₂ = 2 ← <strong>متوازيان ✅</strong></p></div>
+<div class="example-box"><div class="label">📌 متعامدان</div>
+<p><span class="math-formula">ص = 2س + 1</span> و <span class="math-formula">ص = -½ س + 4</span></p>
+<p>2 × (-½) = -1 ← <strong>متعامدان ✅</strong></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">🏗️ الشوارع</div>
+<p>شارعان متوازيان: لهما نفس الاتجاه (نفس الميل) ولا يتقاطعان أبدًا</p>
+<p>شارع يتقاطع عموديًا مع آخر: الزاوية بينهما 90° (حاصل ضرب الميلين = -1)</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ <strong>متوازيان:</strong> <span class="math-formula">م₁ = م₂</span> (نفس الميل، مقاطع مختلفة)</p>
+<p>▸ <strong>متعامدان:</strong> <span class="math-formula">م₁ × م₂ = -1</span> → <span class="math-formula">م₂ = -1/م₁</span> (المقلوب السالب)</p>
+<p><strong>مثال سريع:</strong> إذا م₁ = 3 → الميل المعامد = <strong>-⅓</strong></p>
+<p>إذا م₁ = -⅔ → الميل المعامد = <strong>³⁄₂</strong></p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 المستقيمات المتوازية</div>
+<p>خطان متوازيان لهما <strong>نفس الميل</strong> ومقاطع صادية مختلفة. لا يتقاطعان أبدًا ويبقيان على نفس المسافة دائمًا.</p>
+<p>إذا كان الخط <span class="math-formula">ص = 3س - 1</span>، فإن أي خط بالصيغة <span class="math-formula">ص = 3س + ب</span> (حيث ب ≠ -1) يوازيه.</p></div>
+<div class="detail-box"><div class="label">📚 المستقيمات المتعامدة</div>
+<p>خطان متعامدان يتقاطعان بزاوية قائمة (90°). ميل أحدهما هو <strong>المقلوب السالب</strong> لميل الآخر.</p>
+<p>إذا كان ميل خط = أ/ب، فميل الخط المعامد عليه = -ب/أ</p></div>
+<div class="example-box"><div class="label">📌 مثال: كتابة معادلة خط مواز</div>
+<p>اكتبي معادلة خط يوازي <span class="math-formula">ص = 3س - 1</span> ويمر بالنقطة (2, 4):</p>
+<p>الميل = 3 (نفس ميل الخط الأصلي)</p>
+<p><span class="math-formula">ص - 4 = 3(س - 2)</span> → <span class="math-formula">ص = 3س - 2</span></p></div>
+<div class="example-box"><div class="label">📌 مثال: كتابة معادلة خط عمودي</div>
+<p>اكتبي معادلة خط يعامد <span class="math-formula">ص = 4س + 2</span> ويمر بالنقطة (8, 1):</p>
+<p>ميل الأصلي = 4 → ميل المعامد = <strong>-¼</strong></p>
+<p><span class="math-formula">ص - 1 = -¼(س - 8)</span></p>
+<p><span class="math-formula">ص = -¼ س + 2 + 1 = -¼ س + 3</span></p>
+<p><strong>تحقق:</strong> 4 × (-¼) = -1 ✅</p></div>
+<div class="tip-box"><div class="label">⚠️ تنبيهات</div>
+<p>▸ خط أفقي (م=0) يعامد خطًا رأسيًا (م غير معرف) والعكس</p>
+<p>▸ خطان لهما نفس الميل ونفس المقطع = <strong>نفس الخط</strong> (متطابقان، وليسا متوازيين)</p></div>`
+});
+// ══════ الفصل 4: المتباينات الخطية (5 دروس) ══════
+S(3,0,{
+0:`<h4>🎯 حل المتباينات بالجمع أو بالطرح</h4>
+<p>المتباينة مثل المعادلة لكن بدل (=) نستخدم (> أو < أو ≥ أو ≤). الحل <strong>مجموعة قيم</strong> وليس قيمة واحدة.</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p><span class="math-formula">س + 5 > 12</span></p>
+<p>نطرح 5 من الطرفين: <span class="math-formula">س > 7</span></p>
+<p>الحل = أي عدد أكبر من 7 (مثل 8, 10, 100, ...)</p></div>
+<div class="tip-box"><div class="label">💡 التمثيل على خط الأعداد</div>
+<p>▸ دائرة <strong>مفتوحة ○</strong> لـ > و < (العدد غير داخل في الحل)</p>
+<p>▸ دائرة <strong>مغلقة ●</strong> لـ ≥ و ≤ (العدد داخل في الحل)</p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">💰</div>
+<p>تحتاجين أكثر من 50 ريال لشراء هدية. معك 30 ريال. كم تحتاجين زيادة؟</p>
+<p><span class="math-formula">30 + س > 50</span> → <span class="math-formula">س > 20</span></p>
+<p>تحتاجين <strong>أكثر من 20 ريال</strong></p></div>
+<div class="example-box"><div class="label">🌡️</div>
+<p>الحرارة اليوم أعلى من أمس بـ 3 درجات. أمس كانت أقل من 30°. كم اليوم؟</p>
+<p>أمس < 30 → اليوم = أمس + 3 < 33 → <strong>أقل من 33°</strong></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ نفس قواعد المعادلات بالضبط عند الجمع والطرح</p>
+<p>▸ <strong>اتجاه المتباينة لا يتغير</strong> عند الجمع أو الطرح</p>
+<div class="example-box"><div class="label">✅ تدريبات</div>
+<p>1) <span class="math-formula">س + 8 ≥ 15</span> → <strong>س ≥ 7</strong></p>
+<p>2) <span class="math-formula">س - 4 < 10</span> → <strong>س < 14</strong></p>
+<p>3) <span class="math-formula">-3 + س ≤ 5</span> → <strong>س ≤ 8</strong></p></div>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 رموز المتباينات</div>
+<p>▸ <span class="math-formula">></span> أكبر من (strictly greater)</p>
+<p>▸ <span class="math-formula"><</span> أصغر من (strictly less)</p>
+<p>▸ <span class="math-formula">≥</span> أكبر من أو يساوي (greater than or equal)</p>
+<p>▸ <span class="math-formula">≤</span> أصغر من أو يساوي (less than or equal)</p></div>
+<div class="detail-box"><div class="label">📚 الخواص</div>
+<p><strong>خاصية الجمع:</strong> إذا أ > ب، فإن أ + ج > ب + ج (لأي عدد ج)</p>
+<p><strong>خاصية الطرح:</strong> إذا أ > ب، فإن أ - ج > ب - ج (لأي عدد ج)</p>
+<p>ملاحظة: <strong>الاتجاه يبقى كما هو</strong> عند الجمع أو الطرح.</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p><span class="math-formula">س - 8 ≤ 3</span></p>
+<p>نضيف 8 للطرفين: <span class="math-formula">س ≤ 11</span></p>
+<p>الحل: أي عدد أصغر من أو يساوي 11</p>
+<p>على خط الأعداد: ● عند 11 مع سهم لليسار</p>
+<p><strong>تحقق:</strong> س=11: 11-8=3 ≤ 3 ✅ | س=5: 5-8=-3 ≤ 3 ✅ | س=15: 15-8=7 ≤ 3 ❌</p></div>`
+});
+
+S(3,1,{
+0:`<h4>🎯 حل المتباينات بالضرب أو بالقسمة</h4>
+<p>القاعدة الأهم: عند الضرب أو القسمة في عدد <strong>سالب</strong>، يجب <strong>عكس اتجاه المتباينة</strong>!</p>
+<div class="example-box"><div class="label">📌 مثال: ضرب/قسمة بموجب (لا تغيير)</div>
+<p><span class="math-formula">3س < 18</span> → نقسم على 3 → <span class="math-formula">س < 6</span></p></div>
+<div class="example-box"><div class="label">📌 مثال: قسمة بسالب (نعكس!)</div>
+<p><span class="math-formula">-4س > 20</span></p>
+<p>نقسم على -4 <strong>مع عكس الاتجاه:</strong> <span class="math-formula">س < -5</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">🎒</div>
+<p>ثمن 4 دفاتر أقل من 60 ريال. كم سعر الدفتر الواحد كحد أقصى؟</p>
+<p><span class="math-formula">4س < 60</span> → <span class="math-formula">س < 15</span> ريال</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ ضرب/قسمة بعدد <strong>موجب</strong> ← الاتجاه <strong>يبقى كما هو</strong></p>
+<p>▸ ضرب/قسمة بعدد <strong>سالب</strong> ← الاتجاه <strong>ينعكس!</strong> (> تصبح < والعكس)</p>
+<p><strong>لماذا؟</strong> لأن 3 > 2 لكن -3 < -2 (الضرب بسالب يقلب الترتيب!)</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 القاعدة الأساسية</div>
+<p><strong>عند الضرب أو القسمة في عدد موجب:</strong> اتجاه المتباينة لا يتغير</p>
+<p>إذا أ > ب و ج > 0 فإن أ×ج > ب×ج</p>
+<p><strong>عند الضرب أو القسمة في عدد سالب:</strong> اتجاه المتباينة ينعكس!</p>
+<p>إذا أ > ب و ج < 0 فإن أ×ج <strong><</strong> ب×ج</p></div>
+<div class="example-box"><div class="label">📌 لماذا ينعكس الاتجاه؟</div>
+<p>نعلم أن <span class="math-formula">5 > 3</span></p>
+<p>نضرب في -1: <span class="math-formula">-5 < -3</span> ← الاتجاه انعكس!</p>
+<p>لأن على خط الأعداد: -5 تقع يسار -3</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p><span class="math-formula">-2س + 6 ≥ 0</span></p>
+<p>نطرح 6: <span class="math-formula">-2س ≥ -6</span></p>
+<p>نقسم على -2 <strong>مع عكس الاتجاه:</strong> <span class="math-formula">س ≤ 3</span></p>
+<p><strong>تحقق:</strong> س=3: -6+6=0 ≥ 0 ✅ | س=0: 0+6=6 ≥ 0 ✅ | س=5: -10+6=-4 ≥ 0 ❌</p></div>
+<div class="tip-box"><div class="label">⚠️ الخطأ الأشهر</div>
+<p>نسيان عكس اتجاه المتباينة عند القسمة على عدد سالب — هذا أكثر خطأ يقع فيه الطلاب!</p></div>`
+});
+
+S(3,2,{
+0:`<h4>🎯 حل المتباينات المتعددة الخطوات</h4>
+<p>نفس خطوات المعادلات المتعددة: فك أقواس، تجميع، عمليات عكسية — مع الانتباه لعكس الإشارة عند الضرب/القسمة بسالب.</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p><span class="math-formula">3س + 7 > 22</span></p>
+<p>نطرح 7: <span class="math-formula">3س > 15</span></p>
+<p>نقسم على 3: <span class="math-formula">س > 5</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">🏪 ملاهي</div>
+<p>ميزانية 100 ريال: رسم دخول 20 ريال + 8 ريالات لكل لعبة. كم لعبة يمكنك؟</p>
+<p><span class="math-formula">20 + 8س ≤ 100</span> → <span class="math-formula">8س ≤ 80</span> → <strong>س ≤ 10 ألعاب</strong></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>1️⃣ بسّطي كل طرف (فك أقواس + تجميع)</p>
+<p>2️⃣ اعزلي المتغير بالعمليات العكسية</p>
+<p>3️⃣ <strong>انتبهي:</strong> إذا ضربتِ أو قسمتِ بسالب ← اعكسي الاتجاه!</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p><span class="math-formula">2(س - 3) + 5 < 13</span></p>
+<p>فك: <span class="math-formula">2س - 6 + 5 < 13</span></p>
+<p>تبسيط: <span class="math-formula">2س - 1 < 13</span></p>
+<p>+ 1: <span class="math-formula">2س < 14</span></p>
+<p>÷ 2: <span class="math-formula">س < 7</span></p>
+<p><strong>تحقق:</strong> س=6: 2(3)+5=11 < 13 ✅ | س=10: 2(7)+5=19 < 13 ❌</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: مع عكس</div>
+<p><span class="math-formula">-3(س + 2) ≥ 12</span></p>
+<p>فك: <span class="math-formula">-3س - 6 ≥ 12</span></p>
+<p>+ 6: <span class="math-formula">-3س ≥ 18</span></p>
+<p>÷ (-3) <strong>مع عكس:</strong> <span class="math-formula">س ≤ -6</span></p>
+<p><strong>تحقق:</strong> س=-6: -3(-4)=12 ≥ 12 ✅ | س=-10: -3(-8)=24 ≥ 12 ✅</p></div>`
+});
+
+S(3,3,{
+0:`<h4>🎯 حل المتباينات المركبة</h4>
+<p>متباينتان مرتبطتان بـ <strong>"و"</strong> (التقاطع) أو <strong>"أو"</strong> (الاتحاد).</p>
+<div class="example-box"><div class="label">📌 مثال "و"</div>
+<p><span class="math-formula">-3 < س + 1 ≤ 5</span></p>
+<p>نطرح 1 من الأطراف الثلاثة: <span class="math-formula">-4 < س ≤ 4</span></p>
+<p>الحل: الأعداد بين -4 (غير شامل) و 4 (شامل)</p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">🌡️</div>
+<p>درجة الحرارة المناسبة للتخزين بين 5° و 25°:</p>
+<p><span class="math-formula">5 ≤ ح ≤ 25</span> → متباينة مركبة بـ "و"</p></div>
+<div class="example-box"><div class="label">🎯</div>
+<p>الدرجة إما ممتاز (≥ 90) أو ضعيف (< 50):</p>
+<p><span class="math-formula">د ≥ 90</span> أو <span class="math-formula">د < 50</span> → متباينة مركبة بـ "أو"</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ <strong>"و"</strong> = التقاطع: القيم التي تحقق <strong>المتباينتين معًا</strong></p>
+<p>▸ <strong>"أو"</strong> = الاتحاد: القيم التي تحقق <strong>إحداهما على الأقل</strong></p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 الفرق بين "و" و "أو"</div>
+<p><strong>"و" (∩):</strong> الحل يجب أن يحقق المتباينتين معًا → نأخذ <strong>التقاطع</strong> (الجزء المشترك)</p>
+<p><strong>"أو" (∪):</strong> الحل يكفي أن يحقق إحداهما → نأخذ <strong>الاتحاد</strong> (كل الأجزاء)</p></div>
+<div class="example-box"><div class="label">📌 مثال "و" مفصّل</div>
+<p><span class="math-formula">-2 ≤ 3س + 1 < 10</span></p>
+<p>نطرح 1: <span class="math-formula">-3 ≤ 3س < 9</span></p>
+<p>نقسم على 3: <span class="math-formula">-1 ≤ س < 3</span></p>
+<p>الحل: من -1 (شامل) إلى 3 (غير شامل)</p></div>
+<div class="example-box"><div class="label">📌 مثال "أو" مفصّل</div>
+<p><span class="math-formula">س + 2 > 7</span> أو <span class="math-formula">س - 1 < -4</span></p>
+<p>الأولى: <span class="math-formula">س > 5</span></p>
+<p>الثانية: <span class="math-formula">س < -3</span></p>
+<p>الحل: <span class="math-formula">س > 5 أو س < -3</span> (كل ما هو خارج الفترة [-3, 5])</p></div>`
+});
+
+S(3,4,{
+0:`<h4>🎯 حل المتباينات التي تتضمن القيمة المطلقة</h4>
+<p>▸ <span class="math-formula">|أ| < ب</span> تعني: <span class="math-formula">-ب < أ < ب</span> (بين -ب و ب)</p>
+<p>▸ <span class="math-formula">|أ| > ب</span> تعني: <span class="math-formula">أ > ب</span> أو <span class="math-formula">أ < -ب</span> (خارج -ب و ب)</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p><span class="math-formula">|س - 3| < 5</span></p>
+<p>← <span class="math-formula">-5 < س - 3 < 5</span></p>
+<p>نضيف 3: <span class="math-formula">-2 < س < 8</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">🏭</div>
+<p>خطأ القياس لا يتجاوز 0.5 غرام من الوزن المطلوب (10 غرام):</p>
+<p><span class="math-formula">|س - 10| ≤ 0.5</span> → <span class="math-formula">9.5 ≤ س ≤ 10.5</span></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ <strong>أصغر من:</strong> |أ| < ب ← <strong>بين</strong> -ب و ب ← متباينة مركبة "و"</p>
+<p>▸ <strong>أكبر من:</strong> |أ| > ب ← <strong>خارج</strong> -ب و ب ← متباينة مركبة "أو"</p>
+<p>▸ <strong>تذكري:</strong> "أصغر من = بين" | "أكبر من = خارج"</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 الفهم البصري</div>
+<p><span class="math-formula">|س| < 5</span> تعني: بُعد س عن الصفر <strong>أقل من</strong> 5 ← س تقع <strong>بين</strong> -5 و 5</p>
+<p><span class="math-formula">|س| > 5</span> تعني: بُعد س عن الصفر <strong>أكبر من</strong> 5 ← س تقع <strong>خارج</strong> -5 و 5</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: "أصغر من"</div>
+<p><span class="math-formula">|2س - 3| ≤ 7</span></p>
+<p>← <span class="math-formula">-7 ≤ 2س - 3 ≤ 7</span></p>
+<p>نضيف 3: <span class="math-formula">-4 ≤ 2س ≤ 10</span></p>
+<p>نقسم على 2: <span class="math-formula">-2 ≤ س ≤ 5</span></p>
+<p><strong>تحقق:</strong> س=0: |0-3|=3 ≤ 7 ✅ | س=5: |10-3|=7 ≤ 7 ✅ | س=6: |12-3|=9 ≤ 7 ❌</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: "أكبر من"</div>
+<p><span class="math-formula">|3س + 1| > 10</span></p>
+<p>الحالة 1: <span class="math-formula">3س + 1 > 10</span> → <span class="math-formula">س > 3</span></p>
+<p>الحالة 2: <span class="math-formula">3س + 1 < -10</span> → <span class="math-formula">3س < -11</span> → <span class="math-formula">س < -11/3</span></p>
+<p>الحل: <span class="math-formula">س > 3</span> أو <span class="math-formula">س < -11/3</span></p></div>`
+});
+
+// ══════ الفصل 5: أنظمة المعادلات الخطية (5 دروس) ══════
+S(4,0,{
+0:`<h4>🎯 حل نظام من معادلتين بيانيًا</h4>
+<p>النظام = معادلتان نبحث عن القيم التي تحققهما <strong>معًا</strong>. بيانيًا: نقطة التقاطع.</p>
+<div class="example-box"><div class="label">📌</div>
+<p><span class="math-formula">ص = س + 1</span> و <span class="math-formula">ص = -2س + 7</span></p>
+<p>يتقاطعان عند <strong>(2, 3)</strong></p>
+<p>تحقق: 2+1=3 ✅ و -2(2)+7=3 ✅</p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">📱</div>
+<p>شركة أ: 100+0.5س | شركة ب: 50+س ← متى تتساوى التكلفة؟</p>
+<p>ارسمي الخطين → نقطة التقاطع = الجواب!</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ <strong>حل وحيد:</strong> خطان متقاطعان (ميلان مختلفان)</p>
+<p>▸ <strong>لا حل:</strong> خطان متوازيان (نفس الميل، مقاطع مختلفة)</p>
+<p>▸ <strong>حلول لا نهائية:</strong> خطان متطابقان (نفس الخط)</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 النظام المتسق والنظام غير المتسق</div>
+<p><strong>نظام متسق ومستقل:</strong> حل وحيد (خطان متقاطعان) — أكثر الحالات شيوعًا</p>
+<p><strong>نظام متسق وغير مستقل:</strong> حلول لا نهائية (خطان متطابقان)</p>
+<p><strong>نظام غير متسق:</strong> لا حل (خطان متوازيان)</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p>حلّي بيانيًا: <span class="math-formula">ص = 3س - 1</span> و <span class="math-formula">ص = -س + 7</span></p>
+<p>الأول: (0,-1), (1,2), (2,5) | الثاني: (0,7), (1,6), (2,5)</p>
+<p>التقاطع: <strong>(2, 5)</strong></p>
+<p>تحقق: 3(2)-1=5 ✅ و -(2)+7=5 ✅</p></div>`
+});
+
+S(4,1,{
+0:`<h4>🎯 حل نظام بالتعويض</h4>
+<p>نعزل متغيرًا من معادلة ونعوّض في الأخرى.</p>
+<div class="example-box"><div class="label">📌</div>
+<p><span class="math-formula">ص = 2س + 1</span> ... (1) | <span class="math-formula">3س + ص = 11</span> ... (2)</p>
+<p>نعوض (1) في (2): <span class="math-formula">3س + (2س + 1) = 11</span></p>
+<p><span class="math-formula">5س + 1 = 11</span> → <span class="math-formula">5س = 10</span> → <strong>س = 2</strong></p>
+<p>نعوض في (1): <span class="math-formula">ص = 2(2) + 1 = 5</span></p>
+<p><strong>الحل: (2, 5)</strong></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">🛒</div>
+<p>سعر القلم ضعف سعر الدفتر. 2 قلم + 3 دفاتر = 21 ريال. كم سعر كل؟</p>
+<p>القلم = 2ص (حيث ص = سعر الدفتر)</p>
+<p><span class="math-formula">2(2ص) + 3ص = 21</span> → <span class="math-formula">7ص = 21</span> → الدفتر = 3، القلم = 6</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>1️⃣ اعزلي متغيرًا من إحدى المعادلتين</p>
+<p>2️⃣ عوّضي في المعادلة الأخرى</p>
+<p>3️⃣ حلّي المعادلة الناتجة (بمتغير واحد)</p>
+<p>4️⃣ عوّضي للحصول على المتغير الثاني</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 متى نستخدم التعويض؟</div>
+<p>التعويض مناسب عندما يكون أحد المتغيرين <strong>معزولاً بالفعل</strong> أو <strong>معامله 1 أو -1</strong> مما يسهّل عزله.</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p><span class="math-formula">س + ص = 10</span> ... (1) | <span class="math-formula">2س - ص = 5</span> ... (2)</p>
+<p>من (1): <span class="math-formula">ص = 10 - س</span></p>
+<p>نعوض في (2): <span class="math-formula">2س - (10 - س) = 5</span></p>
+<p><span class="math-formula">2س - 10 + س = 5</span> → <span class="math-formula">3س = 15</span> → <strong>س = 5</strong></p>
+<p><span class="math-formula">ص = 10 - 5 = 5</span></p>
+<p><strong>الحل: (5, 5)</strong></p>
+<p>تحقق في (2): 2(5)-5=5 ✅</p></div>`
+});
+
+S(4,2,{
+0:`<h4>🎯 حل نظام بالحذف بالجمع أو الطرح</h4>
+<p>نجمع أو نطرح المعادلتين لحذف أحد المتغيرين مباشرة.</p>
+<div class="example-box"><div class="label">📌 حذف بالجمع</div>
+<p><span class="math-formula">2س + ص = 7</span> | <span class="math-formula">2س - ص = 1</span></p>
+<p>بالجمع: <span class="math-formula">4س = 8</span> → س=2 → ص=3</p></div>
+<div class="example-box"><div class="label">📌 حذف بالطرح</div>
+<p><span class="math-formula">3س + 2ص = 12</span> | <span class="math-formula">3س - ص = 3</span></p>
+<p>بالطرح: <span class="math-formula">3ص = 9</span> → ص=3 → س=2</p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">🍔</div>
+<p>وجبتان + 3 عصائر = 45 ريال | وجبتان + عصير = 35 ريال</p>
+<p>بالطرح: 2 عصير = 10 → <strong>العصير = 5 ريال، الوجبة = 15 ريال</strong></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ معاملات متعاكسة الإشارة ← <strong>نجمع</strong></p>
+<p>▸ معاملات متساوية ونفس الإشارة ← <strong>نطرح</strong></p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 متى نستخدم الحذف؟</div>
+<p>عندما تكون معاملات أحد المتغيرين <strong>متساوية</strong> (أو متعاكسة) في المعادلتين.</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p><span class="math-formula">5س + 3ص = 11</span> ... (1)</p>
+<p><span class="math-formula">5س - 2ص = 1</span> ... (2)</p>
+<p>معامل س متساوٍ ونفس الإشارة ← نطرح (1) - (2):</p>
+<p><span class="math-formula">(5س-5س) + (3ص-(-2ص)) = 11-1</span></p>
+<p><span class="math-formula">5ص = 10</span> → <strong>ص = 2</strong></p>
+<p>نعوض في (1): 5س+6=11 → <strong>س = 1</strong></p>
+<p>تحقق في (2): 5(1)-2(2) = 5-4 = 1 ✅</p></div>`
+});
+
+S(4,3,{
+0:`<h4>🎯 حل نظام بالحذف باستعمال الضرب</h4>
+<p>إذا المعاملات غير متساوية، نضرب إحدى المعادلتين (أو كلتيهما) في عدد مناسب أولاً.</p>
+<div class="example-box"><div class="label">📌</div>
+<p><span class="math-formula">2س + 3ص = 7</span> | <span class="math-formula">س + 2ص = 4</span></p>
+<p>نضرب الثانية في 2: <span class="math-formula">2س + 4ص = 8</span></p>
+<p>نطرح: <span class="math-formula">-ص = -1</span> → <strong>ص = 1، س = 2</strong></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">🎫</div>
+<p>3 تذاكر كبار + 2 أطفال = 44 ريال | 2 كبار + 5 أطفال = 43 ريال</p>
+<p>نضرب الأولى في 5 والثانية في 2 ← ونطرح لحذف الأطفال</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>1️⃣ اضربي معادلة (أو كلتيهما) لتتساوى المعاملات</p>
+<p>2️⃣ اجمعي أو اطرحي لحذف المتغير</p>
+<p>3️⃣ حلّي ثم عوّضي</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 الاستراتيجية</div>
+<p>اختاري المتغير الأسهل للحذف (معاملاته أصغر)، ثم اضربي المعادلة (أو المعادلتين) بعدد يجعل المعاملات متساوية.</p></div>
+<div class="example-box"><div class="label">📌 مثال: ضرب المعادلتين</div>
+<p><span class="math-formula">3س + 4ص = 10</span> ... (1) | <span class="math-formula">5س + 2ص = 12</span> ... (2)</p>
+<p>نضرب (2) في 2: <span class="math-formula">10س + 4ص = 24</span></p>
+<p>نطرح من المعدّلة - (1): <span class="math-formula">7س = 14</span> → <strong>س = 2</strong></p>
+<p>نعوض في (1): 6+4ص=10 → <strong>ص = 1</strong></p>
+<p>تحقق في (2): 5(2)+2(1) = 12 ✅</p></div>`
+});
+
+S(4,4,{
+0:`<h4>🎯 تطبيقات على أنظمة المعادلات</h4>
+<p>نحوّل المسألة الكلامية إلى نظام معادلتين ونحل.</p>
+<div class="example-box"><div class="label">📌</div>
+<p>مجموع عددين 50 والفرق 12. ما العددان؟</p>
+<p><span class="math-formula">س + ص = 50</span> و <span class="math-formula">س - ص = 12</span></p>
+<p>بالجمع: 2س = 62 → <strong>س = 31، ص = 19</strong></p></div>`,
+1:`<h4>🧩 أمثلة حياتية</h4>
+<div class="example-box"><div class="label">💰</div>
+<p>3 كتب + 2 أقلام = 38 ريال | 2 كتب + 5 أقلام = 36 ريال. ما السعر؟</p></div>
+<div class="example-box"><div class="label">🚤</div>
+<p>قارب مع التيار = 20 كم/س، ضد التيار = 12 كم/س</p>
+<p>سرعة القارب + التيار = 20 | سرعة القارب - التيار = 12</p>
+<p>→ <strong>سرعة القارب = 16، سرعة التيار = 4</strong></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>1️⃣ حددي المتغيرين (ماذا نسمي المجاهيل)</p>
+<p>2️⃣ كوّني معادلتين من المعطيات</p>
+<p>3️⃣ حلّي بأنسب طريقة (رسم/تعويض/حذف)</p>
+<p>4️⃣ أجيبي عن السؤال وتحققي</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 اختيار الطريقة المناسبة</div>
+<p>▸ <strong>الرسم البياني:</strong> لحل تقريبي أو عندما يُطلب ذلك</p>
+<p>▸ <strong>التعويض:</strong> عندما يكون أحد المتغيرين معزولاً أو معامله 1</p>
+<p>▸ <strong>الحذف:</strong> عندما المعاملات مناسبة للجمع/الطرح مباشرة أو بعد الضرب</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p>عدد الطلاب والطالبات في مدرسة 450. عدد الطالبات يزيد 30 عن الطلاب.</p>
+<p>نفرض: س = طلاب، ص = طالبات</p>
+<p><span class="math-formula">س + ص = 450</span> ... (1) | <span class="math-formula">ص = س + 30</span> ... (2)</p>
+<p>نعوض (2) في (1): <span class="math-formula">س + (س + 30) = 450</span></p>
+<p><span class="math-formula">2س = 420</span> → <strong>الطلاب = 210، الطالبات = 240</strong></p>
+<p>تحقق: 210+240=450 ✅ و 240-210=30 ✅</p></div>`
+});
+// ══════════════════════════════════════════════════════════
+// الفصل 6: كثيرات الحدود (7 دروس) - مراجعة شاملة
+// ══════════════════════════════════════════════════════════
+
+S(5,0,{
+0:`<h4>🎯 ضرب وحيدات الحد</h4>
+<p>نضرب <strong>المعاملات</strong> (الأعداد) ونجمع <strong>الأسس</strong> للمتغيرات المتشابهة.</p>
+<div class="example-box"><div class="label">📌 مثال 1</div>
+<p><span class="math-formula">(3س²)(4س³) = 12س⁵</span></p>
+<p>المعاملات: 3 × 4 = 12 | الأسس: 2 + 3 = 5</p></div>
+<div class="example-box"><div class="label">📌 مثال 2</div>
+<p><span class="math-formula">(-2س³ص)(5س²ص⁴) = -10س⁵ص⁵</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">📐 المساحة</div>
+<p>مستطيل طوله 5س² وعرضه 2س:</p>
+<p>المساحة = <span class="math-formula">5س² × 2س = 10س³</span></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p><strong>قوانين الأسس الأساسية:</strong></p>
+<p>▸ <span class="math-formula">أ^م × أ^ن = أ^(م+ن)</span> ← نجمع الأسس عند الضرب</p>
+<p>▸ <span class="math-formula">(أ^م)^ن = أ^(م×ن)</span> ← نضرب الأسس عند الرفع لقوة</p>
+<p>▸ <span class="math-formula">(أب)^ن = أ^ن × ب^ن</span> ← نوزع الأس</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 قوانين الأسس</div>
+<p><strong>1. ضرب قوى لنفس الأساس:</strong> <span class="math-formula">أ^م × أ^ن = أ^(م+ن)</span></p>
+<p>مثال: <span class="math-formula">س³ × س⁴ = س⁷</span></p>
+<p><strong>2. قوة القوة:</strong> <span class="math-formula">(أ^م)^ن = أ^(م×ن)</span></p>
+<p>مثال: <span class="math-formula">(س²)³ = س⁶</span></p>
+<p><strong>3. قوة حاصل الضرب:</strong> <span class="math-formula">(أب)^ن = أ^ن × ب^ن</span></p>
+<p>مثال: <span class="math-formula">(2س)³ = 8س³</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p><span class="math-formula">(4س²ص³)(-3سص²)</span></p>
+<p>المعاملات: 4 × (-3) = -12</p>
+<p>أسس س: 2 + 1 = 3 | أسس ص: 3 + 2 = 5</p>
+<p>النتيجة: <span class="math-formula">-12س³ص⁵</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: قوة القوة</div>
+<p><span class="math-formula">(-3س²ص)² = (-3)² × (س²)² × ص² = 9س⁴ص²</span></p>
+<p><strong>تنبيه:</strong> (-3)² = 9 وليس -9 (لأن سالب × سالب = موجب)</p></div>
+<div class="tip-box"><div class="label">⚠️ أخطاء شائعة</div>
+<p>▸ <span class="math-formula">س² × س³ = س⁶</span> ❌ → الصحيح <span class="math-formula">س⁵</span> (نجمع لا نضرب!)</p>
+<p>▸ <span class="math-formula">(2س)³ = 2س³</span> ❌ → الصحيح <span class="math-formula">8س³</span> (نرفع 2 أيضًا!)</p></div>`
+});
+
+S(5,1,{
+0:`<h4>🎯 قسمة وحيدات الحد</h4>
+<p>نقسم <strong>المعاملات</strong> ونطرح <strong>الأسس</strong> للمتغيرات المتشابهة.</p>
+<div class="example-box"><div class="label">📌 مثال 1</div>
+<p><span class="math-formula">12س⁵ ÷ 3س² = 4س³</span></p>
+<p>المعاملات: 12 ÷ 3 = 4 | الأسس: 5 - 2 = 3</p></div>
+<div class="example-box"><div class="label">📌 مثال 2</div>
+<p><span class="math-formula">18س⁶ص³ ÷ 6س²ص = 3س⁴ص²</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">📐</div>
+<p>مساحة مستطيل = 20س⁴ وعرضه = 4س². ما طوله؟</p>
+<p>الطول = <span class="math-formula">20س⁴ ÷ 4س² = 5س²</span></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ <span class="math-formula">أ^م ÷ أ^ن = أ^(م-ن)</span> ← نطرح الأسس عند القسمة</p>
+<p>▸ <span class="math-formula">أ⁰ = 1</span> ← أي عدد (غير الصفر) مرفوع للصفر = 1</p>
+<p>▸ <span class="math-formula">أ^(-ن) = 1/أ^ن</span> ← الأس السالب = المقلوب</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 القوانين</div>
+<p><strong>قسمة قوى لنفس الأساس:</strong> <span class="math-formula">أ^م ÷ أ^ن = أ^(م-ن)</span></p>
+<p><strong>الأس الصفري:</strong> <span class="math-formula">أ⁰ = 1</span> (حيث أ ≠ 0)</p>
+<p><strong>الأس السالب:</strong> <span class="math-formula">أ^(-ن) = 1/أ^ن</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p><span class="math-formula">24س⁷ص⁴ ÷ 8س³ص⁴</span></p>
+<p>المعاملات: 24 ÷ 8 = 3</p>
+<p>أسس س: 7 - 3 = 4 | أسس ص: 4 - 4 = 0 → ص⁰ = 1</p>
+<p>النتيجة: <span class="math-formula">3س⁴</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: أس سالب</div>
+<p><span class="math-formula">5س² ÷ 10س⁵ = ½ × س^(2-5) = ½ س^(-3) = 1/(2س³)</span></p></div>`
+});
+
+S(5,2,{
+0:`<h4>🎯 كثيرات الحدود</h4>
+<p>تعبير جبري يتكون من حدود مرتبطة بالجمع أو الطرح.</p>
+<p>▸ <strong>وحيدة حد:</strong> <span class="math-formula">3س²</span> (حد واحد)</p>
+<p>▸ <strong>ثنائية حدود:</strong> <span class="math-formula">2س + 5</span> (حدّان)</p>
+<p>▸ <strong>ثلاثية حدود:</strong> <span class="math-formula">س² + 3س - 7</span> (ثلاثة حدود)</p>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">📐</div>
+<p>مساحة مستطيل طوله (س+3) وعرضه (س+2):</p>
+<p>المساحة = <span class="math-formula">س² + 5س + 6</span> ← ثلاثية حدود!</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ <strong>الدرجة</strong> = أعلى أس للمتغير في كثيرة الحدود</p>
+<p>▸ <strong>المعامل الرئيسي</strong> = معامل الحد ذي الدرجة الأعلى</p>
+<p>▸ <strong>الصورة القياسية</strong> = ترتيب الحدود تنازليًا حسب الدرجة</p>
+<p>▸ <strong>الحد الثابت</strong> = حد بدون متغير</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 المصطلحات</div>
+<p><strong>الحد:</strong> عدد أو متغير أو حاصل ضربهما مع إشارته</p>
+<p><strong>المعامل:</strong> العدد المضروب في المتغير (في 3س²: المعامل = 3)</p>
+<p><strong>الدرجة:</strong> أعلى أس يظهر في كثيرة الحدود</p>
+<p><strong>الصورة القياسية:</strong> ترتيب الحدود من الأعلى درجة إلى الأدنى</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p><span class="math-formula">4س³ - 2س² + 7س - 1</span></p>
+<p>▸ عدد الحدود: 4 (رباعية حدود)</p>
+<p>▸ الدرجة: 3 (أعلى أس)</p>
+<p>▸ المعامل الرئيسي: 4 (معامل الحد الأعلى درجة)</p>
+<p>▸ الحد الثابت: -1</p>
+<p>▸ هل هي بالصورة القياسية؟ نعم ✅ (مرتبة تنازليًا: 3, 2, 1, 0)</p></div>
+<div class="example-box"><div class="label">📌 مثال: تحويل للصورة القياسية</div>
+<p><span class="math-formula">5 + 3س - 2س³ + س²</span></p>
+<p>الصورة القياسية: <span class="math-formula">-2س³ + س² + 3س + 5</span></p>
+<p>الدرجة: 3 | المعامل الرئيسي: -2</p></div>`
+});
+
+S(5,3,{
+0:`<h4>🎯 جمع كثيرات الحدود وطرحها</h4>
+<p>نجمع أو نطرح <strong>الحدود المتشابهة فقط</strong> (نفس المتغير بنفس الأس).</p>
+<div class="example-box"><div class="label">📌 جمع</div>
+<p><span class="math-formula">(3س² + 2س - 1) + (5س² - 4س + 3)</span></p>
+<p>= <span class="math-formula">8س² - 2س + 2</span></p></div>
+<div class="example-box"><div class="label">📌 طرح</div>
+<p><span class="math-formula">(7س² + 3س - 4) - (2س² - 5س + 1)</span></p>
+<p>= <span class="math-formula">7س² + 3س - 4 - 2س² + 5س - 1</span></p>
+<p>= <span class="math-formula">5س² + 8س - 5</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">💰</div>
+<p>إيرادات محلين: الأول = <span class="math-formula">3س² + 5س + 100</span> والثاني = <span class="math-formula">2س² - 3س + 200</span></p>
+<p>المجموع: <span class="math-formula">5س² + 2س + 300</span></p>
+<p>الفرق (الأول - الثاني): <span class="math-formula">س² + 8س - 100</span></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p><strong>الجمع:</strong> اجمعي معاملات الحدود المتشابهة مباشرة</p>
+<p><strong>الطرح:</strong> غيّري إشارات كثيرة الحدود المطروحة ثم اجمعي</p>
+<div class="tip-box"><div class="label">⚠️</div>
+<p>عند الطرح: <span class="math-formula">-(2س² - 5س + 1) = -2س² + 5س - 1</span></p>
+<p>غيّري إشارة <strong>كل</strong> حد!</p></div>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 الحدود المتشابهة</div>
+<p>حدّان متشابهان إذا كان لهما <strong>نفس المتغير (أو المتغيرات) بنفس الأس</strong>.</p>
+<p>▸ 3س² و 5س² ← متشابهة ✅ (نفس المتغير ونفس الأس)</p>
+<p>▸ 3س² و 5س³ ← غير متشابهة ❌ (أسس مختلفة)</p>
+<p>▸ 4 و -7 ← متشابهة ✅ (حدود ثابتة)</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل: الطرح بالتفصيل</div>
+<p><span class="math-formula">(4س³ + 2س² - 7) - (3س³ - 5س + 2)</span></p>
+<p><strong>الخطوة 1:</strong> نغير إشارات كثيرة الحدود المطروحة:</p>
+<p>= <span class="math-formula">4س³ + 2س² - 7 - 3س³ + 5س - 2</span></p>
+<p><strong>الخطوة 2:</strong> نجمع الحدود المتشابهة:</p>
+<p>س³: <span class="math-formula">4 - 3 = 1</span></p>
+<p>س²: <span class="math-formula">2</span> (لا يوجد حد مشابه)</p>
+<p>س: <span class="math-formula">5</span> (لا يوجد حد مشابه)</p>
+<p>ثوابت: <span class="math-formula">-7 - 2 = -9</span></p>
+<p><strong>النتيجة:</strong> <span class="math-formula">س³ + 2س² + 5س - 9</span></p></div>`
+});
+
+S(5,4,{
+0:`<h4>🎯 ضرب وحيدة حد في كثيرة حدود</h4>
+<p>نستخدم <strong>خاصية التوزيع</strong>: نضرب وحيدة الحد في كل حد من كثيرة الحدود.</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p><span class="math-formula">3س(2س² + 4س - 5)</span></p>
+<p>= <span class="math-formula">3س × 2س² + 3س × 4س + 3س × (-5)</span></p>
+<p>= <span class="math-formula">6س³ + 12س² - 15س</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">📐</div>
+<p>مساحة مستطيل عرضه 2س وطوله (س² + 3س + 4):</p>
+<p>المساحة = <span class="math-formula">2س(س² + 3س + 4) = 2س³ + 6س² + 8س</span></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p><span class="math-formula">أ(ب + ج + د) = أب + أج + أد</span></p>
+<p>▸ اضربي المعاملات ▸ اجمعي الأسس ▸ انتبهي للإشارات</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 خاصية التوزيع</div>
+<p>لضرب وحيدة حد في كثيرة حدود، نضرب وحيدة الحد في <strong>كل حد</strong> من حدود كثيرة الحدود على حدة.</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p><span class="math-formula">-2س²(4س³ - 3س + 7)</span></p>
+<p>= <span class="math-formula">(-2س²)(4س³) + (-2س²)(-3س) + (-2س²)(7)</span></p>
+<p>= <span class="math-formula">-8س⁵ + 6س³ - 14س²</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: مع متغيرين</div>
+<p><span class="math-formula">3س²ص(2سص - 4ص² + 1)</span></p>
+<p>= <span class="math-formula">6س³ص² - 12س²ص³ + 3س²ص</span></p></div>
+<div class="tip-box"><div class="label">⚠️</div>
+<p>سالب × سالب = موجب: <span class="math-formula">(-2س²)(-3س) = +6س³</span> ✅</p></div>`
+});
+
+S(5,5,{
+0:`<h4>🎯 ضرب كثيرات الحدود</h4>
+<p>نضرب <strong>كل حد</strong> من الأولى في <strong>كل حد</strong> من الثانية، ثم نجمع الحدود المتشابهة.</p>
+<div class="example-box"><div class="label">📌 مثال</div>
+<p><span class="math-formula">(س + 3)(س + 5)</span></p>
+<p>= <span class="math-formula">س² + 5س + 3س + 15</span></p>
+<p>= <span class="math-formula">س² + 8س + 15</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4>
+<div class="example-box"><div class="label">🏠 أرضية</div>
+<p>غرفة طولها (س + 4) وعرضها (س + 2):</p>
+<p>المساحة = <span class="math-formula">(س+4)(س+2) = س² + 6س + 8</span></p></div>`,
+2:`<h4>⚡ الشرح السريع - طريقة FOIL</h4>
+<p>لضرب ثنائيتي حدود <span class="math-formula">(أ + ب)(ج + د)</span>:</p>
+<p>▸ <strong>F</strong> (First/الأولان): أ × ج</p>
+<p>▸ <strong>O</strong> (Outer/الخارجيان): أ × د</p>
+<p>▸ <strong>I</strong> (Inner/الداخليان): ب × ج</p>
+<p>▸ <strong>L</strong> (Last/الأخيران): ب × د</p>
+<p>ثم اجمعي الحدود المتشابهة</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 الطريقة العامة</div>
+<p>كل حد من كثيرة الحدود الأولى يُضرب في كل حد من كثيرة الحدود الثانية. عدد الضربات = عدد حدود الأولى × عدد حدود الثانية.</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: طريقة FOIL</div>
+<p><span class="math-formula">(2س - 3)(4س + 1)</span></p>
+<p><strong>F:</strong> <span class="math-formula">2س × 4س = 8س²</span></p>
+<p><strong>O:</strong> <span class="math-formula">2س × 1 = 2س</span></p>
+<p><strong>I:</strong> <span class="math-formula">(-3) × 4س = -12س</span></p>
+<p><strong>L:</strong> <span class="math-formula">(-3) × 1 = -3</span></p>
+<p>= <span class="math-formula">8س² + 2س - 12س - 3 = 8س² - 10س - 3</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: ثنائية × ثلاثية</div>
+<p><span class="math-formula">(س + 2)(س² - 3س + 4)</span></p>
+<p>= <span class="math-formula">س(س² - 3س + 4) + 2(س² - 3س + 4)</span></p>
+<p>= <span class="math-formula">س³ - 3س² + 4س + 2س² - 6س + 8</span></p>
+<p>= <span class="math-formula">س³ - س² - 2س + 8</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: التحقق</div>
+<p><span class="math-formula">(3س + 2)(س - 5)</span></p>
+<p>= <span class="math-formula">3س² - 15س + 2س - 10 = 3س² - 13س - 10</span></p>
+<p><strong>تحقق بالتعويض (س=1):</strong> (3+2)(1-5) = 5(-4) = -20</p>
+<p>3(1)-13(1)-10 = 3-13-10 = -20 ✅</p></div>`
+});
+
+S(5,6,{
+0:`<h4>🎯 حالات خاصة من ضرب كثيرات الحدود</h4>
+<p>ثلاث متطابقات مهمة جدًا يجب حفظها:</p>
+<p>▸ <strong>مربع المجموع:</strong> <span class="math-formula">(أ + ب)² = أ² + 2أب + ب²</span></p>
+<p>▸ <strong>مربع الفرق:</strong> <span class="math-formula">(أ - ب)² = أ² - 2أب + ب²</span></p>
+<p>▸ <strong>فرق المربعين:</strong> <span class="math-formula">(أ + ب)(أ - ب) = أ² - ب²</span></p>
+<div class="example-box"><div class="label">📌 أمثلة سريعة</div>
+<p><span class="math-formula">(س + 4)² = س² + 8س + 16</span></p>
+<p><span class="math-formula">(س - 3)² = س² - 6س + 9</span></p>
+<p><span class="math-formula">(س + 5)(س - 5) = س² - 25</span></p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية</h4>
+<div class="example-box"><div class="label">🔢 حساب ذهني</div>
+<p>لحساب 99² بسرعة: <span class="math-formula">(100 - 1)² = 10000 - 200 + 1 = 9801</span></p>
+<p>لحساب 52 × 48: <span class="math-formula">(50+2)(50-2) = 2500 - 4 = 2496</span></p></div>
+<div class="example-box"><div class="label">📐 المساحة</div>
+<p>مربع ضلعه (س + 3):</p>
+<p>المساحة = <span class="math-formula">(س+3)² = س² + 6س + 9</span></p></div>`,
+
+2:`<h4>⚡ الشرح السريع</h4>
+<p><strong>المتطابقات الثلاث:</strong></p>
+<p>1️⃣ <span class="math-formula">(أ + ب)² = أ² + 2أب + ب²</span></p>
+<p>2️⃣ <span class="math-formula">(أ - ب)² = أ² - 2أب + ب²</span></p>
+<p>3️⃣ <span class="math-formula">(أ + ب)(أ - ب) = أ² - ب²</span></p>
+<div class="tip-box"><div class="label">⚠️ الخطأ الأشهر</div>
+<p><span class="math-formula">(أ + ب)² ≠ أ² + ب²</span></p>
+<p>لا تنسي الحد الأوسط <strong>2أب</strong>!</p></div>`,
+
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 لماذا هذه المتطابقات مهمة؟</div>
+<p>تختصر الحسابات بدل استخدام FOIL في كل مرة. كما أنها تظهر كثيرًا في التحليل والمعادلات التربيعية.</p></div>
+
+<div class="detail-box"><div class="label">📚 البرهان بالتوزيع</div>
+<p><strong>مربع المجموع:</strong></p>
+<p><span class="math-formula">(أ+ب)² = (أ+ب)(أ+ب) = أ² + أب + أب + ب² = أ² + 2أب + ب²</span></p>
+<p><strong>فرق المربعين:</strong></p>
+<p><span class="math-formula">(أ+ب)(أ-ب) = أ² - أب + أب - ب² = أ² - ب²</span></p>
+<p>الحدان الوسطيان يحذفان بعضهما!</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: مربع المجموع</div>
+<p><span class="math-formula">(3س + 4)²</span></p>
+<p>أ = 3س، ب = 4</p>
+<p>= <span class="math-formula">(3س)² + 2(3س)(4) + 4²</span></p>
+<p>= <span class="math-formula">9س² + 24س + 16</span></p>
+<p><strong>تحقق (س=1):</strong> (3+4)² = 49 و 9+24+16 = 49 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: مربع الفرق</div>
+<p><span class="math-formula">(5س - 2)²</span></p>
+<p>أ = 5س، ب = 2</p>
+<p>= <span class="math-formula">(5س)² - 2(5س)(2) + 2²</span></p>
+<p>= <span class="math-formula">25س² - 20س + 4</span></p>
+<p><strong>تحقق (س=1):</strong> (5-2)² = 9 و 25-20+4 = 9 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: فرق المربعين</div>
+<p><span class="math-formula">(6س + 7)(6س - 7)</span></p>
+<p>أ = 6س، ب = 7</p>
+<p>= <span class="math-formula">(6س)² - 7² = 36س² - 49</span></p>
+<p><strong>تحقق (س=1):</strong> (6+7)(6-7) = 13 × (-1) = -13 و 36(1) - 49 = -13 ✅</p></div>
+
+<div class="tip-box"><div class="label">⚠️ أخطاء شائعة</div>
+<p>1. <span class="math-formula">(أ+ب)² = أ²+ب²</span> ❌ → الصحيح: <span class="math-formula">أ²+2أب+ب²</span></p>
+<p>2. <span class="math-formula">(أ-ب)² = أ²-ب²</span> ❌ → الصحيح: <span class="math-formula">أ²-2أب+ب²</span></p>
+<p>3. الخلط بين (أ-ب)² وبين أ²-ب² — الأولى مربع فرق والثانية فرق مربعين!</p></div>`
+});
+
+// ══════════════════════════════════════════════════════════
+// الفصل 7: التحليل والمعادلات التربيعية (6 دروس)
+// ══════════════════════════════════════════════════════════
+
+S(6,0,{
+0:`<h4>🎯 تحليل وحيدات الحد</h4><p>نكتب العدد كحاصل ضرب عوامله الأولية، والمتغيرات بأسسها.</p><div class="example-box"><div class="label">📌</div><p><span class="math-formula">12س³ص² = 2² × 3 × س³ × ص²</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">🧱</div><p>التحليل = تفكيك إلى أجزاء أصغر، مثل تفكيك مكعبات الليغو لمعرفة مكوناتها!</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p>▸ حللي العدد لعوامل أولية: <span class="math-formula">12 = 2² × 3</span></p><p>▸ اكتبي المتغيرات بأسسها: <span class="math-formula">س⁴ × ص²</span></p><p>▸ <strong>ع.م.أ</strong> لوحيدتي حد: اضربي العوامل المشتركة بأصغر أسس</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 العامل المشترك الأكبر (ع.م.أ)</div>
+<p>لإيجاد ع.م.أ لعدة وحيدات حد:</p>
+<p>1. حللي كل وحيدة حد لعواملها الأولية</p>
+<p>2. اختاري العوامل <strong>المشتركة</strong> بين الجميع</p>
+<p>3. خذي <strong>أصغر أس</strong> لكل عامل مشترك</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p>أوجدي ع.م.أ لـ <span class="math-formula">18س³ص²</span> و <span class="math-formula">12س²ص⁵</span></p>
+<p>18 = 2 × 3² | 12 = 2² × 3</p>
+<p>العوامل المشتركة: 2¹ × 3¹ = 6</p>
+<p>س: أصغر أس = 2 | ص: أصغر أس = 2</p>
+<p><strong>ع.م.أ = 6س²ص²</strong></p></div>`
+});
+
+S(6,1,{
+0:`<h4>🎯 استعمال خاصية التوزيع (التحليل)</h4><p>نستخرج العامل المشترك الأكبر من جميع الحدود.</p><div class="example-box"><div class="label">📌</div><p><span class="math-formula">6س² + 9س = 3س(2س + 3)</span></p><p>العامل المشترك = 3س</p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">📦</div><p>مثل تجميع الأغراض المتشابهة: 6 تفاحات و 9 برتقالات = 3(2 تفاح + 3 برتقال)</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p>1️⃣ أوجدي ع.م.أ لجميع الحدود</p><p>2️⃣ اقسمي كل حد على ع.م.أ</p><p>3️⃣ اكتبي: ع.م.أ × (النواتج)</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 خاصية التوزيع عكسيًا</div>
+<p>الجمع: <span class="math-formula">أب + أج = أ(ب + ج)</span></p>
+<p>هذا هو <strong>عكس التوزيع</strong>: بدل فك الأقواس، نُعيد تكوينها!</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p><span class="math-formula">15س³ - 10س² + 5س</span></p>
+<p>ع.م.أ = 5س</p>
+<p>= <span class="math-formula">5س(3س² - 2س + 1)</span></p>
+<p><strong>تحقق:</strong> 5س(3س²) = 15س³ ✅ | 5س(-2س) = -10س² ✅ | 5س(1) = 5س ✅</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: التحليل بالتجميع</div>
+<p><span class="math-formula">س³ + 2س² + 3س + 6</span></p>
+<p>نجمّع: <span class="math-formula">(س³ + 2س²) + (3س + 6)</span></p>
+<p>نستخرج من كل مجموعة: <span class="math-formula">س²(س + 2) + 3(س + 2)</span></p>
+<p>العامل المشترك (س + 2): <span class="math-formula">(س + 2)(س² + 3)</span></p></div>`
+});
+
+S(6,2,{
+0:`<h4>🎯 المعادلات التربيعية: س² + ب س + ج = ٠</h4>
+<p>نبحث عن عددين <strong>حاصل ضربهما = ج</strong> و<strong>مجموعهما = ب</strong>.</p>
+<div class="example-box"><div class="label">📌</div>
+<p><span class="math-formula">س² + 7س + 12 = 0</span></p>
+<p>نبحث عن عددين ضربهما 12 ومجموعهما 7 → الـ 3 و الـ 4</p>
+<p><span class="math-formula">(س + 3)(س + 4) = 0</span></p>
+<p><strong>س = -3 أو س = -4</strong></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">📐</div><p>مستطيل مساحته 12 سم² وعرضه أقل من طوله بـ 1 سم:</p><p><span class="math-formula">س(س - 1) = 12</span> → <span class="math-formula">س² - س - 12 = 0</span></p><p><span class="math-formula">(س - 4)(س + 3) = 0</span> → الطول = 4 سم (نستبعد -3 لأنه طول)</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ ابحثي عن عددين: <strong>ضربهما = ج</strong> و <strong>مجموعهما = ب</strong></p>
+<p>▸ <strong>خاصية الناتج الصفري:</strong> إذا أ × ب = 0 فإن أ = 0 أو ب = 0</p>
+<div class="example-box"><div class="label">✅</div>
+<p><span class="math-formula">س² - 5س + 6 = 0</span></p>
+<p>ضربهما 6 ومجموعهما -5 → العددان -2 و -3</p>
+<p><span class="math-formula">(س - 2)(س - 3) = 0</span> → <strong>س = 2 أو س = 3</strong></p></div>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 خاصية الناتج الصفري</div>
+<p>إذا كان <span class="math-formula">أ × ب = 0</span>، فإن <span class="math-formula">أ = 0</span> أو <span class="math-formula">ب = 0</span> (أو كلاهما).</p>
+<p>هذه الخاصية هي أساس حل المعادلات التربيعية بالتحليل.</p></div>
+<div class="step-box"><div class="label">خطوات الحل</div>
+<p>1. اجعلي المعادلة = 0 (انقلي كل الحدود لطرف واحد)</p>
+<p>2. حللي إلى عاملين: ابحثي عن عددين ضربهما = ج ومجموعهما = ب</p>
+<p>3. طبقي خاصية الناتج الصفري: ساوي كل عامل بالصفر</p>
+<p>4. حلي كل معادلة</p>
+<p>5. تحققي</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p><span class="math-formula">س² - 8س + 15 = 0</span></p>
+<p>نبحث عن عددين ضربهما 15 ومجموعهما -8:</p>
+<p>عوامل 15: (1,15), (3,5), (-1,-15), <strong>(-3,-5)</strong> ← مجموعهما -8 ✅</p>
+<p><span class="math-formula">(س - 3)(س - 5) = 0</span></p>
+<p><strong>س = 3 أو س = 5</strong></p>
+<p>تحقق: 9-24+15=0 ✅ | 25-40+15=0 ✅</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: مع حد سالب</div>
+<p><span class="math-formula">س² + 2س - 15 = 0</span></p>
+<p>ضربهما -15 ومجموعهما 2: العددان <strong>5 و -3</strong></p>
+<p><span class="math-formula">(س + 5)(س - 3) = 0</span> → <strong>س = -5 أو س = 3</strong></p>
+<p>تحقق: 25-10-15=0 ✅ | 9+6-15=0 ✅</p></div>
+<div class="tip-box"><div class="label">⚠️ نصائح</div>
+<p>▸ إذا ج موجب → العددان لهما نفس الإشارة (حسب إشارة ب)</p>
+<p>▸ إذا ج سالب → العددان مختلفا الإشارة</p></div>`
+});
+
+S(6,3,{
+0:`<h4>🎯 المعادلات التربيعية: أ س² + ب س + ج = ٠</h4>
+<p>عندما المعامل الرئيسي ≠ 1، نستخدم <strong>طريقة حاصل الضرب أ × ج</strong> أو التجربة.</p>
+<div class="example-box"><div class="label">📌</div>
+<p><span class="math-formula">2س² + 7س + 3 = 0</span></p>
+<p>أ × ج = 2 × 3 = 6 → نبحث عن عددين ضربهما 6 ومجموعهما 7 → <strong>1 و 6</strong></p>
+<p><span class="math-formula">2س² + س + 6س + 3 = 0</span></p>
+<p><span class="math-formula">س(2س + 1) + 3(2س + 1) = 0</span></p>
+<p><span class="math-formula">(2س + 1)(س + 3) = 0</span></p>
+<p><strong>س = -½ أو س = -3</strong></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">🏀</div><p>ارتفاع كرة: <span class="math-formula">ع = -5ت² + 20ت</span>. متى تصل ارتفاع 15م؟</p><p><span class="math-formula">-5ت² + 20ت - 15 = 0</span> → <span class="math-formula">-5(ت² - 4ت + 3) = 0</span></p><p><span class="math-formula">(ت-1)(ت-3) = 0</span> → بعد ثانية واحدة أو 3 ثوانٍ</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p><strong>طريقة أ × ج:</strong></p><p>1️⃣ احسبي أ × ج</p><p>2️⃣ ابحثي عن عددين ضربهما = أ×ج ومجموعهما = ب</p><p>3️⃣ أعيدي كتابة الحد الأوسط كمجموع هذين العددين</p><p>4️⃣ حللي بالتجميع</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p><span class="math-formula">3س² + 10س + 8 = 0</span></p>
+<p><strong>أ × ج = 3 × 8 = 24</strong></p>
+<p>نبحث عن عددين ضربهما 24 ومجموعهما 10: → <strong>4 و 6</strong></p>
+<p>نعيد كتابة الحد الأوسط: <span class="math-formula">3س² + 4س + 6س + 8 = 0</span></p>
+<p>نجمّع: <span class="math-formula">(3س² + 4س) + (6س + 8) = 0</span></p>
+<p>نستخرج: <span class="math-formula">س(3س + 4) + 2(3س + 4) = 0</span></p>
+<p><span class="math-formula">(3س + 4)(س + 2) = 0</span></p>
+<p><strong>س = -4/3 أو س = -2</strong></p>
+<p>تحقق (س=-2): 3(4)+10(-2)+8 = 12-20+8 = 0 ✅</p></div>`
+});
+
+S(6,4,{
+0:`<h4>🎯 المعادلات التربيعية: الفرق بين مربعين</h4>
+<p><strong>المتطابقة:</strong> <span class="math-formula">أ² - ب² = (أ + ب)(أ - ب)</span></p>
+<p>تعبير على شكل "مربع ناقص مربع" يُحلّل إلى حاصل ضرب (مجموع)(فرق).</p>
+<div class="example-box"><div class="label">📌 مثال 1</div>
+<p><span class="math-formula">س² - 49</span></p>
+<p>= <span class="math-formula">س² - 7²</span> (كلاهما مربع كامل، والعملية طرح)</p>
+<p>= <span class="math-formula">(س + 7)(س - 7)</span></p></div>
+<div class="example-box"><div class="label">📌 مثال 2</div>
+<p><span class="math-formula">4س² - 9</span></p>
+<p>= <span class="math-formula">(2س)² - 3²</span></p>
+<p>= <span class="math-formula">(2س + 3)(2س - 3)</span></p></div>
+<div class="example-box"><div class="label">📌 مثال 3: حل المعادلة</div>
+<p><span class="math-formula">9س² - 25 = 0</span></p>
+<p><span class="math-formula">(3س + 5)(3س - 5) = 0</span></p>
+<p><strong>س = -5/3 أو س = 5/3</strong></p></div>`,
+
+1:`<h4>🧩 أمثلة حياتية</h4>
+<div class="example-box"><div class="label">🔢 حساب ذهني</div>
+<p>51 × 49 = (50+1)(50-1) = 50² - 1² = 2500 - 1 = <strong>2499</strong></p>
+<p>73 × 67 = (70+3)(70-3) = 4900 - 9 = <strong>4891</strong></p>
+<p>102 × 98 = (100+2)(100-2) = 10000 - 4 = <strong>9996</strong></p></div>`,
+
+2:`<h4>⚡ الشرح السريع</h4>
+<p><strong>الشروط:</strong></p>
+<p>▸ التعبير عبارة عن <strong>فرق</strong> (طرح) — وليس مجموع!</p>
+<p>▸ كل من الحدين <strong>مربع كامل</strong></p>
+<p><strong>التحليل:</strong> <span class="math-formula">أ² - ب² = (أ + ب)(أ - ب)</span></p>
+<div class="example-box"><div class="label">✅ تدريبات مع الحل</div>
+<p>1) <span class="math-formula">س² - 36 = (س + 6)(س - 6)</span></p>
+<p>2) <span class="math-formula">9س² - 1 = (3س + 1)(3س - 1)</span></p>
+<p>3) <span class="math-formula">25س² - 49 = (5س + 7)(5س - 7)</span></p>
+<p>4) <span class="math-formula">16 - س² = (4 + س)(4 - س)</span></p></div>
+<div class="tip-box"><div class="label">⚠️ تنبيه مهم</div>
+<p><span class="math-formula">س² + 25</span> ← هذا <strong>مجموع مربعين</strong> ولا يُحلّل!</p></div>`,
+
+3:`<h4>📖 الشرح التفصيلي: الفرق بين مربعين</h4>
+<div class="detail-box"><div class="label">📚 المتطابقة والبرهان</div>
+<p><span class="math-formula">أ² - ب² = (أ + ب)(أ - ب)</span></p>
+<p><strong>البرهان:</strong> لنتحقق بالتوزيع (FOIL):</p>
+<p><span class="math-formula">(أ + ب)(أ - ب) = أ² - أب + أب - ب²</span></p>
+<p>الحدان الوسطيان <span class="math-formula">-أب + أب = 0</span> يحذفان!</p>
+<p>= <span class="math-formula">أ² - ب²</span> ✅</p></div>
+
+<div class="step-box"><div class="label">خطوات التحليل</div>
+<p><strong>1.</strong> تأكدي أن التعبير على شكل <strong>فرق</strong> (عملية طرح)</p>
+<p><strong>2.</strong> تأكدي أن كل حد <strong>مربع كامل</strong></p>
+<p><strong>3.</strong> أوجدي أ = جذر الحد الأول، ب = جذر الحد الثاني</p>
+<p><strong>4.</strong> اكتبي: <span class="math-formula">(أ + ب)(أ - ب)</span></p></div>
+
+<div class="detail-box"><div class="label">📚 المربعات الكاملة الشائعة</div>
+<p><strong>أعداد:</strong> 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144</p>
+<p><strong>متغيرات:</strong> س², 4س²=(2س)², 9س²=(3س)², 16س²=(4س)², 25س²=(5س)²</p>
+<p><strong>قوى زوجية:</strong> س⁴=(س²)², س⁶=(س³)², 16س⁴=(4س²)²</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: بسيط</div>
+<p><span class="math-formula">س² - 64</span></p>
+<p>▸ فرق؟ نعم ✅ | س² مربع كامل؟ نعم (جذره س) ✅ | 64 مربع كامل؟ نعم (جذره 8) ✅</p>
+<p>= <span class="math-formula">(س + 8)(س - 8)</span></p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: بمعاملات</div>
+<p><span class="math-formula">9س² - 100</span></p>
+<p>▸ <span class="math-formula">9س² = (3س)²</span> ✅ | <span class="math-formula">100 = 10²</span> ✅</p>
+<p>= <span class="math-formula">(3س + 10)(3س - 10)</span></p>
+<p><strong>تحقق:</strong> (3س+10)(3س-10) = 9س² - 30س + 30س - 100 = 9س² - 100 ✅</p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: استخراج عامل مشترك أولاً</div>
+<p><span class="math-formula">2س² - 50</span></p>
+<p>ليست فرق مربعين مباشرة! لكن نستخرج 2 أولاً:</p>
+<p>= <span class="math-formula">2(س² - 25)</span></p>
+<p>الآن (س² - 25) فرق مربعين:</p>
+<p>= <span class="math-formula">2(س + 5)(س - 5)</span></p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 4: تحليل مزدوج (أسس عالية)</div>
+<p><span class="math-formula">س⁴ - 81</span></p>
+<p>= <span class="math-formula">(س²)² - 9²</span> → فرق مربعين!</p>
+<p>= <span class="math-formula">(س² + 9)(س² - 9)</span></p>
+<p>لاحظي: <span class="math-formula">س² - 9 = (س+3)(س-3)</span> ← فرق مربعين مرة ثانية!</p>
+<p>لكن <span class="math-formula">س² + 9</span> <strong>لا يُحلّل</strong> (مجموع مربعين)</p>
+<p>= <span class="math-formula">(س² + 9)(س + 3)(س - 3)</span></p></div>
+
+<div class="example-box"><div class="label">📌 مثال مفصّل 5: حل معادلة</div>
+<p><span class="math-formula">25س² - 16 = 0</span></p>
+<p><span class="math-formula">(5س)² - 4² = 0</span></p>
+<p><span class="math-formula">(5س + 4)(5س - 4) = 0</span></p>
+<p><span class="math-formula">5س + 4 = 0</span> → <span class="math-formula">س = -4/5</span></p>
+<p><span class="math-formula">5س - 4 = 0</span> → <span class="math-formula">س = 4/5</span></p>
+<p><strong>تحقق:</strong> 25(16/25) - 16 = 16 - 16 = 0 ✅</p></div>
+
+<div class="tip-box"><div class="label">⚠️ أخطاء شائعة</div>
+<p>1. <strong>تحليل مجموع مربعين:</strong> <span class="math-formula">س² + 9</span> ← لا يُحلّل على الحقيقية!</p>
+<p>2. <strong>نسيان العامل المشترك:</strong> <span class="math-formula">3س² - 27 = 3(س²-9) = 3(س+3)(س-3)</span></p>
+<p>3. <strong>عدم إكمال التحليل:</strong> إذا ظهر فرق مربعين في أحد العوامل، حلّليه!</p>
+<p>4. <strong>خطأ في الجذور:</strong> جذر <span class="math-formula">4س²</span> = <span class="math-formula">2س</span> وليس 4س!</p></div>`
+});
+
+S(6,5,{
+0:`<h4>🎯 المعادلات التربيعية: المربعات الكاملة</h4>
+<p>▸ <span class="math-formula">أ² + 2أب + ب² = (أ + ب)²</span></p>
+<p>▸ <span class="math-formula">أ² - 2أب + ب² = (أ - ب)²</span></p>
+<div class="example-box"><div class="label">📌</div>
+<p><span class="math-formula">س² + 6س + 9 = (س + 3)²</span></p>
+<p>لأن: أ = س، ب = 3، 2أب = 2(س)(3) = 6س ✅</p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">📐</div><p>مساحة مربع = <span class="math-formula">س² + 10س + 25</span>. ما طول ضلعه؟</p><p>= <span class="math-formula">(س + 5)²</span> → الضلع = <strong>(س + 5)</strong></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p><strong>كيف تتعرفين على المربع الكامل؟</strong></p>
+<p>1️⃣ هل الحد الأول مربع كامل؟ (مثل س², 4س², 9س²)</p>
+<p>2️⃣ هل الحد الأخير مربع كامل؟ (مثل 9, 16, 25)</p>
+<p>3️⃣ هل الحد الأوسط = 2 × جذر الأول × جذر الأخير؟</p>
+<p>إذا نعم للثلاثة ← مربع كامل!</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 شرط المربع الكامل</div>
+<p>ثلاثية الحدود <span class="math-formula">أ² ± 2أب + ب²</span> هي مربع كامل إذا وفقط إذا:</p>
+<p>1. الحد الأول والأخير مربعان كاملان</p>
+<p>2. الحد الأوسط = ± 2 × (جذر الأول) × (جذر الأخير)</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p>هل <span class="math-formula">4س² - 12س + 9</span> مربع كامل؟</p>
+<p>▸ 4س² = (2س)² ✅ | 9 = 3² ✅</p>
+<p>▸ الحد الأوسط: 12س = 2(2س)(3) = 12س ✅</p>
+<p>→ <span class="math-formula">(2س - 3)²</span></p>
+<p><strong>تحقق:</strong> (2س-3)² = 4س² - 12س + 9 ✅</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: حل معادلة</div>
+<p><span class="math-formula">س² + 14س + 49 = 0</span></p>
+<p>= <span class="math-formula">(س + 7)² = 0</span></p>
+<p>→ <strong>س = -7</strong> (جذر مكرر - حل وحيد!)</p></div>
+<div class="tip-box"><div class="label">⚠️</div>
+<p><span class="math-formula">س² + 6س + 4</span> ← ليس مربعًا كاملاً! لأن 4 = 2² لكن 2(س)(2) = 4س ≠ 6س</p></div>`
+});
+
+// ══════════════════════════════════════════════════════════
+// الفصل 8: الدوال التربيعية (4 دروس)
+// ══════════════════════════════════════════════════════════
+
+S(7,0,{
+0:`<h4>🎯 تمثيل الدوال التربيعية بيانيًا</h4>
+<p>الرسم البياني للدالة التربيعية <span class="math-formula">ص = أس² + بس + ج</span> هو <strong>قطع مكافئ</strong> (شكل U).</p>
+<div class="example-box"><div class="label">📌</div>
+<p><span class="math-formula">ص = س²</span> ← قطع مفتوح للأعلى، رأسه (0,0)</p>
+<p><span class="math-formula">ص = -س²</span> ← قطع مفتوح للأسفل، رأسه (0,0)</p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">⛲</div><p>مسار ماء النافورة = قطع مكافئ مفتوح للأسفل!</p></div><div class="example-box"><div class="label">🏀</div><p>مسار الكرة عند رميها = قطع مكافئ — الرأس هو أعلى نقطة.</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ <strong>أ > 0</strong> ← مفتوح للأعلى ∪ (الرأس = أدنى نقطة)</p>
+<p>▸ <strong>أ < 0</strong> ← مفتوح للأسفل ∩ (الرأس = أعلى نقطة)</p>
+<p>▸ <strong>محور التماثل:</strong> <span class="math-formula">س = -ب/(2أ)</span></p>
+<p>▸ <strong>الرأس:</strong> عوّضي قيمة محور التماثل في الدالة</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 عناصر القطع المكافئ</div>
+<p><strong>الرأس:</strong> أعلى أو أدنى نقطة — إحداثياتها (س₀, ص₀) حيث <span class="math-formula">س₀ = -ب/(2أ)</span></p>
+<p><strong>محور التماثل:</strong> خط رأسي يمر بالرأس — معادلته <span class="math-formula">س = -ب/(2أ)</span></p>
+<p><strong>الاتجاه:</strong> يعتمد على إشارة أ (المعامل الرئيسي)</p>
+<p><strong>المقطع الصادي:</strong> النقطة (0, ج)</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p><span class="math-formula">ص = س² - 4س + 3</span></p>
+<p><strong>محور التماثل:</strong> <span class="math-formula">س = -(-4)/(2×1) = 4/2 = 2</span></p>
+<p><strong>الرأس:</strong> ص = (2)² - 4(2) + 3 = 4 - 8 + 3 = -1 → <strong>(2, -1)</strong></p>
+<p><strong>الاتجاه:</strong> أ = 1 > 0 ← مفتوح للأعلى (الرأس أدنى نقطة)</p>
+<p><strong>المقطع الصادي:</strong> (0, 3)</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2</div>
+<p><span class="math-formula">ص = -2س² + 8س - 5</span></p>
+<p>محور التماثل: <span class="math-formula">س = -8/(2×(-2)) = -8/(-4) = 2</span></p>
+<p>الرأس: ص = -2(4)+8(2)-5 = -8+16-5 = 3 → <strong>(2, 3)</strong></p>
+<p>الاتجاه: أ = -2 < 0 ← مفتوح للأسفل (الرأس أعلى نقطة)</p></div>`
+});
+
+S(7,1,{
+0:`<h4>🎯 حل المعادلات التربيعية بيانيًا</h4><p>حلول <span class="math-formula">أس² + بس + ج = 0</span> = نقاط تقاطع القطع المكافئ مع <strong>محور س</strong>.</p>`,
+1:`<h4>🧩 مثال</h4><div class="example-box"><div class="label">🏀</div><p>متى تلمس الكرة الأرض؟ = أين يقطع المنحنى محور س (ص = 0)</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ يقطع محور س في <strong>نقطتين</strong> = حلّان حقيقيان مختلفان</p>
+<p>▸ يمس محور س في <strong>نقطة واحدة</strong> = حل مكرر (جذر مزدوج)</p>
+<p>▸ <strong>لا يقطع</strong> محور س = لا حلول حقيقية</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 العلاقة بالمميز</div>
+<p><strong>المميز (Δ) = ب² - 4أج</strong></p>
+<p>▸ Δ > 0 → القطع يقطع محور س في نقطتين = <strong>جذران حقيقيان مختلفان</strong></p>
+<p>▸ Δ = 0 → القطع يمس محور س = <strong>جذر حقيقي مكرر</strong></p>
+<p>▸ Δ < 0 → القطع لا يقطع محور س = <strong>لا جذور حقيقية</strong></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p><span class="math-formula">ص = س² - 4س + 3</span></p>
+<p>لإيجاد الجذور: <span class="math-formula">س² - 4س + 3 = 0</span></p>
+<p><span class="math-formula">(س - 1)(س - 3) = 0</span> → <strong>س = 1 أو س = 3</strong></p>
+<p>نقاط التقاطع مع محور س: (1, 0) و (3, 0)</p>
+<p>المميز: Δ = 16 - 12 = 4 > 0 ← جذران مختلفان ✅</p></div>`
+});
+
+S(7,2,{
+0:`<h4>🎯 حل المعادلات التربيعية بإكمال المربع</h4>
+<p>نحوّل التعبير إلى <strong>مربع كامل + ثابت</strong>.</p>
+<div class="example-box"><div class="label">📌</div>
+<p><span class="math-formula">س² + 6س + 5 = 0</span></p>
+<p><span class="math-formula">س² + 6س = -5</span></p>
+<p>نضيف (6/2)² = 9 للطرفين: <span class="math-formula">س² + 6س + 9 = -5 + 9</span></p>
+<p><span class="math-formula">(س + 3)² = 4</span></p>
+<p><span class="math-formula">س + 3 = ±2</span></p>
+<p><strong>س = -1 أو س = -5</strong></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">📐</div><p>حديقة مربعة مساحتها 40 م² وزدنا على ضلعها 3م. ما الضلع الأصلي؟</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>1️⃣ انقلي الثابت للطرف الآخر</p>
+<p>2️⃣ أضيفي <span class="math-formula">(ب/2)²</span> لكلا الطرفين</p>
+<p>3️⃣ حللي الطرف الأيسر كمربع كامل</p>
+<p>4️⃣ خذي الجذر التربيعي مع ±</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="step-box"><div class="label">الخطوات المفصّلة</div>
+<p>1. تأكدي أن معامل س² = 1 (إذا لا، اقسمي كل الحدود عليه)</p>
+<p>2. انقلي الحد الثابت للطرف الآخر</p>
+<p>3. أوجدي <span class="math-formula">(ب/2)²</span> وأضيفيه لكلا الطرفين</p>
+<p>4. الطرف الأيسر يصبح مربعًا كاملاً: <span class="math-formula">(س + ب/2)²</span></p>
+<p>5. خذي الجذر التربيعي لكلا الطرفين (± للطرف الأيمن)</p>
+<p>6. حلّي لإيجاد قيمتي س</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p><span class="math-formula">س² - 8س + 12 = 0</span></p>
+<p><strong>نقل الثابت:</strong> <span class="math-formula">س² - 8س = -12</span></p>
+<p><strong>إكمال المربع:</strong> (ب/2)² = (-8/2)² = (-4)² = 16</p>
+<p><span class="math-formula">س² - 8س + 16 = -12 + 16</span></p>
+<p><span class="math-formula">(س - 4)² = 4</span></p>
+<p><span class="math-formula">س - 4 = ±2</span></p>
+<p><strong>س = 4 + 2 = 6</strong> أو <strong>س = 4 - 2 = 2</strong></p>
+<p>تحقق: 36-48+12=0 ✅ | 4-16+12=0 ✅</p></div>`
+});
+
+S(7,3,{
+0:`<h4>🎯 حل المعادلات التربيعية بالقانون العام</h4>
+<p><span class="math-formula">س = (-ب ± √(ب² - 4أج)) / (2أ)</span></p>
+<p>يعمل مع <strong>أي</strong> معادلة تربيعية!</p>
+<div class="example-box"><div class="label">📌</div>
+<p><span class="math-formula">2س² + 5س - 3 = 0</span></p>
+<p>أ=2، ب=5، ج=-3</p>
+<p><span class="math-formula">س = (-5 ± √(25+24)) / 4 = (-5 ± √49) / 4 = (-5 ± 7) / 4</span></p>
+<p><strong>س = 2/4 = ½</strong> أو <strong>س = -12/4 = -3</strong></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">🚀</div><p>ارتفاع صاروخ: <span class="math-formula">ع = -5ت² + 30ت</span>. متى يصل 40م؟</p><p><span class="math-formula">-5ت² + 30ت - 40 = 0</span> → <span class="math-formula">ت² - 6ت + 8 = 0</span></p><p>بالقانون العام أو التحليل: <strong>ت = 2 أو ت = 4</strong> ثوانٍ</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p><strong>المميز Δ = ب² - 4أج:</strong></p>
+<p>▸ Δ > 0 → حلّان حقيقيان مختلفان</p>
+<p>▸ Δ = 0 → حل واحد مكرر</p>
+<p>▸ Δ < 0 → لا حلول حقيقية</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 القانون العام (صيغة الجذور)</div>
+<p>لأي معادلة <span class="math-formula">أس² + بس + ج = 0</span> حيث أ ≠ 0:</p>
+<p><span class="math-formula">س = (-ب ± √(ب² - 4أج)) / (2أ)</span></p>
+<p>هذا القانون يُعطي الحلّين (أو الحل) مباشرة.</p></div>
+<div class="detail-box"><div class="label">📚 المميز Δ = ب² - 4أج</div>
+<p><strong>Δ > 0:</strong> جذران حقيقيان مختلفان</p>
+<p><strong>Δ = 0:</strong> جذر حقيقي واحد مكرر (= -ب/(2أ))</p>
+<p><strong>Δ < 0:</strong> لا توجد جذور حقيقية (الجذور تكون عقدية/تخيلية)</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p><span class="math-formula">3س² - 7س + 2 = 0</span></p>
+<p>أ=3، ب=-7، ج=2</p>
+<p>Δ = (-7)² - 4(3)(2) = 49 - 24 = 25 > 0 ← حلّان</p>
+<p><span class="math-formula">س = (7 ± √25) / 6 = (7 ± 5) / 6</span></p>
+<p><strong>س = 12/6 = 2</strong> أو <strong>س = 2/6 = ⅓</strong></p>
+<p>تحقق (س=2): 12-14+2=0 ✅</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: جذر مكرر</div>
+<p><span class="math-formula">س² - 6س + 9 = 0</span></p>
+<p>Δ = 36 - 36 = 0 ← حل واحد مكرر</p>
+<p><span class="math-formula">س = 6/2 = 3</span></p>
+<p>أو بالتحليل: <span class="math-formula">(س-3)² = 0</span> → <strong>س = 3</strong></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: لا حل حقيقي</div>
+<p><span class="math-formula">س² + 2س + 5 = 0</span></p>
+<p>Δ = 4 - 20 = -16 < 0</p>
+<p>← <strong>لا توجد حلول حقيقية</strong></p></div>`
+});
+
+// ══════════════════════════════════════════════════════════
+// الفصل 9: الدوال الجذرية والمثلثات (7 دروس)
+// ══════════════════════════════════════════════════════════
+
+S(8,0,{
+0:`<h4>🎯 تبسيط العبارات الجذرية</h4><p>نستخرج المربعات الكاملة من تحت الجذر لتبسيط العبارة.</p><div class="example-box"><div class="label">📌</div><p><span class="math-formula">√50 = √(25×2) = √25 × √2 = 5√2</span></p><p><span class="math-formula">√72 = √(36×2) = 6√2</span></p><p><span class="math-formula">√48 = √(16×3) = 4√3</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">📐</div><p>قطر مربع ضلعه 5 = <span class="math-formula">5√2 ≈ 7.07</span> سم</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p>▸ <span class="math-formula">√(أ×ب) = √أ × √ب</span></p><p>▸ <span class="math-formula">√(أ/ب) = √أ / √ب</span></p><p>▸ ابحثي عن أكبر مربع كامل يقسم العدد تحت الجذر</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 الشكل المبسّط</div>
+<p>العبارة الجذرية مبسّطة عندما:</p>
+<p>1. لا يوجد مربع كامل تحت الجذر (عدا 1)</p>
+<p>2. لا يوجد كسر تحت الجذر</p>
+<p>3. لا يوجد جذر في المقام</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: تبسيط</div>
+<p><span class="math-formula">√200 = √(100 × 2) = 10√2</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: إنطاق المقام</div>
+<p><span class="math-formula">3/√5</span> → نضرب البسط والمقام في √5:</p>
+<p>= <span class="math-formula">(3×√5)/(√5×√5) = 3√5/5</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: مع متغيرات</div>
+<p><span class="math-formula">√(18س⁴) = √(9×2×س⁴) = 3س²√2</span></p></div>`
+});
+
+S(8,1,{
+0:`<h4>🎯 العمليات على العبارات الجذرية</h4><p>نجمع/نطرح الجذور <strong>المتشابهة فقط</strong> (نفس ما تحت الجذر).</p><div class="example-box"><div class="label">📌</div><p><span class="math-formula">3√2 + 5√2 = 8√2</span></p><p><span class="math-formula">√8 + √18 = 2√2 + 3√2 = 5√2</span></p></div>`,
+1:`<h4>🧩 مثال</h4><div class="example-box"><div class="label">📐</div><p>محيط مثلث أضلاعه √12 و √27 و √3:</p><p>= <span class="math-formula">2√3 + 3√3 + √3 = 6√3</span></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p>▸ بسّطي كل جذر أولاً ▸ اجمعي المتشابهة ▸ الضرب: <span class="math-formula">√أ × √ب = √(أب)</span></p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: جمع بعد التبسيط</div>
+<p><span class="math-formula">√45 + √20 - √5</span></p>
+<p>= <span class="math-formula">3√5 + 2√5 - √5 = 4√5</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: ضرب جذور</div>
+<p><span class="math-formula">(2 + √3)(4 - √3)</span></p>
+<p>= <span class="math-formula">8 - 2√3 + 4√3 - (√3)²</span></p>
+<p>= <span class="math-formula">8 + 2√3 - 3 = 5 + 2√3</span></p></div>`
+});
+
+S(8,2,{
+0:`<h4>🎯 المعادلات الجذرية</h4><p>معادلة فيها المتغير تحت الجذر. نربّع الطرفين ثم <strong>نتحقق</strong> (مهم جدًا!).</p><div class="example-box"><div class="label">📌</div><p><span class="math-formula">√(س + 3) = 5</span></p><p>تربيع: <span class="math-formula">س + 3 = 25</span> → <strong>س = 22</strong></p><p>تحقق: √(22+3) = √25 = 5 ✅</p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">🔬</div><p>زمن سقوط جسم: <span class="math-formula">ت = √(2ع/10)</span>. إذا ت = 3 ثوانٍ، كم الارتفاع؟</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p>1️⃣ اعزلي الجذر في طرف</p><p>2️⃣ ربّعي الطرفين</p><p>3️⃣ حلّي المعادلة الناتجة</p><p>4️⃣ <strong>تحققي!</strong> (قد تظهر حلول دخيلة لا تصلح)</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 الحلول الدخيلة</div>
+<p>التربيع قد يُنتج حلولاً لا تحقق المعادلة الأصلية! لذلك <strong>التحقق واجب وضروري</strong>.</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل: حل دخيل</div>
+<p><span class="math-formula">√(2س - 1) = س - 2</span></p>
+<p><strong>تربيع:</strong> <span class="math-formula">2س - 1 = (س-2)² = س² - 4س + 4</span></p>
+<p><span class="math-formula">0 = س² - 6س + 5 = (س-1)(س-5)</span></p>
+<p>→ س = 1 أو س = 5</p>
+<p><strong>تحقق:</strong></p>
+<p>س = 5: √(10-1) = √9 = 3 و 5-2 = 3 ✅ → <strong>مقبول</strong></p>
+<p>س = 1: √(2-1) = √1 = 1 و 1-2 = -1 → 1 ≠ -1 ❌ → <strong>دخيل (مرفوض)</strong></p>
+<p><strong>الحل النهائي: س = 5 فقط</strong></p></div>`
+});
+
+S(8,3,{
+0:`<h4>🎯 نظرية فيثاغورس</h4><p><span class="math-formula">أ² + ب² = ج²</span> حيث ج = الوتر (أطول ضلع، مقابل الزاوية القائمة).</p><div class="example-box"><div class="label">📌</div><p>ضلعان قائمان: 3 و 4 → <span class="math-formula">ج = √(9 + 16) = √25 = 5</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">📺</div><p>شاشة عرضها 80 سم وارتفاعها 60 سم. كم قطرها؟</p><p><span class="math-formula">ق = √(6400 + 3600) = √10000 = 100</span> سم</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p>▸ إيجاد الوتر: <span class="math-formula">ج = √(أ² + ب²)</span></p><p>▸ إيجاد ضلع قائم: <span class="math-formula">أ = √(ج² - ب²)</span></p><p>▸ ثلاثيات فيثاغورس: (3,4,5) | (5,12,13) | (8,15,17) | (7,24,25)</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 النظرية</div><p>في أي مثلث <strong>قائم الزاوية</strong>: مربع طول الوتر = مجموع مربعي طولي الضلعين القائمين.</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: إيجاد الوتر</div>
+<p>ضلعان: 5 و 12</p>
+<p><span class="math-formula">ج² = 25 + 144 = 169</span> → <strong>ج = 13</strong></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: إيجاد ضلع</div>
+<p>الوتر = 10، ضلع = 6</p>
+<p><span class="math-formula">أ² = 100 - 36 = 64</span> → <strong>أ = 8</strong></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: هل المثلث قائم؟</div>
+<p>أضلاع: 7, 24, 25</p>
+<p><span class="math-formula">7² + 24² = 49 + 576 = 625 = 25²</span> → <strong>نعم، قائم ✅</strong></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 4: تطبيق</div>
+<p>سلم طوله 13م يستند على حائط. إذا كانت قاعدته تبعد 5م عن الحائط، فكم يصل ارتفاعه؟</p>
+<p><span class="math-formula">ع² = 13² - 5² = 169 - 25 = 144</span> → <strong>ع = 12م</strong></p></div>`
+});
+
+S(8,4,{
+0:`<h4>🎯 المسافة بين نقطتين</h4><p><span class="math-formula">ف = √((س₂ - س₁)² + (ص₂ - ص₁)²)</span></p><div class="example-box"><div class="label">📌</div><p>بين (1, 2) و (4, 6):</p><p><span class="math-formula">ف = √((4-1)² + (6-2)²) = √(9 + 16) = √25 = 5</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">🗺️</div><p>المسافة المباشرة بين نقطتين على الخريطة — تطبيق مباشر لنظرية فيثاغورس!</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p>▸ <span class="math-formula">ف = √(Δس² + Δص²)</span> حيث Δس = الفرق الأفقي و Δص = الفرق الرأسي</p><p>▸ <strong>نقطة المنتصف:</strong> <span class="math-formula">م = ((س₁+س₂)/2, (ص₁+ص₂)/2)</span></p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 الاشتقاق</div>
+<p>صيغة المسافة مشتقة من نظرية فيثاغورس: الفرق الأفقي والرأسي يشكلان ضلعي مثلث قائم، والمسافة بين النقطتين هي الوتر.</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1</div>
+<p>بين (-3, 2) و (5, -4):</p>
+<p><span class="math-formula">ف = √((5-(-3))² + (-4-2)²) = √(64 + 36) = √100 = 10</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: نقطة المنتصف</div>
+<p>منتصف القطعة بين (2, 3) و (8, 7):</p>
+<p><span class="math-formula">م = ((2+8)/2, (3+7)/2) = (5, 5)</span></p></div>`
+});
+
+S(8,5,{
+0:`<h4>🎯 المثلثات المتشابهة</h4><p>مثلثان متشابهان إذا تساوت زواياهما المتناظرة وتناسبت أضلاعهما.</p>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">🏗️</div><p>ظل عمود طوله 15م يساوي 5م، وظل شجرة يساوي 3م. ما ارتفاع الشجرة؟</p><p><span class="math-formula">15/5 = الشجرة/3</span> → الشجرة = <strong>9م</strong></p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p>▸ <strong>حالات التشابه:</strong> زاوية-زاوية (ز.ز) | ضلع-زاوية-ضلع (ض.ز.ض) | ضلع-ضلع-ضلع (ض.ض.ض)</p><p>▸ الأضلاع المتناظرة <strong>متناسبة</strong> (نسبة ثابتة)</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 حالات التشابه</div>
+<p><strong>1. زاوية-زاوية (ز.ز):</strong> إذا تساوت زاويتان في مثلث مع زاويتين في مثلث آخر</p>
+<p><strong>2. ضلع-زاوية-ضلع (ض.ز.ض):</strong> إذا تناسب ضلعان وتساوت الزاوية المحصورة</p>
+<p><strong>3. ضلع-ضلع-ضلع (ض.ض.ض):</strong> إذا تناسبت الأضلاع الثلاثة</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p>مثلثان متشابهان: أضلاع الأول 3, 4, 5 وأحد أضلاع الثاني 6 (يقابل 3).</p>
+<p>نسبة التشابه = 6/3 = 2</p>
+<p>باقي الأضلاع: 4×2 = <strong>8</strong> و 5×2 = <strong>10</strong></p></div>`
+});
+
+S(8,6,{
+0:`<h4>🎯 النسب المثلثية</h4>
+<p>في المثلث القائم، لكل زاوية حادة (θ) ثلاث نسب أساسية:</p>
+<p>▸ <span class="math-formula">جا θ = الضلع المقابل / الوتر</span></p>
+<p>▸ <span class="math-formula">جتا θ = الضلع المجاور / الوتر</span></p>
+<p>▸ <span class="math-formula">ظا θ = الضلع المقابل / الضلع المجاور</span></p>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">🏗️</div><p>سلم بزاوية 60° على الأرض طوله 10م. كم ارتفاعه عن الأرض؟</p><p><span class="math-formula">جا 60° = ع/10</span></p><p><span class="math-formula">ع = 10 × جا 60° = 10 × (√3/2) ≈ 8.66</span> م</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ <strong>جا</strong> = مقابل/وتر | <strong>جتا</strong> = مجاور/وتر | <strong>ظا</strong> = مقابل/مجاور</p>
+<p><strong>الزوايا الخاصة:</strong></p>
+<p>جا 30° = ½ | جا 45° = √2/2 | جا 60° = √3/2</p>
+<p>جتا 30° = √3/2 | جتا 45° = √2/2 | جتا 60° = ½</p>
+<p>ظا 30° = √3/3 | ظا 45° = 1 | ظا 60° = √3</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 تذكّر: جا، جتا، ظا</div>
+<p>بالنسبة لزاوية θ في مثلث قائم:</p>
+<p><strong>جا θ (sin):</strong> طول الضلع <strong>المقابل</strong> للزاوية مقسومًا على طول <strong>الوتر</strong></p>
+<p><strong>جتا θ (cos):</strong> طول الضلع <strong>المجاور</strong> للزاوية مقسومًا على طول <strong>الوتر</strong></p>
+<p><strong>ظا θ (tan):</strong> طول الضلع <strong>المقابل</strong> مقسومًا على طول الضلع <strong>المجاور</strong></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: إيجاد النسب</div>
+<p>مثلث قائم: المقابل = 5، المجاور = 12، الوتر = 13</p>
+<p><span class="math-formula">جا θ = 5/13</span></p>
+<p><span class="math-formula">جتا θ = 12/13</span></p>
+<p><span class="math-formula">ظا θ = 5/12</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: إيجاد ضلع</div>
+<p>زاوية 30° والوتر = 20. أوجدي الضلع المقابل.</p>
+<p><span class="math-formula">جا 30° = المقابل / 20</span></p>
+<p><span class="math-formula">½ = المقابل / 20</span></p>
+<p>المقابل = <strong>10</strong></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: إيجاد زاوية</div>
+<p>مثلث قائم: المقابل = 8، الوتر = 16</p>
+<p><span class="math-formula">جا θ = 8/16 = 0.5</span></p>
+<p><span class="math-formula">θ = 30°</span></p></div>`
+});
+
+// ══════════════════════════════════════════════════════════
+// الفصل 10: الإحصاء والاحتمال (5 دروس)
+// ══════════════════════════════════════════════════════════
+
+S(9,0,{
+0:`<h4>🎯 تصميم دراسة مسحية</h4><p>الدراسة المسحية: جمع بيانات من <strong>عينة</strong> (مجموعة صغيرة) لتمثيل <strong>مجتمع</strong> أكبر.</p><div class="example-box"><div class="label">📌</div><p>سؤال 100 طالبة عن المادة المفضلة لتمثيل رأي المدرسة كلها (1000 طالبة).</p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">📊</div><p>شركة تسأل 500 عميل عن رضاهم بدل سؤال مليون عميل — هذه دراسة مسحية!</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p>▸ <strong>العينة العشوائية</strong> = أدق تمثيل (كل فرد نفس الفرصة)</p><p>▸ تجنبي <strong>التحيز</strong> في صياغة الأسئلة</p><p>▸ كلما كبرت العينة ← النتائج أدق</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 أنواع العينات</div>
+<p><strong>عشوائية بسيطة:</strong> كل فرد في المجتمع له نفس الفرصة في الاختيار (مثل سحب أسماء من صندوق)</p>
+<p><strong>طبقية:</strong> نقسم المجتمع لطبقات (مثل صفوف دراسية) ونختار من كل طبقة</p>
+<p><strong>منتظمة:</strong> نختار كل شخص رقم ن (مثل كل خامس شخص)</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل: تحيز في الأسئلة</div>
+<p><strong>سؤال متحيز ❌:</strong> "ألا توافقين على أن الرياضيات أهم مادة؟"</p>
+<p><strong>سؤال محايد ✅:</strong> "ما المادة التي تفضلينها أكثر؟"</p></div>`
+});
+
+S(9,1,{
+0:`<h4>🎯 تحليل نتائج الدراسة المسحية</h4><p>نستخدم الجداول والرسوم البيانية لعرض النتائج واستخلاص المعلومات.</p>`,
+1:`<h4>🧩 مثال</h4><div class="example-box"><div class="label">📊</div><p>نتائج استبيان الرياضة المفضلة: كرة قدم 45%، سباحة 25%، تنس 20%، أخرى 10%</p><p>يمكن تمثيلها بأعمدة أو دائرة نسبية</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p>▸ ابحثي عن الأنماط والاتجاهات</p><p>▸ قارني النسب والتكرارات</p><p>▸ استخلصي استنتاجات مدعومة بالبيانات</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 أنواع التمثيل البياني</div>
+<p><strong>الأعمدة:</strong> لمقارنة كميات بين فئات مختلفة</p>
+<p><strong>الدائرية:</strong> لعرض النسب المئوية</p>
+<p><strong>الخطية:</strong> لعرض التغير عبر الزمن</p>
+<p><strong>النقطية:</strong> لعرض العلاقة بين متغيرين</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل</div>
+<p>درجات 20 طالبة في الاختبار: نرتبها في جدول تكراري:</p>
+<p>50-59: 2 طالبات | 60-69: 4 | 70-79: 6 | 80-89: 5 | 90-100: 3</p>
+<p><strong>استنتاج:</strong> أكثر الطالبات حصلن على درجات بين 70-79</p></div>`
+});
+
+S(9,2,{
+0:`<h4>🎯 إحصائيات العينة ومعالم المجتمع</h4>
+<p>▸ <strong>المتوسط</strong> = مجموع القيم ÷ عددها</p>
+<p>▸ <strong>الوسيط</strong> = القيمة الوسطى بعد الترتيب</p>
+<p>▸ <strong>المنوال</strong> = القيمة الأكثر تكرارًا</p>`,
+1:`<h4>🧩 مثال</h4><div class="example-box"><div class="label">📝</div><p>درجات: 75, 80, 85, 90, 90</p><p>المتوسط = 420÷5 = <strong>84</strong></p><p>الوسيط = <strong>85</strong> (القيمة الوسطى)</p><p>المنوال = <strong>90</strong> (الأكثر تكرارًا)</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4><p>▸ <strong>إحصائية العينة:</strong> ما نحسبه من بيانات العينة</p><p>▸ <strong>معلمة المجتمع:</strong> القيمة الحقيقية للمجتمع كله (التي نقدّرها)</p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 متى نستخدم كل مقياس؟</div>
+<p><strong>المتوسط:</strong> يتأثر بالقيم المتطرفة ← مناسب للبيانات المتقاربة</p>
+<p><strong>الوسيط:</strong> لا يتأثر بالقيم المتطرفة ← أدق مع وجود قيم شاذة</p>
+<p><strong>المنوال:</strong> مناسب للبيانات الوصفية (الألوان، الأنواع)</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل: تأثير القيم المتطرفة</div>
+<p>رواتب 5 موظفين: 3000, 3500, 4000, 4500, 50000</p>
+<p>المتوسط = 13000 (مضلل! بسبب الراتب المرتفع)</p>
+<p>الوسيط = <strong>4000</strong> (أدق لتمثيل الوضع الحقيقي)</p></div>
+<div class="detail-box"><div class="label">📚 هامش الخطأ</div>
+<p>هو مقدار الاختلاف المتوقع بين إحصائية العينة ومعلمة المجتمع. كلما كبرت العينة، صغر هامش الخطأ.</p></div>`
+});
+
+S(9,3,{
+0:`<h4>🎯 التباديل والتوافيق</h4>
+<p>▸ <strong>التبديل:</strong> عد الطرق عندما <strong>الترتيب مهم</strong></p>
+<p>▸ <strong>التوفيق:</strong> عد الطرق عندما <strong>الترتيب غير مهم</strong></p>
+<div class="example-box"><div class="label">📌</div>
+<p>اختيار رئيسة ونائبة من 5 طالبات (الترتيب مهم) = <span class="math-formula">5 × 4 = 20</span></p>
+<p>اختيار لجنة من 2 من 5 (الترتيب غير مهم) = <span class="math-formula">20 ÷ 2 = 10</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">🏆</div><p>ترتيب 3 فائزات (ذهب، فضة، برونز) من 10 متسابقات = تبديل</p><p>اختيار فريق من 3 من 10 بدون ترتيب = توفيق</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ <span class="math-formula">ن! = ن × (ن-1) × ... × 2 × 1</span> (المضروب)</p>
+<p>▸ <strong>تبديل:</strong> <span class="math-formula">ل(ن,ر) = ن!/(ن-ر)!</span></p>
+<p>▸ <strong>توفيق:</strong> <span class="math-formula">ق(ن,ر) = ن!/(ر!(ن-ر)!)</span></p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 المضروب (ن!)</div>
+<p><span class="math-formula">5! = 5×4×3×2×1 = 120</span></p>
+<p><span class="math-formula">3! = 3×2×1 = 6</span></p>
+<p><span class="math-formula">1! = 1</span> و <span class="math-formula">0! = 1</span> (بالتعريف)</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: تبديل</div>
+<p>كم طريقة لترتيب 3 كتب من أصل 7 على رف؟</p>
+<p><span class="math-formula">ل(7,3) = 7!/(7-3)! = 7!/4! = 7×6×5 = 210</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: توفيق</div>
+<p>كم طريقة لاختيار لجنة من 3 أشخاص من 8؟</p>
+<p><span class="math-formula">ق(8,3) = 8!/(3!×5!) = (8×7×6)/(3×2×1) = 336/6 = 56</span></p></div>
+<div class="tip-box"><div class="label">💡 كيف تفرقين بينهما؟</div>
+<p>اسألي نفسك: <strong>هل يهم مين الأول ومين الثاني؟</strong></p>
+<p>نعم ← <strong>تبديل</strong> (رئيسة ونائبة) | لا ← <strong>توفيق</strong> (لجنة بدون مناصب)</p></div>`
+});
+
+S(9,4,{
+0:`<h4>🎯 احتمالات الحوادث المركبة</h4>
+<p>▸ <strong>"و" (تقاطع):</strong> حدوث الحادثتين معًا</p>
+<p>▸ <strong>"أو" (اتحاد):</strong> حدوث إحداهما على الأقل</p>
+<div class="example-box"><div class="label">📌</div>
+<p>نرد مرتين: ح(6 ثم 6) = <span class="math-formula">1/6 × 1/6 = 1/36</span></p></div>`,
+1:`<h4>🧩 مثال حياتي</h4><div class="example-box"><div class="label">🎲</div><p>احتمال سحب بطاقة ملك <strong>أو</strong> بطاقة حمراء من مجموعة ورق:</p><p><span class="math-formula">ح = 4/52 + 26/52 - 2/52 = 28/52 = 7/13</span></p><p>(طرحنا 2/52 لأن هناك ملكين أحمرين — تقاطع!)</p></div>`,
+2:`<h4>⚡ الشرح السريع</h4>
+<p>▸ <strong>أحداث مستقلة:</strong> لا تؤثر على بعض ← <span class="math-formula">ح(أ∩ب) = ح(أ) × ح(ب)</span></p>
+<p>▸ <strong>أحداث متنافية:</strong> لا تحدث معًا ← <span class="math-formula">ح(أ∪ب) = ح(أ) + ح(ب)</span></p>
+<p>▸ <strong>أحداث غير متنافية:</strong> قد تحدث معًا ← <span class="math-formula">ح(أ∪ب) = ح(أ) + ح(ب) - ح(أ∩ب)</span></p>`,
+3:`<h4>📖 الشرح التفصيلي</h4>
+<div class="detail-box"><div class="label">📚 القوانين</div>
+<p><strong>الأحداث المستقلة:</strong> حدوث أحدها لا يؤثر على احتمال الآخر</p>
+<p><span class="math-formula">ح(أ ∩ ب) = ح(أ) × ح(ب)</span></p>
+<p>مثال: رمي عملة ثم نرد — النتيجتان مستقلتان</p>
+<p><strong>الأحداث المتنافية:</strong> لا يمكن أن تحدث معًا</p>
+<p><span class="math-formula">ح(أ ∪ ب) = ح(أ) + ح(ب)</span></p>
+<p>مثال: سحب بطاقة — لا يمكن أن تكون حمراء وسوداء معًا</p>
+<p><strong>الأحداث غير المتنافية:</strong> يمكن أن تحدث معًا</p>
+<p><span class="math-formula">ح(أ ∪ ب) = ح(أ) + ح(ب) - ح(أ ∩ ب)</span></p>
+<p>نطرح التقاطع حتى لا نحسبه مرتين!</p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 1: أحداث مستقلة</div>
+<p>رمي نرد مرتين. ما احتمال أن يظهر عدد زوجي في الأولى و عدد أكبر من 4 في الثانية؟</p>
+<p>ح(زوجي) = 3/6 = 1/2 | ح(>4) = 2/6 = 1/3</p>
+<p><span class="math-formula">ح = 1/2 × 1/3 = 1/6</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 2: غير متنافية</div>
+<p>من مجموعة ورق: ح(ملك أو أحمر)</p>
+<p>ح(ملك) = 4/52 | ح(أحمر) = 26/52 | ح(ملك أحمر) = 2/52</p>
+<p><span class="math-formula">ح = 4/52 + 26/52 - 2/52 = 28/52 = 7/13</span></p></div>
+<div class="example-box"><div class="label">📌 مثال مفصّل 3: متنافية</div>
+<p>من نرد واحد: ح(1 أو 6)</p>
+<p>لا يمكن ظهور 1 و 6 معًا ← متنافية</p>
+<p><span class="math-formula">ح = 1/6 + 1/6 = 2/6 = 1/3</span></p></div>`
+});
+// NAFES EXAMS - 6 models fully solved
+// ═══════════════════════════════════════
+const nafesExams = {
+"exam1445_1":{title:"اختبار نافس 1445هـ - الفترة الأولى",questions:[
+{q:"إذا كان 2س - 5 = 9 فما قيمة س؟",a:"نضيف 5: 2س = 14 → نقسم على 2: س = 7",ans:"7"},
+{q:"√81 يساوي:",a:"√81 = 9 لأن 9 × 9 = 81",ans:"9"},
+{q:"مثلث قائم ضلعاه 6 و 8، ما الوتر؟",a:"ج² = 36 + 64 = 100 → ج = 10",ans:"10"},
+{q:"حجم أسطوانة نق=5 وع=10:",a:"ح = π×25×10 = 250π ≈ 785.4 سم³",ans:"250π سم³"},
+{q:"إذا كانت د(س) = 4س - 7، أوجدي د(3):",a:"د(3) = 4(3) - 7 = 12 - 7 = 5",ans:"5"},
+{q:"الوسيط للأعداد: 12, 5, 8, 15, 3",a:"الترتيب: 3, 5, 8, 12, 15 → الوسيط = 8",ans:"8"},
+{q:"(3س² + 4س) + (2س² - 7س) =",a:"نجمع المتشابهة: 5س² - 3س",ans:"5س² - 3س"},
+{q:"|س - 4| = 6 كم حلاً؟",a:"حالة 1: س=10 | حالة 2: س=-2 → حلّان",ans:"حلّان"},
+{q:"احتمال كرة حمراء من 4 حمراء و 6 زرقاء:",a:"ح = 4/10 = 2/5",ans:"2/5"},
+{q:"ميل الخط بين (1,3) و (4,9):",a:"م = (9-3)/(4-1) = 6/3 = 2",ans:"2"}
+]},
+
+"exam1445_2":{title:"اختبار نافس 1445هـ - الفترة الثانية",questions:[
+{q:"حلي: 5س + 12 = 3س + 20",a:"2س = 8 → س = 4",ans:"4"},
+{q:"محيط مربع = 48 سم، ما مساحته؟",a:"الضلع = 12 → المساحة = 144 سم²",ans:"144 سم²"},
+{q:"√(64/25) =",a:"√64/√25 = 8/5 = 1.6",ans:"8/5"},
+{q:"حجم مخروط نق=3 وع=12:",a:"ح = ⅓×π×9×12 = 36π ≈ 113.1 سم³",ans:"36π سم³"},
+{q:"3 قمصان × 5 بناطيل × 2 حذاء =",a:"3 × 5 × 2 = 30",ans:"30 تنسيقة"},
+{q:"المتوسط: 10, 20, 30, 40, 50",a:"150 ÷ 5 = 30",ans:"30"},
+{q:"(س+5)(س-5) =",a:"فرق مربعين: س² - 25",ans:"س² - 25"},
+{q:"الحد العاشر: 2, 5, 8, 11, ...",a:"أ=2، د=3 → حـ10 = 2+9×3 = 29",ans:"29"},
+{q:"حجم كرة نق=6:",a:"ح = ⁴⁄₃×π×216 = 288π ≈ 904.8 سم³",ans:"288π سم³"},
+{q:"-2س(3س²-4س+1) =",a:"-6س³+8س²-2س",ans:"-6س³+8س²-2س"}
+]},
+
+"exam1444_1":{title:"اختبار نافس 1444هـ - الفترة الأولى",questions:[
+{q:"حلي: 3(س + 4) = 27",a:"3س+12=27 → 3س=15 → س=5",ans:"5"},
+{q:"√196 =",a:"14²=196 → √196=14",ans:"14"},
+{q:"مثلث قائم وتره 13 وضلع 5:",a:"أ²=169-25=144 → أ=12",ans:"12"},
+{q:"هل √7 نسبي؟",a:"7 ليس مربعًا كاملاً → غير نسبي",ans:"غير نسبي"},
+{q:"ميل الخط: ص = -3س + 7",a:"الميل = -3",ans:"-3"},
+{q:"حجم أسطوانة نق=7 وع=5:",a:"ح = π×49×5 = 245π ≈ 769.7 سم³",ans:"245π سم³"},
+{q:"المدى: 15, 22, 8, 31, 12",a:"31 - 8 = 23",ans:"23"},
+{q:"(2س + 3)² =",a:"4س²+12س+9",ans:"4س²+12س+9"},
+{q:"احتمال صورة في عملة:",a:"ح = 1/2",ans:"1/2"},
+{q:"4س² - 9 تحليل:",a:"فرق مربعين: (2س+3)(2س-3)",ans:"(2س+3)(2س-3)"}
+]},
+
+"exam1444_2":{title:"اختبار نافس 1444هـ - الفترة الثانية",questions:[
+{q:"حلي: |2س + 1| = 9",a:"حالة 1: 2س+1=9 → س=4 | حالة 2: 2س+1=-9 → س=-5",ans:"س=4 أو س=-5"},
+{q:"تقدير √50:",a:"√49=7 و √64=8 → √50 ≈ 7.1",ans:"≈ 7.1"},
+{q:"المسافة بين (0,0) و (3,4):",a:"√(9+16) = √25 = 5",ans:"5"},
+{q:"مساحة سطح أسطوانة نق=3 وع=8:",a:"م = 2π(9)+2π(3)(8) = 18π+48π = 66π",ans:"66π سم²"},
+{q:"المنوال: 5,3,7,3,9,3,8:",a:"3 يتكرر 3 مرات",ans:"3"},
+{q:"إذا ص=2س+3 و ص=-س+9، نقطة التقاطع:",a:"2س+3=-س+9 → 3س=6 → س=2 → ص=7",ans:"(2, 7)"},
+{q:"(5س³-2س) - (3س³+4س-7) =",a:"2س³-6س+7",ans:"2س³-6س+7"},
+{q:"عدد طرق اختيار رئيس ونائب من 5:",a:"5×4 = 20",ans:"20"},
+{q:"حلي: 4س/2 + 6 = 18",a:"2س+6=18 → 2س=12 → س=6",ans:"6"},
+{q:"(3س-2)(س+4) =",a:"3س²+12س-2س-8 = 3س²+10س-8",ans:"3س²+10س-8"}
+]},
+
+"exam1443_1":{title:"اختبار نافس 1443هـ - نموذج تدريبي",questions:[
+{q:"حلي: 7س - 14 = 0",a:"7س = 14 → س = 2",ans:"2"},
+{q:"√225 =",a:"15×15 = 225 → √225 = 15",ans:"15"},
+{q:"حجم كرة قطرها 10 (نق=5):",a:"ح = ⁴⁄₃×π×125 = 500π/3 ≈ 523.6 سم³",ans:"500π/3 سم³"},
+{q:"(س - 4)² =",a:"س²-8س+16",ans:"س²-8س+16"},
+{q:"المتتابعة: 100,93,86,79,... الحد السادس؟",a:"أ=100، د=-7 → حـ6=100+5(-7)=65",ans:"65"},
+{q:"ميل خط أفقي:",a:"الميل = 0",ans:"0"},
+{q:"4(2س-1) = 3(س+6)",a:"8س-4=3س+18 → 5س=22 → س=4.4",ans:"4.4"},
+{q:"كيس 5 بيضاء و3 سوداء، ح(سوداء):",a:"ح = 3/8",ans:"3/8"},
+{q:"(4س²+3س) + (-2س²+5س-1) =",a:"2س²+8س-1",ans:"2س²+8س-1"},
+{q:"إذا د(س)=س²-3، أوجدي د(-2):",a:"(-2)²-3 = 4-3 = 1",ans:"1"}
+]},
+
+"exam1443_2":{title:"اختبار نافس 1443هـ - النموذج الرسمي",questions:[
+{q:"حلي: س/3 + 5 = 11",a:"س/3=6 → س=18",ans:"18"},
+{q:"3² + 4² = س²، ما س الموجبة؟",a:"9+16=25 → س=5",ans:"5"},
+{q:"حجم مخروط نق=6 وع=9:",a:"ح = ⅓×π×36×9 = 108π ≈ 339.3 سم³",ans:"108π سم³"},
+{q:"(3س+2)(2س-5) =",a:"6س²-15س+4س-10 = 6س²-11س-10",ans:"6س²-11س-10"},
+{q:"المتوسط والوسيط: 4,7,10,13,16",a:"متوسط=50÷5=10 | وسيط=10",ans:"كلاهما = 10"},
+{q:"{(1,3),(2,5),(3,3),(1,7)} هل دالة؟",a:"1 مرتبطة بـ 3 و 7 ← ليست دالة",ans:"ليست دالة"},
+{q:"|س| = -3 كم حل؟",a:"القيمة المطلقة لا تكون سالبة ← لا حل",ans:"لا يوجد حل"},
+{q:"2س²(3س-4)+س²(2س+1) =",a:"6س³-8س²+2س³+س² = 8س³-7س²",ans:"8س³-7س²"},
+{q:"المدى الربيعي: 2,4,6,8,10,12,14",a:"ر1=4، ر3=12 → 12-4=8",ans:"8"},
+{q:"حجم أسطوانة=100π وع=4، ما نق؟",a:"100π=πنق²(4) → نق²=25 → نق=5",ans:"5 سم"}
+]}
+};
+
+// NAFES Quiz - 25 questions
+const nafesQuizzes = [
+{q:"إذا كان 3س + 7 = 22 فإن س =",options:["3","5","7","15"],correct:1},
+{q:"√144 يساوي:",options:["11","12","13","14"],correct:1},
+{q:"محيط مربع = 36 سم، طول ضلعه:",options:["6 سم","9 سم","12 سم","18 سم"],correct:1},
+{q:"حجم أسطوانة نق=3 وع=7:",options:["198 سم³","63π سم³","21π سم³","42π سم³"],correct:1},
+{q:"مثلث قائم ضلعاه 3 و 4، الوتر:",options:["5","6","7","12"],correct:0},
+{q:"|−8| تساوي:",options:["-8","0","8","16"],correct:2},
+{q:"د(س) = 2س-3، د(4) =",options:["5","8","11","3"],correct:0},
+{q:"(3س²+2س)+(س²-5س) =",options:["4س²-3س","4س²+7س","2س²-3س","4س²-3"],correct:0},
+{q:"الوسيط: 3,7,9,12,15:",options:["7","9","12","9.2"],correct:1},
+{q:"احتمال عدد فردي في النرد:",options:["1/6","1/3","1/2","2/3"],correct:2},
+{q:"(س+4)(س-4) =",options:["س²+16","س²-16","س²-8س+16","س²+8"],correct:1},
+{q:"√50 أقرب إلى:",options:["6","7","8","9"],correct:1},
+{q:"ميل الخط بين (2,1) و (6,9):",options:["2","3","4","1/2"],correct:0},
+{q:"حجم كرة نق=3:",options:["36π","27π","12π","108π"],correct:0},
+{q:"الحد العاشر: 5,9,13,17,...",options:["37","41","45","49"],correct:1},
+{q:"4 قمصان × 3 بناطيل =",options:["7","12","16","24"],correct:1},
+{q:"3(2س-4)=18 فإن س=",options:["3","5","7","9"],correct:1},
+{q:"(2س+1)² =",options:["4س²+1","4س²+4س+1","2س²+2س+1","4س²+2س+1"],correct:1},
+{q:"المنوال: 4,7,2,7,5,7,3",options:["2","4","5","7"],correct:3},
+{q:"2س+5 = س+12، س=",options:["5","7","12","17"],correct:1},
+{q:"مساحة سطح مخروط نق=3 وارتفاعه المائل=5:",options:["24π","15π","9π+15π","8π"],correct:2},
+{q:"ح(عدم أ) إذا ح(أ)=0.3:",options:["0.3","0.5","0.7","1.3"],correct:2},
+{q:"5س²(2س-3) =",options:["10س³-15س²","10س²-15س","7س³-8س²","10س³-3"],correct:0},
+{q:"√(16/9) =",options:["4/3","16/9","4/9","2/3"],correct:0},
+{q:"خط ص=5 ميله =",options:["5","1","0","غير معرف"],correct:2}
+];
+
+// ═══════════ STATE & RENDER FUNCTIONS ═══════════
+let currentView='home', currentChapter=null, selectedAnswers={}, currentExamKey=null;
+
+function showSection(s){currentView=s;currentChapter=null;updateNav();renderContent();closeSidebar();}
+function showChapter(i){currentView='chapter';currentChapter=i;updateNav();renderContent();closeSidebar();}
+
+function updateNav(){
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  const items=document.querySelectorAll('.nav-item');
+  if(currentView==='home')items[0].classList.add('active');
+  else if(currentView==='chapter'&&items[currentChapter+1])items[currentChapter+1].classList.add('active');
+  else items.forEach(i=>{
+    if(i.textContent.includes('مذاكرة')&&currentView==='nafes')i.classList.add('active');
+    if(i.textContent.includes('حلول')&&(currentView==='nafes-exams'||currentView==='exam-detail'))i.classList.add('active');
+    if(i.textContent.includes('تدريب')&&currentView==='nafes-quiz')i.classList.add('active');
+  });
+}
+
+function renderContent(){
+  const m=document.getElementById('mainContent');
+  m.scrollTop=0;
+  switch(currentView){
+    case'home':renderHome(m);break;
+    case'chapter':renderChapterLessons(m);break;
+    case'nafes':renderNafes(m);break;
+    case'nafes-exams':renderNafesExams(m);break;
+    case'nafes-quiz':renderNafesQuiz(m);break;
+    case'exam-detail':renderExamDetail(m);break;
+  }
+}
+
+function renderHome(el){
+  el.innerHTML=`<div class="fade-in">
+  <div class="welcome-banner">
+    <h2>مرحبًا بكنّ في <span>منصة الرياضيات الذكية</span> 🎓</h2>
+    <p>هدية خاصة من <strong>الأستاذة عواطف العتيبي</strong> لطالباتها المتميزات في الصف الثالث المتوسط. المنصة تحتوي على شرح شامل لجميع دروس المنهج بأربع طرق مختلفة، بالإضافة إلى 6 نماذج نافس محلولة و25 سؤال تدريب تفاعلي!</p>
+  </div>
+  <div class="section-header"><h2>📚 الفصول الدراسية</h2></div>
+  <div class="chapter-grid">
+    ${chapters.map((ch,i)=>`<div class="chapter-card" onclick="showChapter(${i})">
+      <div class="ch-number">${ch.icon}</div>
+      <h3>${ch.name}</h3>
+      <div class="lesson-count">${ch.lessons.length} دروس • 4 شروحات لكل درس</div>
+    </div>`).join('')}
+  </div></div>`;
+}
+
+function renderChapterLessons(el){
+  const ch=chapters[currentChapter];
+  el.innerHTML=`<div class="fade-in">
+  <div class="section-header">
+    <h2>${ch.icon} ${ch.name}</h2>
+    <button class="back-btn" onclick="showSection('home')">→ الرجوع</button>
+  </div>
+  ${ch.lessons.map((lesson,li)=>`
+  <div class="lesson-item" id="lesson-${li}">
+    <div class="lesson-header" onclick="toggleLesson(${li})">
+      <div class="right">
+        <div class="lesson-num">${li+1}</div>
+        <div class="lesson-name">${lesson}</div>
+      </div>
+      <span class="lesson-arrow">▼</span>
+    </div>
+    <div class="lesson-body">
+      <div class="explanation-tabs">
+        <button class="exp-tab active" onclick="switchTab(${currentChapter},${li},0,this)"><span class="tab-icon">🎯</span> الشرح المبسّط</button>
+        <button class="exp-tab" onclick="switchTab(${currentChapter},${li},1,this)"><span class="tab-icon">🧩</span> أمثلة حياتية</button>
+        <button class="exp-tab" onclick="switchTab(${currentChapter},${li},2,this)"><span class="tab-icon">⚡</span> شرح سريع</button>
+        <button class="exp-tab" onclick="switchTab(${currentChapter},${li},3,this)"><span class="tab-icon">📖</span> شرح تفصيلي</button>
+      </div>
+      <div class="explanation-content" id="exp-${currentChapter}-${li}">
+        ${getExp(currentChapter,li,0)}
+      </div>
+    </div>
+  </div>`).join('')}
+  </div>`;
+}
+
+function getExp(ci,li,style){
+  const key=ci+"-"+li;
+  if(ED[key]&&ED[key][style]!==undefined)return ED[key][style];
+  return ED[key]?ED[key][0]||'':'';
+}
+
+function toggleLesson(li){document.getElementById("lesson-"+li).classList.toggle('open');}
+
+function switchTab(ci,li,style,btn){
+  btn.parentElement.querySelectorAll('.exp-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  const c=document.getElementById("exp-"+ci+"-"+li);
+  c.innerHTML='<div class="ai-loading"><div class="spinner"></div><p>جاري تحضير الشرح...</p></div>';
+  setTimeout(function(){c.innerHTML=getExp(ci,li,style);},500);
+}
+
+function renderNafes(el){
+  el.innerHTML=`<div class="fade-in">
+  <div class="section-header"><h2>🎯 مذاكرة اختبارات نافس</h2><button class="back-btn" onclick="showSection('home')">→ الرجوع</button></div>
+  <div class="welcome-banner">
+    <h2>استعدي لاختبارات <span>نافس</span> 💪</h2>
+    <p>اختبار نافس يقيس مستوى التحصيل في الرياضيات. هنا تجدين مراجعة شاملة ونصائح ذهبية وأسئلة محلولة للتفوق!</p>
+  </div>
+  <div class="nafes-grid">
+    <div class="nafes-card" onclick="showSection('nafes-quiz')"><div class="card-icon" style="background:rgba(99,102,241,0.15);color:var(--accent-1);">⚡</div><h3>تدريب تفاعلي (25 سؤال)</h3><p>أسئلة محاكية لنمط نافس مع التصحيح الفوري</p></div>
+    <div class="nafes-card" onclick="showSection('nafes-exams')"><div class="card-icon" style="background:rgba(34,211,238,0.15);color:var(--accent-cyan);">📝</div><h3>6 نماذج محلولة</h3><p>حلول مفصلة لاختبارات نافس من 1443 إلى 1445هـ</p></div>
+  </div>
+  <div style="margin-top:2rem;">
+    <h3 style="margin-bottom:1rem;font-family:'Almarai';font-weight:700;">📊 أكثر المواضيع تكرارًا:</h3>
+    ${[{t:'نظرية فيثاغورس',p:90},{t:'المعادلات الخطية',p:85},{t:'الإحصاء والنزعة المركزية',p:80},{t:'الأعداد الحقيقية والجذور',p:75},{t:'كثيرات الحدود',p:72},{t:'الاحتمالات',p:70},{t:'حجم الأشكال ثلاثية الأبعاد',p:65},{t:'الدوال والعلاقات',p:60}].map(t=>'<div style="margin-bottom:0.8rem;"><div style="display:flex;justify-content:space-between;margin-bottom:0.3rem;"><span style="font-size:0.9rem;">'+t.t+'</span><span style="color:var(--accent-gold);font-weight:700;font-size:0.85rem;">'+t.p+'%</span></div><div style="height:6px;border-radius:3px;background:rgba(255,255,255,0.05);overflow:hidden;"><div style="height:100%;width:'+t.p+'%;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));border-radius:3px;"></div></div></div>').join('')}
+  </div>
+  <div style="margin-top:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;">
+    <h3 style="color:var(--accent-gold);margin-bottom:1rem;">💡 نصائح ذهبية لاختبار نافس</h3>
+    <p style="line-height:2;color:var(--text-secondary);">
+      ✅ ابدئي بالأسئلة السهلة أولاً لضمان الدرجات<br>
+      ✅ اقرئي السؤال مرتين قبل الإجابة<br>
+      ✅ استخدمي الاستبعاد في الاختيار من متعدد<br>
+      ✅ خصصي وقتًا لكل سؤال ولا تتوقفي طويلاً<br>
+      ✅ راجعي حساباتك قبل الاختيار<br>
+      ✅ تدربي 15 دقيقة يوميًا<br>
+      ✅ ركزي على المواضيع الأكثر تكرارًا<br>
+      ✅ احفظي ثلاثيات فيثاغورس: (3,4,5) (5,12,13) (8,15,17)
+    </p>
+  </div></div>`;
+}
+
+function renderNafesExams(el){
+  const keys=Object.keys(nafesExams);
+  el.innerHTML=`<div class="fade-in">
+  <div class="section-header"><h2>📝 حلول اختبارات نافس السابقة</h2><button class="back-btn" onclick="showSection('nafes')">→ الرجوع</button></div>
+  <p style="color:var(--text-secondary);margin-bottom:1.5rem;">6 نماذج محلولة بالكامل مع الخطوات التفصيلية لكل سؤال</p>
+  <div class="nafes-grid">
+    ${keys.map((k,i)=>`<div class="nafes-card" onclick="showExam('${k}')">
+      <div class="card-icon" style="background:rgba(${i%3===0?'99,102,241':i%3===1?'34,211,238':'52,211,153'},0.15);color:var(--accent-${i%3===0?'1':i%3===1?'cyan':'emerald'});">📋</div>
+      <h3>${nafesExams[k].title}</h3>
+      <p>${nafesExams[k].questions.length} سؤال مع الحل التفصيلي</p>
+    </div>`).join('')}
+  </div></div>`;
+}
+
+function showExam(key){currentExamKey=key;currentView='exam-detail';updateNav();renderContent();}
+
+function renderExamDetail(el){
+  const exam=nafesExams[currentExamKey];
+  el.innerHTML=`<div class="fade-in">
+  <div class="section-header"><h2>📋 ${exam.title}</h2><button class="back-btn" onclick="showSection('nafes-exams')">→ الرجوع</button></div>
+  ${exam.questions.map((item,i)=>`
+  <div class="exam-detail-card">
+    <div class="q-head">السؤال ${i+1} من ${exam.questions.length}</div>
+    <div class="q-body">${item.q}</div>
+    <div class="sol-box">
+      <div class="sol-label">✅ الحل التفصيلي</div>
+      <p style="color:var(--text-secondary);line-height:1.8;">${item.a}</p>
+      <p class="sol-answer">الجواب: ${item.ans}</p>
+    </div>
+  </div>`).join('')}
+  </div>`;
+}
+
+function renderNafesQuiz(el){
+  selectedAnswers={};
+  el.innerHTML=`<div class="fade-in">
+  <div class="section-header"><h2>⚡ تدريب تفاعلي - نمط نافس (${nafesQuizzes.length} سؤال)</h2><button class="back-btn" onclick="showSection('nafes')">→ الرجوع</button></div>
+  <div class="quiz-container">
+    ${nafesQuizzes.map((q,qi)=>`
+    <div class="quiz-question" id="qq-${qi}">
+      <div class="q-num">السؤال ${qi+1} من ${nafesQuizzes.length}</div>
+      <div class="q-text">${q.q}</div>
+      ${q.options.map((opt,oi)=>`
+      <div class="quiz-option" id="qo-${qi}-${oi}" onclick="selectAnswer(${qi},${oi})">
+        <div class="letter">${['أ','ب','ج','د'][oi]}</div>
+        <span>${opt}</span>
+      </div>`).join('')}
+    </div>`).join('')}
+    <button class="submit-quiz" onclick="submitQuiz()">تصحيح الإجابات ✓</button>
+    <div id="quizResult"></div>
+  </div></div>`;
+}
+
+function selectAnswer(qi,oi){
+  nafesQuizzes[qi].options.forEach(function(_,i){document.getElementById("qo-"+qi+"-"+i).classList.remove('selected');});
+  document.getElementById("qo-"+qi+"-"+oi).classList.add('selected');
+  selectedAnswers[qi]=oi;
+}
+
+function submitQuiz(){
+  var score=0;
+  nafesQuizzes.forEach(function(q,qi){
+    var sel=selectedAnswers[qi];
+    q.options.forEach(function(_,oi){
+      var el=document.getElementById("qo-"+qi+"-"+oi);
+      el.classList.remove('selected');
+      el.style.pointerEvents='none';
+      if(oi===q.correct)el.classList.add('correct');
+      else if(oi===sel&&oi!==q.correct)el.classList.add('wrong');
+    });
+    if(sel===q.correct)score++;
+  });
+  var pct=Math.round((score/nafesQuizzes.length)*100);
+  var emoji=pct>=80?'🌟':pct>=60?'👍':'💪';
+  var msg=pct>=80?'ممتازة! أداء رائع!':pct>=60?'جيد، استمري!':'تحتاجين مراجعة أكثر، لا تيأسي!';
+  document.getElementById('quizResult').innerHTML='<div class="score-display"><div class="score">'+emoji+' '+score+'/'+nafesQuizzes.length+'</div><div class="label">'+msg+'<br>النسبة: '+pct+'%</div></div>';
+  document.querySelector('.submit-quiz').style.display='none';
+}
+
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');}
+function closeSidebar(){document.getElementById('sidebar').classList.remove('open');}
+
+
+
+// ═══════════════════════════════════════════
+// CMS v3: COMPLETE FIX
+// ═══════════════════════════════════════════
+var isAdmin = false;
+var ADMIN_PASS = 'awatef2024';
+var uploadedFiles = [];
+try { uploadedFiles = JSON.parse(localStorage.getItem('math_files') || '[]'); } catch(e){}
+
+// ── Patch getExp for custom content ──
+var _baseGetExp = getExp;
+getExp = function(ci, li, style) {
+  try { var c = localStorage.getItem('custom_' + ci + '_' + li + '_' + style); if (c) return c; } catch(e){}
+  return _baseGetExp(ci, li, style);
+};
+
+// ── Build full content with admin buttons + files ──
+function buildExpContent(ci, li, style) {
+  var html = getExp(ci, li, style);
+  
+  // Admin buttons
+  if (isAdmin) {
+    html += '<div class="cms-actions">' +
+      '<button onclick="editContent(' + ci + ',' + li + ',' + style + ')" class="cms-btn cms-edit">✏️ تعديل المحتوى</button>' +
+      '<button onclick="attachFileToLesson(' + ci + ',' + li + ')" class="cms-btn cms-attach">📎 إرفاق ملف</button>' +
+      '<button onclick="addLinkToLesson(' + ci + ',' + li + ')" class="cms-btn cms-link">🔗 إضافة رابط</button>' +
+      '</div>';
+  }
+  
+  // Lesson files (visible to ALL)
+  var lf = uploadedFiles.filter(function(f){ return f.lesson === ci + '-' + li; });
+  if (lf.length > 0) {
+    html += '<div class="lesson-files"><p class="lesson-files-title">📎 ملفات ومرفقات الدرس:</p>';
+    lf.forEach(function(f) {
+      html += '<div class="file-card">';
+      if (f.isLink) {
+        html += '<span class="file-card-icon">🔗</span>' +
+          '<div class="file-card-info"><span class="file-card-name">' + f.name + '</span></div>' +
+          '<a href="' + f.url + '" target="_blank" class="file-btn file-view">فتح ↗</a>';
+      } else {
+        html += '<span class="file-card-icon">' + (f.type && f.type.indexOf('pdf') > -1 ? '📄' : '🖼️') + '</span>' +
+          '<div class="file-card-info"><span class="file-card-name">' + f.name + '</span><span class="file-card-meta">' + Math.round((f.size||0)/1024) + ' KB</span></div>' +
+          '<button onclick="openFile(\'' + f.id + '\')" class="file-btn file-view">عرض</button>' +
+          '<button onclick="downloadFile(\'' + f.id + '\')" class="file-btn file-dl">⬇ تحميل</button>';
+      }
+      if (isAdmin) html += '<button onclick="removeFile(\'' + f.id + '\')" class="file-btn file-del">حذف</button>';
+      html += '</div>';
+    });
+    html += '</div>';
+  }
+  return html;
+}
+
+// ── Patch switchTab ──
+switchTab = function(ci, li, style, btn) {
+  btn.parentElement.querySelectorAll('.exp-tab').forEach(function(t){t.classList.remove('active');});
+  btn.classList.add('active');
+  var c = document.getElementById('exp-' + ci + '-' + li);
+  c.innerHTML = '<div class="ai-loading"><div class="spinner"></div><p>جاري تحضير الشرح...</p></div>';
+  setTimeout(function() { c.innerHTML = buildExpContent(ci, li, style); }, 400);
+};
+
+// ── Patch renderChapterLessons to use buildExpContent for initial render ──
+renderChapterLessons = function(el) {
+  var ch = chapters[currentChapter];
+  var ci = currentChapter;
+  var html = '<div class="fade-in"><div class="section-header"><h2>' + ch.icon + ' ' + ch.name + '</h2>' +
+    '<button class="back-btn" onclick="showSection(\'home\')">→ الرجوع</button></div>';
+  
+  ch.lessons.forEach(function(lesson, li) {
+    html += '<div class="lesson-item" id="lesson-' + li + '">' +
+      '<div class="lesson-header" onclick="toggleLesson(' + li + ')">' +
+      '<div class="right"><div class="lesson-num">' + (li+1) + '</div><div class="lesson-name">' + lesson + '</div></div>' +
+      '<span class="lesson-arrow">▼</span></div>' +
+      '<div class="lesson-body"><div class="explanation-tabs">' +
+      '<button class="exp-tab active" onclick="switchTab(' + ci + ',' + li + ',0,this)"><span class="tab-icon">🎯</span> الشرح المبسّط</button>' +
+      '<button class="exp-tab" onclick="switchTab(' + ci + ',' + li + ',1,this)"><span class="tab-icon">🧩</span> أمثلة حياتية</button>' +
+      '<button class="exp-tab" onclick="switchTab(' + ci + ',' + li + ',2,this)"><span class="tab-icon">⚡</span> شرح سريع</button>' +
+      '<button class="exp-tab" onclick="switchTab(' + ci + ',' + li + ',3,this)"><span class="tab-icon">📖</span> شرح تفصيلي</button></div>' +
+      '<div class="explanation-content" id="exp-' + ci + '-' + li + '">' +
+      buildExpContent(ci, li, 0) +
+      '</div></div></div>';
+  });
+  
+  html += '</div>';
+  el.innerHTML = html;
+};
+
+// ── Patch renderContent ──
+var _baseRenderContent = renderContent;
+renderContent = function() {
+  var m = document.getElementById('mainContent');
+  m.scrollTop = 0;
+  if (currentView === 'files') { renderFilesPage(m); return; }
+  _baseRenderContent();
+  updateAdminBadge();
+};
+
+function updateAdminBadge() {
+  var b = document.querySelector('.header-badge');
+  if (!b) return;
+  if (isAdmin) { b.innerHTML='👩‍🏫 وضع المعلمة مفعّل'; b.style.cssText='border:1px solid rgba(52,211,153,0.3);color:#34d399;background:linear-gradient(135deg,rgba(52,211,153,0.15),rgba(52,211,153,0.05));padding:0.4rem 1rem;border-radius:100px;font-size:0.8rem;'; }
+  else { b.innerHTML='🎁 هدية من أ. عواطف العتيبي'; b.style.cssText='border:1px solid rgba(251,191,36,0.3);color:#fbbf24;background:linear-gradient(135deg,rgba(251,191,36,0.15),rgba(251,191,36,0.05));padding:0.4rem 1rem;border-radius:100px;font-size:0.8rem;'; }
+}
+
+// ── Patch showSection ──
+var _baseShowSection = showSection;
+showSection = function(s) {
+  if (s === 'files') { currentView='files'; currentChapter=null; updateNav(); renderContent(); closeSidebar(); return; }
+  _baseShowSection(s);
+};
+
+// ── Patch renderNafes to show uploaded nafes files ──
+var _baseRenderNafes = renderNafes;
+renderNafes = function(el) {
+  _baseRenderNafes(el);
+  var nf = uploadedFiles.filter(function(f){ return f.lesson === 'nafes'; });
+  if (nf.length > 0 || isAdmin) {
+    var x = '<div style="margin-top:2rem;"><h3 style="font-weight:700;color:var(--accent-cyan);margin-bottom:1rem;">📥 اختبارات نافس من المعلمة</h3>';
+    if (isAdmin) {
+      x += '<div style="margin-bottom:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">' +
+        '<button onclick="uploadNafesFile()" class="cms-btn cms-attach" style="padding:0.7rem 1.2rem">📝 رفع اختبار نافس</button>' +
+        '<button onclick="addNafesLink()" class="cms-btn cms-link" style="padding:0.7rem 1.2rem">🔗 رابط اختبار</button></div>';
+    }
+    if (nf.length === 0) { x += '<p style="color:var(--text-muted);font-size:0.9rem;">لا توجد اختبارات مرفوعة بعد.</p>'; }
+    else {
+      x += '<div class="nafes-grid">';
+      nf.forEach(function(f) {
+        x += '<div class="nafes-card">';
+        if (f.isLink) {
+          x += '<div class="card-icon" style="background:rgba(34,211,238,0.12);color:#22d3ee">🔗</div><h3>' + f.name + '</h3><p>' + f.date + '</p>' +
+            '<div style="margin-top:0.5rem"><a href="' + f.url + '" target="_blank" class="file-btn file-view" style="text-decoration:none;padding:0.4rem 1rem;">فتح الرابط ↗</a>';
+        } else {
+          x += '<div class="card-icon" style="background:rgba(239,68,68,0.12);color:#ef4444">📄</div><h3>' + f.name + '</h3><p>' + f.date + ' • ' + Math.round((f.size||0)/1024) + ' KB</p>' +
+            '<div style="margin-top:0.5rem"><button onclick="openFile(\'' + f.id + '\')" class="file-btn file-view" style="padding:0.4rem 1rem;">عرض</button> ' +
+            '<button onclick="downloadFile(\'' + f.id + '\')" class="file-btn file-dl" style="padding:0.4rem 1rem;">⬇ تحميل</button>';
+        }
+        if (isAdmin) x += ' <button onclick="removeFile(\'' + f.id + '\')" class="file-btn file-del" style="padding:0.4rem 1rem;">حذف</button>';
+        x += '</div></div>';
+      });
+      x += '</div>';
+    }
+    x += '</div>';
+    var fi = el.querySelector('.fade-in');
+    if (fi) fi.insertAdjacentHTML('beforeend', x);
+  }
+};
+
+// ═══ ADMIN ═══
+function showLoginModal() {
+  var d=document.createElement('div');d.id='cmsModal';d.className='cms-overlay';
+  d.innerHTML='<div class="cms-dialog"><h3 class="cms-title">🔐 دخول المعلمة</h3><input type="password" id="cmsPass" placeholder="كلمة المرور" class="cms-input" onkeydown="if(event.key===\'Enter\')doLogin()"/><button onclick="doLogin()" class="cms-primary-btn">تسجيل الدخول</button><button onclick="closeCms()" class="cms-secondary-btn">إلغاء</button></div>';
+  document.body.appendChild(d);setTimeout(function(){var p=document.getElementById('cmsPass');if(p)p.focus();},100);
+}
+function doLogin(){var p=document.getElementById('cmsPass');if(p&&p.value===ADMIN_PASS){isAdmin=true;var l=document.getElementById('adminLabel');if(l)l.textContent='تسجيل خروج 🚪';closeCms();toast('مرحبًا أ. عواطف! ✅');renderContent();}else{toast('كلمة المرور غير صحيحة ❌');}}
+function toggleAdminLogin(){if(isAdmin){isAdmin=false;var l=document.getElementById('adminLabel');if(l)l.textContent='دخول المعلمة 🔐';toast('تم تسجيل الخروج');renderContent();}else{showLoginModal();}}
+function closeCms(){var m=document.getElementById('cmsModal');if(m)m.remove();}
+function toast(msg){var t=document.createElement('div');t.className='cms-toast';t.textContent=msg;document.body.appendChild(t);setTimeout(function(){t.remove();},2500);}
+
+// ═══ EDITING ═══
+function editContent(ci,li,style){
+  var cur=getExp(ci,li,style);
+  var d=document.createElement('div');d.id='cmsModal';d.className='cms-overlay';
+  d.innerHTML='<div class="cms-dialog cms-wide"><h3 class="cms-title">✏️ تعديل المحتوى</h3>'+
+    '<p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.5rem;">'+chapters[ci].name+' ← '+chapters[ci].lessons[li]+'</p>'+
+    '<p style="font-size:0.72rem;color:var(--accent-gold);margin-bottom:0.8rem;">HTML مدعوم: &lt;strong&gt; | &lt;span class="math-formula"&gt; | &lt;div class="example-box"&gt; | &lt;div class="tip-box"&gt;</p>'+
+    '<textarea id="cmsEditor" class="cms-textarea">'+escH(cur)+'</textarea>'+
+    '<div class="cms-btn-row"><button onclick="saveContent('+ci+','+li+','+style+')" class="cms-primary-btn" style="flex:1">💾 حفظ</button>'+
+    '<button onclick="resetContent('+ci+','+li+','+style+')" class="cms-danger-btn">↩️ استعادة الأصلي</button>'+
+    '<button onclick="closeCms()" class="cms-secondary-btn" style="width:auto;padding:0.6rem 1.5rem">إلغاء</button></div></div>';
+  document.body.appendChild(d);
+}
+function escH(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function saveContent(ci,li,style){var t=document.getElementById('cmsEditor');if(!t)return;try{localStorage.setItem('custom_'+ci+'_'+li+'_'+style,t.value);}catch(e){}closeCms();toast('تم حفظ التعديل ✅');renderContent();}
+function resetContent(ci,li,style){try{localStorage.removeItem('custom_'+ci+'_'+li+'_'+style);}catch(e){}closeCms();toast('تم استعادة الأصلي ↩️');renderContent();}
+
+// ═══ FILES ═══
+function saveFiles(){try{localStorage.setItem('math_files',JSON.stringify(uploadedFiles));}catch(e){toast('⚠️ المساحة ممتلئة');}}
+function attachFileToLesson(ci,li){_doUpload(ci+'-'+li);}
+function uploadNafesFile(){_doUpload('nafes');}
+function uploadGeneralFile(){_doUpload('general');}
+function _doUpload(key){
+  var inp=document.createElement('input');inp.type='file';inp.accept='.pdf,.png,.jpg,.jpeg,.doc,.docx';
+  inp.onchange=function(e){var file=e.target.files[0];if(!file)return;
+    if(file.size>5242880){toast('⚠️ الملف أكبر من 5 ميجا');return;}
+    toast('جاري الرفع... ⏳');
+    var r=new FileReader();r.onload=function(ev){
+      uploadedFiles.push({id:'f'+Date.now(),name:file.name,type:file.type||'',size:file.size,data:ev.target.result,lesson:key,date:new Date().toLocaleDateString('ar-SA'),isLink:false});
+      saveFiles();toast('✅ تم رفع "'+file.name+'"');renderContent();
+    };r.readAsDataURL(file);};inp.click();
+}
+function addLinkToLesson(ci,li){_doLink(ci+'-'+li);}
+function addNafesLink(){_doLink('nafes');}
+function addGeneralLink(){_doLink('general');}
+function _doLink(key){
+  var d=document.createElement('div');d.id='cmsModal';d.className='cms-overlay';
+  d.innerHTML='<div class="cms-dialog"><h3 class="cms-title">🔗 إضافة رابط</h3>'+
+    '<input type="text" id="linkName" placeholder="اسم الملف" class="cms-input" style="text-align:right;font-size:0.9rem;margin-bottom:0.5rem"/>'+
+    '<input type="url" id="linkUrl" placeholder="https://..." class="cms-input" style="text-align:left;direction:ltr;font-size:0.9rem"/>'+
+    '<button onclick="saveLink(\''+key+'\')" class="cms-primary-btn">💾 حفظ</button>'+
+    '<button onclick="closeCms()" class="cms-secondary-btn">إلغاء</button></div>';
+  document.body.appendChild(d);
+}
+function saveLink(key){var n=document.getElementById('linkName').value.trim();var u=document.getElementById('linkUrl').value.trim();
+  if(!n||!u){toast('أدخلي الاسم والرابط');return;}
+  uploadedFiles.push({id:'f'+Date.now(),name:n,url:u,lesson:key,date:new Date().toLocaleDateString('ar-SA'),isLink:true});
+  saveFiles();closeCms();toast('✅ تم حفظ الرابط');renderContent();}
+function openFile(fid){var f=uploadedFiles.find(function(x){return x.id===fid;});if(!f)return;
+  if(f.isLink){window.open(f.url,'_blank');return;}
+  var w=window.open('','_blank');if(!w){toast('فعّلي النوافذ المنبثقة');return;}
+  if(f.type.indexOf('pdf')>-1){w.document.write('<html><head><title>'+f.name+'</title></head><body style="margin:0"><embed src="'+f.data+'" type="application/pdf" width="100%" height="100%" style="position:absolute;inset:0"/></body></html>');}
+  else{w.document.write('<html><head><title>'+f.name+'</title></head><body style="margin:0;background:#111;display:flex;align-items:center;justify-content:center;min-height:100vh"><img src="'+f.data+'" style="max-width:100%;max-height:100vh"/></body></html>');}}
+function downloadFile(fid){var f=uploadedFiles.find(function(x){return x.id===fid;});if(!f||!f.data)return;var a=document.createElement('a');a.href=f.data;a.download=f.name;a.click();}
+function removeFile(fid){if(!confirm('حذف هذا الملف؟'))return;uploadedFiles=uploadedFiles.filter(function(x){return x.id!==fid;});saveFiles();toast('تم الحذف 🗑️');renderContent();}
+
+// ═══ FILES PAGE ═══
+function renderFilesPage(el){
+  var nf=uploadedFiles.filter(function(f){return f.lesson==='nafes';});
+  var gf=uploadedFiles.filter(function(f){return f.lesson==='general';});
+  var lf=uploadedFiles.filter(function(f){return f.lesson!=='nafes'&&f.lesson!=='general';});
+  var h='<div class="fade-in"><div class="section-header"><h2>📁 ملفات ومرفقات</h2><button class="back-btn" onclick="showSection(\'home\')">→ الرجوع</button></div>';
+  if(isAdmin){h+='<div class="cms-actions" style="margin-bottom:1.5rem"><button onclick="uploadNafesFile()" class="cms-btn cms-attach" style="padding:0.7rem 1.2rem">📝 رفع اختبار نافس</button><button onclick="addNafesLink()" class="cms-btn cms-link" style="padding:0.7rem 1.2rem">🔗 رابط اختبار</button><button onclick="uploadGeneralFile()" class="cms-btn cms-edit" style="padding:0.7rem 1.2rem">📤 رفع ملف عام</button><button onclick="addGeneralLink()" class="cms-btn cms-link" style="padding:0.7rem 1.2rem">🔗 رابط عام</button></div>';}
+  h+='<h3 style="font-weight:700;color:var(--accent-cyan);margin-bottom:1rem">📝 اختبارات نافس</h3>';
+  if(nf.length===0){h+='<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:2rem">لا توجد اختبارات بعد.</p>';}
+  else{h+='<div class="nafes-grid" style="margin-bottom:2rem">';nf.forEach(function(f){h+='<div class="nafes-card">';if(f.isLink){h+='<div class="card-icon" style="background:rgba(34,211,238,0.12);color:#22d3ee">🔗</div><h3>'+f.name+'</h3><p>'+f.date+'</p><div style="margin-top:0.5rem"><a href="'+f.url+'" target="_blank" class="file-btn file-view" style="text-decoration:none;padding:0.4rem 1rem">فتح ↗</a>';}else{h+='<div class="card-icon" style="background:rgba(239,68,68,0.12);color:#ef4444">📄</div><h3>'+f.name+'</h3><p>'+f.date+' • '+Math.round((f.size||0)/1024)+' KB</p><div style="margin-top:0.5rem"><button onclick="openFile(\''+f.id+'\')" class="file-btn file-view" style="padding:0.4rem 1rem">عرض</button> <button onclick="downloadFile(\''+f.id+'\')" class="file-btn file-dl" style="padding:0.4rem 1rem">⬇ تحميل</button>';}if(isAdmin)h+=' <button onclick="removeFile(\''+f.id+'\')" class="file-btn file-del" style="padding:0.4rem 1rem">حذف</button>';h+='</div></div>';});h+='</div>';}
+  h+='<h3 style="font-weight:700;color:var(--accent-3);margin-bottom:1rem">📁 ملفات عامة</h3>';
+  if(gf.length===0){h+='<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:2rem">لا توجد ملفات.</p>';}
+  else{h+='<div class="nafes-grid" style="margin-bottom:2rem">';gf.forEach(function(f){h+='<div class="nafes-card">';if(f.isLink){h+='<div class="card-icon" style="background:rgba(99,102,241,0.12);color:var(--accent-1)">🔗</div><h3>'+f.name+'</h3><p>'+f.date+'</p><div style="margin-top:0.5rem"><a href="'+f.url+'" target="_blank" class="file-btn file-view" style="text-decoration:none;padding:0.4rem 1rem">فتح ↗</a>';}else{h+='<div class="card-icon" style="background:rgba(99,102,241,0.12);color:var(--accent-1)">'+(f.type&&f.type.indexOf('pdf')>-1?'📄':'🖼️')+'</div><h3>'+f.name+'</h3><p>'+f.date+' • '+Math.round((f.size||0)/1024)+' KB</p><div style="margin-top:0.5rem"><button onclick="openFile(\''+f.id+'\')" class="file-btn file-view" style="padding:0.4rem 1rem">عرض</button> <button onclick="downloadFile(\''+f.id+'\')" class="file-btn file-dl" style="padding:0.4rem 1rem">⬇ تحميل</button>';}if(isAdmin)h+=' <button onclick="removeFile(\''+f.id+'\')" class="file-btn file-del" style="padding:0.4rem 1rem">حذف</button>';h+='</div></div>';});h+='</div>';}
+  if(lf.length>0){h+='<h3 style="font-weight:700;color:var(--accent-emerald);margin-bottom:1rem">📎 ملفات الدروس</h3><div class="nafes-grid">';lf.forEach(function(f){var p=f.lesson.split('-');var cn=chapters[+p[0]]?chapters[+p[0]].name:'';var ln=chapters[+p[0]]&&chapters[+p[0]].lessons[+p[1]]?chapters[+p[0]].lessons[+p[1]]:'';h+='<div class="nafes-card"><div class="card-icon" style="background:rgba(52,211,153,0.12);color:#34d399">'+(f.isLink?'🔗':'📄')+'</div><h3>'+f.name+'</h3><p style="color:var(--accent-emerald);font-size:0.75rem">'+cn+' ← '+ln+'</p><p>'+f.date+'</p><div style="margin-top:0.5rem">';if(f.isLink){h+='<a href="'+f.url+'" target="_blank" class="file-btn file-view" style="text-decoration:none;padding:0.4rem 1rem">فتح ↗</a>';}else{h+='<button onclick="openFile(\''+f.id+'\')" class="file-btn file-view" style="padding:0.4rem 1rem">عرض</button> <button onclick="downloadFile(\''+f.id+'\')" class="file-btn file-dl" style="padding:0.4rem 1rem">⬇ تحميل</button>';}if(isAdmin)h+=' <button onclick="removeFile(\''+f.id+'\')" class="file-btn file-del" style="padding:0.4rem 1rem">حذف</button>';h+='</div></div>';});h+='</div>';}
+  h+='<div style="margin-top:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:1.2rem"><p style="font-size:0.8rem;color:var(--text-muted)">💡 الملفات المرفوعة تُحفظ في المتصفح. لمشاركتها مع الطالبات استخدمي <strong>روابط Google Drive</strong>.</p></div></div>';
+  el.innerHTML=h;
+}
+
+// ═══ INIT ═══
+(function(){
+  var sb=document.getElementById('sidebar');if(!sb)return;
+  var sec=document.createElement('div');
+  sec.innerHTML='<div class="nav-divider"></div><div class="sidebar-section"><div class="sidebar-title">أدوات</div><div class="nav-item" onclick="showSection(\'files\')"><span class="icon">📁</span> ملفات ومرفقات</div><div class="nav-item" onclick="toggleAdminLogin()"><span class="icon">🔐</span> <span id="adminLabel">دخول المعلمة 🔐</span></div></div>';
+  sb.appendChild(sec);
+  var s=document.createElement('style');
+  s.textContent='.cms-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;display:flex;align-items:center;justify-content:center;padding:1rem}.cms-dialog{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:1.5rem;width:100%;max-width:400px}.cms-wide{max-width:800px;max-height:90vh;overflow-y:auto}.cms-title{text-align:center;font-size:1.1rem;font-weight:800;margin-bottom:1rem}.cms-input{width:100%;background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:.8rem;text-align:center;font-size:1rem;color:var(--text-primary);font-family:Tajawal;margin-bottom:.8rem;outline:none}.cms-input:focus{border-color:var(--accent-1)}.cms-textarea{width:100%;min-height:250px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:1rem;color:var(--text-primary);font-size:.85rem;font-family:monospace;direction:rtl;resize:vertical;line-height:1.8;outline:none}.cms-textarea:focus{border-color:var(--accent-1)}.cms-primary-btn{width:100%;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;border:none;padding:.8rem;border-radius:12px;font-family:Tajawal;font-size:1rem;font-weight:700;cursor:pointer;margin-bottom:.4rem}.cms-primary-btn:hover{opacity:.9}.cms-secondary-btn{width:100%;background:transparent;border:1px solid var(--border);color:var(--text-muted);padding:.6rem;border-radius:12px;font-family:Tajawal;cursor:pointer}.cms-danger-btn{padding:.6rem 1.2rem;background:rgba(239,68,68,.12);color:#ef4444;border:1px solid rgba(239,68,68,.3);border-radius:12px;font-family:Tajawal;cursor:pointer}.cms-btn{font-size:.8rem;padding:.5rem 1rem;border-radius:10px;cursor:pointer;font-family:Tajawal;font-weight:600;border:1px solid;transition:.2s;display:inline-block}.cms-edit{background:rgba(251,191,36,.1);border-color:rgba(251,191,36,.3);color:#fbbf24}.cms-attach{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.3);color:#34d399}.cms-link{background:rgba(34,211,238,.1);border-color:rgba(34,211,238,.3);color:#22d3ee}.cms-actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem}.cms-btn-row{display:flex;gap:.5rem;margin-top:.8rem;flex-wrap:wrap}.cms-toast{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:9999;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;padding:.7rem 1.5rem;border-radius:12px;font-size:.9rem;font-weight:700;box-shadow:0 10px 40px rgba(0,0,0,.4);font-family:Tajawal;animation:fadeIn .3s}.lesson-files{margin-top:1rem;border-top:1px solid var(--border);padding-top:1rem}.lesson-files-title{font-weight:700;color:var(--accent-cyan);font-size:.9rem;margin-bottom:.5rem}.file-card{display:flex;align-items:center;gap:.5rem;background:rgba(34,211,238,.05);border:1px solid rgba(34,211,238,.12);border-radius:10px;padding:.6rem .8rem;margin-bottom:.4rem;flex-wrap:wrap}.file-card-icon{font-size:1.3rem;flex-shrink:0}.file-card-info{flex:1;min-width:100px}.file-card-name{display:block;font-size:.85rem;font-weight:600}.file-card-meta{display:block;font-size:.7rem;color:var(--text-muted)}.file-btn{font-size:.72rem;padding:.25rem .7rem;border-radius:8px;cursor:pointer;font-family:Tajawal;border:1px solid;display:inline-block;font-weight:600;background:transparent}.file-view{color:var(--accent-3);border-color:rgba(99,102,241,.3)}.file-dl{color:#34d399;border-color:rgba(52,211,153,.3)}.file-del{color:#ef4444;border-color:rgba(239,68,68,.25)}';
+  document.head.appendChild(s);
+})();
+
+renderContent();
+</script>
+</body>
+</html>
